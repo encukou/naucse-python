@@ -1,0 +1,439 @@
+<h1 id="vybirani_kousku_hada">Vybírání kousků hada
+<a href="#vybirani_kousku_hada" class="header-link">#</a>
+</h1>
+<p>Místo toho, aby byl všude stejný kousek hada,
+budeme chtít vybrat vždycky ten správný.</p>
+<p>Jak na to?
+Podle čeho ho vybrat?</p>
+<p>Obrázky s kousky hada jsou pojmenovány
+<code><var>odkud</var>-<var>kam</var></code>.
+To není náhoda – ukazuje to, co potřebuješ vědět, abys mohla ten správný
+kousek vybrat.</p>
+<p>Když máš hada podle následujícího obrázku, na políčko (3, 2) patří
+kousek, na kterém se had plazí zleva nahoru – tedy <code>snake_tiles['left-top']</code></p>
+<p><span class="figure"><a href="naucse:static?filename=tile-selection.svg"><img src="naucse:static?filename=tile-selection.svg" alt="Had na „šachovnici“ se souřadnicemi. Políčko (3, 2) je zvýrazněné a vedou z něj šipky doleva a nahoru, kudy had pokračuje."></a></span></p>
+<p>Na koncích hada je ve jménech obrázků místo směru <code>end</code>.</p>
+<p>Pro každé z políček budeš potřebovat zjistit, odkud a kam na něm had leze –
+tedy směr k <em>předchozí</em> a <em>následující</em> souřadnici:</p>
+<table class="table">
+    <tr>
+        <th>Souřadnice</th>
+        <th>Předchozí</th>
+        <th>Směr k předchozí</th>
+        <th>Následující</th>
+        <th>Směr k následující</th>
+        <th></th>
+    </tr>
+
+
+        <tr>
+            <td>(1, 2)</td>
+            <td><em>není</em></td>
+            <td><code>end</code></td>
+            <td>
+                (2, 2)
+            </td>
+            <td><code>right</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/end-right.png"
+                    style="width: 1em"
+                    alt="end-right.png"
+                >
+            </td>
+        </tr>
+
+        <tr>
+            <td>(2, 2)</td>
+            <td>
+                (1, 2)
+            </td>
+            <td><code>left</code></td>
+            <td>
+                (3, 2)
+            </td>
+            <td><code>right</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/left-right.png"
+                    style="width: 1em"
+                    alt="left-right.png"
+                >
+            </td>
+        </tr>
+
+        <tr>
+            <td>(3, 2)</td>
+            <td>
+                (2, 2)
+            </td>
+            <td><code>left</code></td>
+            <td>
+                (3, 3)
+            </td>
+            <td><code>top</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/left-top.png"
+                    style="width: 1em"
+                    alt="left-top.png"
+                >
+            </td>
+        </tr>
+
+        <tr>
+            <td>(3, 3)</td>
+            <td>
+                (3, 2)
+            </td>
+            <td><code>bottom</code></td>
+            <td>
+                (3, 4)
+            </td>
+            <td><code>top</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/bottom-top.png"
+                    style="width: 1em"
+                    alt="bottom-top.png"
+                >
+            </td>
+        </tr>
+
+        <tr>
+            <td>(3, 4)</td>
+            <td>
+                (3, 3)
+            </td>
+            <td><code>bottom</code></td>
+            <td>
+                (3, 5)
+            </td>
+            <td><code>top</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/bottom-top.png"
+                    style="width: 1em"
+                    alt="bottom-top.png"
+                >
+            </td>
+        </tr>
+
+        <tr>
+            <td>(3, 5)</td>
+            <td>
+                (3, 4)
+            </td>
+            <td><code>bottom</code></td>
+            <td>
+                (4, 5)
+            </td>
+            <td><code>right</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/bottom-right.png"
+                    style="width: 1em"
+                    alt="bottom-right.png"
+                >
+            </td>
+        </tr>
+
+        <tr>
+            <td>(4, 5)</td>
+            <td>
+                (3, 5)
+            </td>
+            <td><code>left</code></td>
+            <td><em>není</em></td>
+            <td><code>end</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/left-end.png"
+                    style="width: 1em"
+                    alt="left-end.png"
+                >
+            </td>
+        </tr>
+
+</table><p>Toto je <strong>těžký úkol</strong>.
+I když všechny potřebné informace a nástroje k tomu teď teoreticky znáš,
+je potřeba je správným způsobem poskládat dohromady.
+Tohle skládání dohromady, <em>návrh algoritmů</em>, je nejsložitější programátorská 
+disciplína.</p>
+<p>Zkus nad tím ale přemýšlet, nech si to rozležet v hlavě třeba přes noc,
+vrať se k materiálům k předchozím lekcím (hlavně k úvodu do Pythonu),
+zkoušej a objevuj… A časem na to přijdeš.</p>
+<p>Jestli nemáš čas, koukněme se na to, jak se dá zařídit.</p>
+<h2 id="tohle_neni_evangelium">Tohle není evangelium
+<a href="#tohle_neni_evangelium" class="header-link">#</a>
+</h2>
+<p>Popisuju tady jedno možné řešení.
+Existuje spousta jiných správných způsobů, jak vybírat políčka hada.
+Možná ti dokonce jiné řešení přijde jednodušší – a možná to bude dokonce
+<em>tvoje</em> řešení!</p>
+<h2 id="jednodussi_podproblemy">Jednodušší podproblémy
+<a href="#jednodussi_podproblemy" class="header-link">#</a>
+</h2>
+<p>Složité problémy programátoři většinou vhodně rozdělí na více jednodušších
+problémů.
+Každý pak vyřeší zvlášť a pak spojí dohromady.</p>
+<p>Jaké jednodušší úkoly by se daly najít tady?</p>
+<ol>
+<li>Projít všechny souřadnice, a pro každou z nich políčko zjistit
+předchozí i následující souřadnici.</li>
+<li>Když mám dvě souřadnice, zjistit směr od jedné ke druhé.</li>
+</ol>
+<p>Řešením prvního z nich v tabulce výše „vyplníš“ sloupečky se souřadnicemi.
+Řešením druhého pak z těchto informací dostaneš <em>směry</em>, části jména obrázku.</p>
+<p>Budeš potřebovat vyřešit oba dva problémy.
+Ten druhý je ale jednodušší, tak se pojďme zaměřit na něj.</p>
+<h2 id="zjistit_smer">Zjistit směr
+<a href="#zjistit_smer" class="header-link">#</a>
+</h2>
+<p>Potřebuješ počítači říct, jak ze souřadnic dvou políček, které jsou vedle sebe,
+zjistit směr od jednoho ke druhému.</p>
+<p>Například směr od (3, 2) k (2, 2) je <em>doleva</em>.
+Směr od (3, 2) k (3, 3) je <em>nahoru</em>.
+(Viz obrázek, nebo třetí řádek tabulky výše.)</p>
+<p><span class="figure"><a href="naucse:static?filename=tile-selection.svg"><img src="naucse:static?filename=tile-selection.svg" alt="Had na „šachovnici“ se souřadnicemi. Políčko (3, 2) je zvýrazněné a vedou z něj šipky doleva a nahoru, kudy had pokračuje."></a></span></p>
+<p>V Pythonu to napíšeš jako <em>funkci</em>, která bere dva argumenty (souřadnice)
+a vrátí anglické jméno směru – řetězec, který se dá použít ve jméně souboru
+s obrázkem.</p>
+<p>Až bude tahle funkce hotová, měla by se dát použít následovně:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">direction</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="go">&#39;left&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">direction</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="go">&#39;bottom&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">direction</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="s1">&#39;end&#39;</span><span class="p">)</span>
+<span class="go">&#39;end&#39;</span>
+</pre></div><p>Na koncích hada bude potřeba jako druhou souřadnici použít místo dvojice čísel
+něco jiného.
+Řetězec <code>'end'</code> funguje dobře, ale stejně tak by se dalo použít cokoli jiného,
+co není souřadnice: <code>False</code>, <code>-1</code>, nebo třeba <code>[]</code>.
+(Zkušený Pythonista by použil hodnotu <code>None</code>.)</p>
+<p>Jak takovou funkci napsat?
+Když si pořádně prohlédneš první tři sloupce tabulky výše, možná přijdeš na to,
+jak se od sebe liší souřadnice, které jsou <em>nalevo</em> od sebe. Nebo <em>nahoru</em>.</p>
+<ul>
+<li>Jak zjistit směr mezi dvěma souřadnicemi:<ul>
+<li>Když ta druhá není souřadnice:<ul>
+<li>výsledek je <code>'end'</code></li>
+</ul>
+</li>
+<li>Když se <var>x</var> té první rovná <var>x</var>+1 druhé:<ul>
+<li>výsledek je <code>'left'</code></li>
+</ul>
+</li>
+<li>Když se <var>x</var> té první rovná <var>x</var>-1 druhé:<ul>
+<li>výsledek je <code>'right'</code></li>
+</ul>
+</li>
+<li>Když se <var>y</var> té první rovná <var>y</var>+1 druhé:<ul>
+<li>výsledek je <code>'bottom'</code></li>
+</ul>
+</li>
+<li>Když se <var>y</var> té první rovná <var>y</var>-1 druhé:<ul>
+<li>výsledek je <code>'top'</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Zkušený programátor v tento moment zbystří a zeptá se: „ale co když neplatí
+ani jedna z těch podmínek“?
+Taková situace ve hře nemůže nastat (nebo ano?), ale přesto je dobré ji
+podchytit a na konec postupu přidat třeba „Jinak je výsledek <code>'end'</code>”.</p>
+<p>Vymyslet tenhle postup je složitější část řešení našeho problému.
+Zbytek je jen téměř doslovný překlad z češtiny do Pythonu:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">direction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;end&#39;</span>
+
+    <span class="c1"># Rozložení souřadnic na čísla (x, y) – to je v češtině &quot;samozřejmé&quot;</span>
+    <span class="n">x_a</span><span class="p">,</span> <span class="n">y_a</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="n">x_b</span><span class="p">,</span> <span class="n">y_b</span> <span class="o">=</span> <span class="n">b</span>
+
+    <span class="c1"># ... a logika pokračuje</span>
+    <span class="k">if</span> <span class="n">x_a</span> <span class="o">==</span> <span class="n">x_b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;left&#39;</span>
+    <span class="k">elif</span> <span class="n">x_a</span> <span class="o">==</span> <span class="n">x_b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;right&#39;</span>
+    <span class="k">elif</span> <span class="n">y_a</span> <span class="o">==</span> <span class="n">y_b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;bottom&#39;</span>
+    <span class="k">elif</span> <span class="n">y_a</span> <span class="o">==</span> <span class="n">y_b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;top&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;end&#39;</span>
+
+<span class="c1"># Vyzkoušení</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tohle by mělo být &quot;left&quot;:&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tohle by mělo být &quot;bottom&quot;:&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tohle by mělo být &quot;top&quot;:&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tohle by mělo být &quot;right&quot;:&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tohle by mělo být &quot;end&quot;:&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="s1">&#39;end&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tohle by mělo být &quot;end&quot;:&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">80</span><span class="p">)))</span>
+</pre></div><h2 id="projit_vsechny_souradnice">Projít všechny souřadnice
+<a href="#projit_vsechny_souradnice" class="header-link">#</a>
+</h2>
+<p>Teď se vraťme k prvnímu problému: jak projít všechny políčka hada,
+a u každého zjisti políčko předchozí a následující?</p>
+<p>Protože rozdíl mezi souřadnicemi jako (1, 2) a (2, 2) není na první pohled
+moc čitelný, kousky hada si označím písmenky.
+Budu psát A místo (1, 2); B místo (2, 2); atd.:</p>
+<p><span class="figure"><a href="naucse:static?filename=lettered.svg"><img src="naucse:static?filename=lettered.svg" alt="Had na „šachovnici“. Každý kousek hada má písmenko: A, B, C, ..., G"></a></span></p>
+<p>Takového hada nakreslím následovně:</p>
+<ul>
+<li>Nakreslím políčko A (k čemuž potřebuju vědět, že je to začátek a po něm je B)</li>
+<li>Nakreslím políčko B (k čemuž potřebuju vědět, že před ním je A a po něm B)</li>
+<li>Nakreslím políčko C (k čemuž potřebuju vědět, že před ním je B a po něm D)</li>
+<li>… a tak dál:</li>
+</ul>
+<table class="table">
+
+    <tr>
+        <th>K vykreslení</th>
+
+            <td>A</td>
+
+            <td>B</td>
+
+            <td>C</td>
+
+            <td>D</td>
+
+            <td>E</td>
+
+            <td>F</td>
+
+            <td>G</td>
+
+    </tr>
+    <tr>
+        <th>Předchozí</th>
+
+            <td>
+            ×
+            </td>
+
+            <td>
+
+                A
+
+            </td>
+
+            <td>
+
+                B
+
+            </td>
+
+            <td>
+
+                C
+
+            </td>
+
+            <td>
+
+                D
+
+            </td>
+
+            <td>
+
+                E
+
+            </td>
+
+            <td>
+
+                F
+
+            </td>
+
+    </tr>
+    <tr>
+        <th>Následující</th>
+
+            <td>
+
+                B
+
+            </td>
+
+            <td>
+
+                C
+
+            </td>
+
+            <td>
+
+                D
+
+            </td>
+
+            <td>
+
+                E
+
+            </td>
+
+            <td>
+
+                F
+
+            </td>
+
+            <td>
+
+                G
+
+            </td>
+
+            <td>
+            ×
+            </td>
+
+    </tr>
+</table><p>Jak na to?
+První řádek tabulky, seznam [A, B, C, D, E, F, G] už máš – to jsou souřadnice
+hada, <code>snake</code>.
+Kdyz se ti k tomu podaří připravit seznamy s druhým řádkem,
+[×, A, B, C, D, E, F], a třetím, [B, C, D, E, F, G, ×], můžeš je pak spojit
+pomocí funkce <code>zip</code>.
+Vzpomínáš na ni?
+Prochází několik „opovídajících si“ seznamů a dá <var>n</var>-tici
+prvních prvků, pak <var>n</var>-tici druhých prvků, pak třetích…</p>
+<p>Náš příklad byl:</p>
+<div class="highlight"><pre><span></span><span class="n">veci</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tráva&#39;</span><span class="p">,</span> <span class="s1">&#39;slunce&#39;</span><span class="p">,</span> <span class="s1">&#39;mrkev&#39;</span><span class="p">,</span> <span class="s1">&#39;řeka&#39;</span><span class="p">]</span>
+<span class="n">barvy</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;zelená&#39;</span><span class="p">,</span> <span class="s1">&#39;žluté&#39;</span><span class="p">,</span> <span class="s1">&#39;oranžová&#39;</span><span class="p">,</span> <span class="s1">&#39;modrá&#39;</span><span class="p">]</span>
+<span class="n">mista</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;na zemi&#39;</span><span class="p">,</span> <span class="s1">&#39;nahoře&#39;</span><span class="p">,</span> <span class="s1">&#39;na talíři&#39;</span><span class="p">,</span> <span class="s1">&#39;za zídkou&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">vec</span><span class="p">,</span> <span class="n">barva</span><span class="p">,</span> <span class="n">misto</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">veci</span><span class="p">,</span> <span class="n">barvy</span><span class="p">,</span> <span class="n">mista</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">barva</span><span class="p">,</span> <span class="n">vec</span><span class="p">,</span> <span class="s1">&#39;je&#39;</span><span class="p">,</span> <span class="n">misto</span><span class="p">)</span>
+</pre></div><p>Ale stejně tak můžeš použít:</p>
+<div class="highlight"><pre><span></span><span class="n">snake</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]</span>
+<span class="n">prevs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span>
+<span class="n">nexts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">coords</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="nb">next</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">snake</span><span class="p">,</span> <span class="n">prevs</span><span class="p">,</span> <span class="n">nexts</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;na políčku&#39;</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="s1">&#39;had leze z&#39;</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="s1">&#39;do&#39;</span><span class="p">,</span> <span class="nb">next</span><span class="p">)</span>
+</pre></div><p>Ty dva další seznamy je ale potřeba „vyrobit“ z prvního:
+vybrat správný kousek a na správnou stranu doplnit „chybějící“ prvek:</p>
+<div class="highlight"><pre><span></span><span class="n">snake</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]</span>
+<span class="n">prevs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">snake</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">nexts</span> <span class="o">=</span> <span class="n">snake</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">coords</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="nb">next</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">snake</span><span class="p">,</span> <span class="n">prevs</span><span class="p">,</span> <span class="n">nexts</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;na políčku&#39;</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="s1">&#39;had leze z&#39;</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="s1">&#39;do&#39;</span><span class="p">,</span> <span class="nb">next</span><span class="p">)</span>
+</pre></div><p>Anebo, s „opravdovými“ souřadnicemi a funkcí <code>direction</code>:</p>
+<div class="highlight"><pre><span></span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+
+<span class="k">for</span> <span class="n">coords</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="nb">next</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">snake</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">snake</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">snake</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]):</span>
+    <span class="n">before</span> <span class="o">=</span> <span class="n">direction</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">prev</span><span class="p">)</span>  <span class="c1"># směr z aktuálního políčka na předchozí</span>
+    <span class="n">after</span> <span class="o">=</span> <span class="n">direction</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="nb">next</span><span class="p">)</span>   <span class="c1"># směr z aktuálního políčka na následující</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">before</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">after</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;na&#39;</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="s1">&#39;vykreslit:&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+</pre></div><p>Jestli jsi došla až sem, doufám, že nebudeš mít příliš
+velké problémy s „transplantací“ tohoto kódu do svojí hry.</p>

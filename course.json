@@ -1,0 +1,1877 @@
+{
+    "api_version": [
+        0,
+        4
+    ],
+    "course": {
+        "description": "Hravá ochutnávka programování",
+        "edit_info": {
+            "branch": "patch-1",
+            "url": "https://github.com/encukou/naucse-python"
+        },
+        "lessons": {
+            "beginners/install": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017."
+                        ],
+                        "content": {
+                            "path": "install/index.html"
+                        },
+                        "ids": [
+                            "instalace_pythonu"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#instalace_pythonu",
+                            "naucse:page?lesson=beginners/install&page=linux",
+                            "naucse:page?lesson=beginners/install&page=macos",
+                            "naucse:page?lesson=beginners/install&page=windows"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install/index.md",
+                        "title": "Instalace Pythonu",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    },
+                    "linux": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017."
+                        ],
+                        "content": {
+                            "path": "install/linux.html"
+                        },
+                        "ids": [
+                            "check-tkinter",
+                            "doinstalovani_virtualenv",
+                            "instalace_pythonu_3",
+                            "instalace_pythonu_na_linux",
+                            "install-virtualenv",
+                            "kontrola_tkinter"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#check-tkinter",
+                            "#doinstalovani_virtualenv",
+                            "#instalace_pythonu_3",
+                            "#instalace_pythonu_na_linux",
+                            "#install-virtualenv",
+                            "#kontrola_tkinter"
+                        ],
+                        "slug": "linux",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install/linux.md",
+                        "subtitle": "Linux",
+                        "title": "Instalace Pythonu – Linux",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    },
+                    "macos": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017."
+                        ],
+                        "content": {
+                            "path": "install/macos.html"
+                        },
+                        "ids": [
+                            "instalace_pythonu_pro_macos"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#instalace_pythonu_pro_macos",
+                            "http://brew.sh"
+                        ],
+                        "slug": "macos",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install/macos.md",
+                        "subtitle": "macOS",
+                        "title": "Instalace Pythonu – macOS",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    },
+                    "windows": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017."
+                        ],
+                        "content": {
+                            "path": "install/windows.html"
+                        },
+                        "ids": [
+                            "instalace_pythonu_pro_windows",
+                            "starsi_windows_nebo_existujici_python"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#instalace_pythonu_pro_windows",
+                            "#starsi_windows_nebo_existujici_python",
+                            "https://www.python.org/downloads/",
+                            "naucse:static?filename=windows_32v64-bit.png",
+                            "naucse:static?filename=windows_add_python_to_path.png"
+                        ],
+                        "slug": "windows",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install/windows.md",
+                        "subtitle": "Windows",
+                        "title": "Instalace Pythonu – Windows",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/beginners/install/info.yml",
+                "static_files": {
+                    "windows_32v64-bit.png": {
+                        "path": "install/windows_32v64-bit.png"
+                    },
+                    "windows_add_python_to_path.png": {
+                        "path": "install/windows_add_python_to_path.png"
+                    }
+                },
+                "title": "Instalace Pythonu"
+            },
+            "beginners/install-editor": {
+                "pages": {
+                    "atom": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
+                        ],
+                        "content": {
+                            "path": "install-editor/atom.html"
+                        },
+                        "ids": [
+                            "instalace_atomu",
+                            "nacvik_odsazovani",
+                            "nastaveni"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#instalace_atomu",
+                            "#nacvik_odsazovani",
+                            "#nastaveni",
+                            "https://atom.io"
+                        ],
+                        "slug": "atom",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install-editor/atom.md",
+                        "subtitle": "Atom",
+                        "title": "Instalace Atomu",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    },
+                    "gedit": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
+                        ],
+                        "content": {
+                            "path": "install-editor/gedit.html"
+                        },
+                        "ids": [
+                            "instalace_geditu",
+                            "nacvik_odsazovani",
+                            "nastaveni"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#instalace_geditu",
+                            "#nacvik_odsazovani",
+                            "#nastaveni",
+                            "https://wiki.gnome.org/Apps/Gedit",
+                            "naucse:static?filename=gedit_indent.png",
+                            "naucse:static?filename=gedit_linenums.png",
+                            "naucse:static?filename=gedit_prefs.png"
+                        ],
+                        "slug": "gedit",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install-editor/gedit.md",
+                        "subtitle": "Gedit",
+                        "title": "Instalace Geditu",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    },
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
+                        ],
+                        "content": {
+                            "path": "install-editor/index.html"
+                        },
+                        "ids": [
+                            "co_programatorsky_editor_umi",
+                            "ide",
+                            "instalace_editoru",
+                            "volba_a_nastaveni_editoru"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#co_programatorsky_editor_umi",
+                            "#ide",
+                            "#instalace_editoru",
+                            "#volba_a_nastaveni_editoru",
+                            "https://eclipse.org/",
+                            "https://www.jetbrains.com/pycharm/",
+                            "https://www.kdevelop.org/",
+                            "naucse:page?lesson=beginners/install-editor&page=atom",
+                            "naucse:page?lesson=beginners/install-editor&page=gedit",
+                            "naucse:page?lesson=beginners/install-editor&page=kate",
+                            "naucse:page?lesson=beginners/install-editor&page=notepad-plus-plus",
+                            "naucse:page?lesson=beginners/install-editor&page=others",
+                            "naucse:page?lesson=beginners/install-editor&page=vscode"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install-editor/index.md",
+                        "title": "Instalace editoru",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    },
+                    "kate": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
+                        ],
+                        "content": {
+                            "path": "install-editor/kate.html"
+                        },
+                        "ids": [
+                            "instalace_kate",
+                            "nacvik_odsazovani",
+                            "nastaveni"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#instalace_kate",
+                            "#nacvik_odsazovani",
+                            "#nastaveni",
+                            "https://kate-editor.org/get-it/"
+                        ],
+                        "slug": "kate",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install-editor/kate.md",
+                        "subtitle": "Kate",
+                        "title": "Instalace Kate",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    },
+                    "notepad-plus-plus": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
+                        ],
+                        "content": {
+                            "path": "install-editor/notepad-plus-plus.html"
+                        },
+                        "ids": [
+                            "instalace_notepadu",
+                            "nacvik_odsazovani",
+                            "nastaveni"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#instalace_notepadu",
+                            "#nacvik_odsazovani",
+                            "#nastaveni",
+                            "https://notepad-plus-plus.org/"
+                        ],
+                        "slug": "notepad-plus-plus",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install-editor/notepad-plus-plus.md",
+                        "subtitle": "Notepad++",
+                        "title": "Instalace Notepadu++",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    },
+                    "others": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
+                        ],
+                        "content": {
+                            "path": "install-editor/others.html"
+                        },
+                        "ids": [
+                            "cislovani_radku",
+                            "instalace_editoru",
+                            "kontrola_stylu_zdrojoveho_kodu",
+                            "nacvik_odsazovani",
+                            "nastaveni",
+                            "obarvovani",
+                            "odsazovani"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#cislovani_radku",
+                            "#instalace_editoru",
+                            "#kontrola_stylu_zdrojoveho_kodu",
+                            "#nacvik_odsazovani",
+                            "#nastaveni",
+                            "#obarvovani",
+                            "#odsazovani",
+                            "https://www.python.org/dev/peps/pep-0008/"
+                        ],
+                        "slug": "others",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install-editor/others.md",
+                        "subtitle": "Nastavení",
+                        "title": "Nastavení editoru",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    },
+                    "vscode": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2017, Tomáš Roj (2019)"
+                        ],
+                        "content": {
+                            "path": "install-editor/vscode.html"
+                        },
+                        "ids": [
+                            "instalace_instalace_visual_studio_code",
+                            "nacvik_odsazovani",
+                            "nastaveni",
+                            "odesilani_telemetrickych_dat",
+                            "stazeni_a_instalace"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#instalace_instalace_visual_studio_code",
+                            "#nacvik_odsazovani",
+                            "#nastaveni",
+                            "#odesilani_telemetrickych_dat",
+                            "#stazeni_a_instalace",
+                            "https://code.visualstudio.com/",
+                            "https://code.visualstudio.com/docs/supporting/faq#_how-to-disable-telemetry-reporting",
+                            "https://privacy.microsoft.com/en-us/privacystatement"
+                        ],
+                        "slug": "vscode",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/install-editor/vscode.md",
+                        "subtitle": "Visual Studio Code",
+                        "title": "Instalace Visual Studio Code",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/beginners/install-editor/info.yml",
+                "static_files": {
+                    "gedit_indent.png": {
+                        "path": "install-editor/gedit_indent.png"
+                    },
+                    "gedit_linenums.png": {
+                        "path": "install-editor/gedit_linenums.png"
+                    },
+                    "gedit_prefs.png": {
+                        "path": "install-editor/gedit_prefs.png"
+                    }
+                },
+                "title": "Instalace editoru"
+            },
+            "beginners/venv-setup": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2014-2018."
+                        ],
+                        "content": {
+                            "path": "venv-setup/index.html"
+                        },
+                        "ids": [
+                            "adresar_pro_kazdou_lekci",
+                            "aktivace_virtualniho_prostredi",
+                            "nastaveni_prostredi",
+                            "prepnuti",
+                            "priprava_adresare",
+                            "virtualni_prostredi"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#adresar_pro_kazdou_lekci",
+                            "#aktivace_virtualniho_prostredi",
+                            "#nastaveni_prostredi",
+                            "#prepnuti",
+                            "#priprava_adresare",
+                            "#virtualni_prostredi",
+                            "naucse:static?filename=dirs-00.png"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/beginners/venv-setup/index.md",
+                        "title": "Nastavení prostředí",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/beginners/venv-setup/info.yml",
+                "static_files": {
+                    "dirs-00.png": {
+                        "path": "venv-setup/dirs-00.png"
+                    },
+                    "dirs.png": {
+                        "path": "venv-setup/dirs.png"
+                    }
+                },
+                "title": "Nastavení prostředí"
+            },
+            "fast-track/bool": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "bool/index.html"
+                        },
+                        "ids": [
+                            "logika",
+                            "porovnavani_veci",
+                            "pravdivostni_hodnoty",
+                            "pritomnost",
+                            "shrnuti",
+                            "solution-0"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#logika",
+                            "#porovnavani_veci",
+                            "#pravdivostni_hodnoty",
+                            "#pritomnost",
+                            "#shrnuti",
+                            "naucse:solution?solution=0"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"mi\">1</span> <span class=\"o\">==</span> <span class=\"s1\">&#39;krajta&#39;</span>\n<span class=\"go\">False</span>\n</pre></div><p>Jablka a hrušky nemůžeš porovnávat, ale můžeš si potvrdit že jsou to dvě různé\nvěci.</p>"
+                            }
+                        ],
+                        "source_file": "lessons/fast-track/bool/index.md",
+                        "title": "Porovnávání a logika",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/bool/info.yml",
+                "static_files": {},
+                "title": "Porovnávání a logika"
+            },
+            "fast-track/class": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2015-2019."
+                        ],
+                        "content": {
+                            "path": "class/index.html"
+                        },
+                        "ids": [
+                            "atributy",
+                            "parametr_codeselfcode",
+                            "shrnuti",
+                            "tridy"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#atributy",
+                            "#parametr_codeselfcode",
+                            "#shrnuti",
+                            "#tridy"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/fast-track/class/index.md",
+                        "title": "Třídy",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/class/info.yml",
+                "static_files": {},
+                "title": "Třídy"
+            },
+            "fast-track/conversion": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "conversion/index.html"
+                        },
+                        "ids": [
+                            "prevadeni_typu",
+                            "solution-0"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#prevadeni_typu",
+                            "naucse:solution?solution=0"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<p>Nastane chyba!</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"nb\">int</span><span class=\"p\">(</span><span class=\"s1\">&#39;ahoj&#39;</span><span class=\"p\">)</span>\n<span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;&lt;stdin&gt;&quot;</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"gr\">ValueError</span>: <span class=\"n\">invalid literal for int() with base 10: &#39;ahoj&#39;</span>\n</pre></div><p>Hláška obsahuje užitečné informace, i když je k nim potřeba angličtina\na pokročilejší znalost (infor)matiky.\nV doslovnějším překladu hláška zní <em>Chyba hodnoty: špatný zápis celého čísla\nv desítkové soustavě: <code>'ahoj'</code></em>.\nDůležité je ale hlavně to <code>ValueError</code>, chyba hodnoty.</p>"
+                            }
+                        ],
+                        "source_file": "lessons/fast-track/conversion/index.md",
+                        "title": "Převádění typů",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/conversion/info.yml",
+                "static_files": {},
+                "title": "Převádění typů"
+            },
+            "fast-track/def": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "def/index.html"
+                        },
+                        "ids": [
+                            "parametry",
+                            "shrnuti",
+                            "solution-0",
+                            "solution-1",
+                            "solution-2",
+                            "solution-3",
+                            "solution-4",
+                            "vlastni_funkce",
+                            "vraceni"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#parametry",
+                            "#shrnuti",
+                            "#vlastni_funkce",
+                            "#vraceni",
+                            "naucse:solution?solution=0",
+                            "naucse:solution?solution=1",
+                            "naucse:solution?solution=2",
+                            "naucse:solution?solution=3",
+                            "naucse:solution?solution=4"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<p>Každé volání spustí tělo funkce znovu.</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp gp-VirtualEnv\">(venv)</span> <span class=\"gp\">$ </span>python<span class=\"w\"> </span>python_intro.py\n<span class=\"go\">Ahoj!</span>\n<span class=\"go\">Jak se máš?</span>\n<span class=\"go\">Ahoj!</span>\n<span class=\"go\">Jak se máš?</span>\n<span class=\"go\">Ahoj!</span>\n<span class=\"go\">Jak se máš?</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;&lt;stdin&gt;&quot;</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"gr\">NameError</span>: <span class=\"n\">name &#39;pozdrav&#39; is not defined</span>\n</pre></div><p>Python si postěžuje na <code>NameError</code> – nezná nic jménem <code>pozdrav</code>.</p>\n<p>Python totiž program čte odzhora dolů.\nAž příkazem <code>def</code> se „naučí\" jak zdravit.\nPředtím, než se k příkazu <code>def</code> dostane, funkce neexistuje.</p>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"k\">def</span> <span class=\"nf\">pozdrav</span><span class=\"p\">(</span><span class=\"n\">meno</span><span class=\"p\">):</span>\n    <span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"s1\">&#39;Vitam ťa,&#39;</span><span class=\"p\">,</span> <span class=\"n\">meno</span><span class=\"p\">)</span>\n\n<span class=\"n\">pozdrav</span><span class=\"p\">(</span><span class=\"nb\">input</span><span class=\"p\">(</span><span class=\"s1\">&#39;Ako sa voláš? &#39;</span><span class=\"p\">))</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"k\">def</span> <span class=\"nf\">pozdrav</span><span class=\"p\">(</span><span class=\"n\">meno</span><span class=\"p\">):</span>\n    <span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"s1\">&#39;Vitam ťa,&#39;</span><span class=\"p\">,</span> <span class=\"n\">meno</span><span class=\"p\">)</span>\n\n<span class=\"n\">pozdrav</span><span class=\"p\">()</span>\n</pre></div><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;&lt;stdin&gt;&quot;</span>, line <span class=\"m\">9</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"gr\">TypeError</span>: <span class=\"n\">pozdrav() missing 1 required positional argument: &#39;meno&#39;</span>\n</pre></div><p>Python si stěžuje na <code>TypeError</code> – funkce <code>pozdrav</code> nedostala povinný\nargument <code>meno</code>.</p>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"k\">def</span> <span class=\"nf\">paty_pad</span><span class=\"p\">(</span><span class=\"n\">jmeno</span><span class=\"p\">):</span>\n    <span class=\"k\">if</span> <span class=\"n\">jmeno</span> <span class=\"o\">==</span> <span class=\"s1\">&#39;Hubert&#39;</span><span class=\"p\">:</span>\n        <span class=\"k\">return</span> <span class=\"s1\">&#39;Huberte&#39;</span>\n    <span class=\"k\">elif</span> <span class=\"n\">jmeno</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span> <span class=\"o\">==</span> <span class=\"s1\">&#39;a&#39;</span><span class=\"p\">:</span>\n        <span class=\"k\">return</span> <span class=\"n\">jmeno</span><span class=\"p\">[:</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span> <span class=\"o\">+</span> <span class=\"s1\">&#39;o&#39;</span>\n    <span class=\"k\">else</span><span class=\"p\">:</span>\n        <span class=\"k\">return</span> <span class=\"n\">jmeno</span>\n\n<span class=\"k\">def</span> <span class=\"nf\">pozdrav</span><span class=\"p\">(</span><span class=\"n\">jmeno</span><span class=\"p\">):</span>\n    <span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"s1\">&#39;Vítam tě,&#39;</span><span class=\"p\">,</span> <span class=\"n\">paty_pad</span><span class=\"p\">(</span><span class=\"n\">jmeno</span><span class=\"p\">))</span>\n\n<span class=\"n\">pozdrav</span><span class=\"p\">(</span><span class=\"s1\">&#39;Hubert&#39;</span><span class=\"p\">)</span>\n<span class=\"n\">pozdrav</span><span class=\"p\">(</span><span class=\"s1\">&#39;Ola&#39;</span><span class=\"p\">)</span>\n<span class=\"n\">pozdrav</span><span class=\"p\">(</span><span class=\"s1\">&#39;Soňa&#39;</span><span class=\"p\">)</span>\n</pre></div>"
+                            }
+                        ],
+                        "source_file": "lessons/fast-track/def/index.md",
+                        "title": "Vlastní funkce",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/def/info.yml",
+                "static_files": {},
+                "title": "Vlastní funkce"
+            },
+            "fast-track/dict": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "dict/index.html"
+                        },
+                        "ids": [
+                            "meneni_slovniku",
+                            "shrnuti",
+                            "slovniky"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#meneni_slovniku",
+                            "#shrnuti",
+                            "#slovniky"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/fast-track/dict/index.md",
+                        "title": "Slovníky",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/dict/info.yml",
+                "static_files": {},
+                "title": "Slovníky"
+            },
+            "fast-track/for": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "for/index.html"
+                        },
+                        "ids": [
+                            "cykly",
+                            "opakuj_varnvar-krat",
+                            "shrnuti"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#cykly",
+                            "#opakuj_varnvar-krat",
+                            "#shrnuti"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/fast-track/for/index.md",
+                        "title": "Cykly",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/for/info.yml",
+                "static_files": {},
+                "title": "Cykly"
+            },
+            "fast-track/if": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "if/index.html"
+                        },
+                        "ids": [
+                            "jinak",
+                            "kdyz_tak",
+                            "odsazovani",
+                            "podminky",
+                            "shrnuti",
+                            "vice_moznosti"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#jinak",
+                            "#kdyz_tak",
+                            "#odsazovani",
+                            "#podminky",
+                            "#shrnuti",
+                            "#vice_moznosti"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/fast-track/if/index.md",
+                        "title": "Podmínky",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/if/info.yml",
+                "static_files": {},
+                "title": "Podmínky"
+            },
+            "fast-track/list": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "list/index.html"
+                        },
+                        "ids": [
+                            "odstranovani",
+                            "pridavani_do_seznamu",
+                            "rezani",
+                            "rezani_retezcu",
+                            "seznamy",
+                            "shrnuti",
+                            "solution-0",
+                            "solution-1",
+                            "solution-2",
+                            "solution-3",
+                            "solution-4",
+                            "solution-5",
+                            "vybirani_prvku"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#odstranovani",
+                            "#pridavani_do_seznamu",
+                            "#rezani",
+                            "#rezani_retezcu",
+                            "#seznamy",
+                            "#shrnuti",
+                            "#vybirani_prvku",
+                            "naucse:solution?solution=0",
+                            "naucse:solution?solution=1",
+                            "naucse:solution?solution=2",
+                            "naucse:solution?solution=3",
+                            "naucse:solution?solution=4",
+                            "naucse:solution?solution=5"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">loterie</span><span class=\"p\">)</span>\n<span class=\"go\">6</span>\n</pre></div><p>Funkce <code>len()</code> umí zjistit nejen délku řetězce, ale i délku seznamu – tedy\npočet jeho prvků.</p>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span>\n<span class=\"go\">[59, 42, 30, 19, 12, 3, 199]</span>\n<span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span><span class=\"p\">[</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n<span class=\"go\">42</span>\n</pre></div><p>Ne, dostaneš druhý prvek.</p>\n<p>Programátoři počítají od nuly.\nChceš li tedy první prvek, popros Python o prvek číslo nula:</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span>\n<span class=\"go\">42</span>\n</pre></div><p>Je to zpočátku divné, ale dá se na to zvyknout.</p>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span>\n<span class=\"go\">[59, 42, 30, 19, 12, 3, 199]</span>\n\n<span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span><span class=\"p\">[</span><span class=\"mi\">3</span><span class=\"p\">]</span>\n<span class=\"go\">19</span>\n</pre></div><p>Index 3 označuje čtvrtý prvek.</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span><span class=\"p\">[</span><span class=\"mi\">7</span><span class=\"p\">]</span>\n<span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;&lt;stdin&gt;&quot;</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"gr\">IndexError</span>: <span class=\"n\">list index out of range</span>\n</pre></div><p>Prvek s indexem 100 v seznamu není – nastane chyba.</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span><span class=\"p\">[</span><span class=\"mi\">1000</span><span class=\"p\">]</span>\n<span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;&lt;stdin&gt;&quot;</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"gr\">IndexError</span>: <span class=\"n\">list index out of range</span>\n</pre></div><p>Prvek s indexem 7 v seznamu taky není.</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n<span class=\"go\">199</span>\n</pre></div><p>Index -1 označuje <em>poslední</em> prvek.</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">2</span><span class=\"p\">]</span>\n<span class=\"go\">3</span>\n</pre></div><p>Index -2 označuje předposlední prvek.</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">6</span><span class=\"p\">]</span>\n<span class=\"go\">42</span>\n</pre></div><p>Index -6 označuje šestý prvek od konce.</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">100</span><span class=\"p\">]</span>\n<span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;&lt;stdin&gt;&quot;</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"gr\">IndexError</span>: <span class=\"n\">list index out of range</span>\n</pre></div><p>Stý prvek od konce v seznamu není. Nastane chyba.</p>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"k\">del</span> <span class=\"n\">loterie</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n<span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">loterie</span>\n<span class=\"go\">[42, 30, 19, 12, 3]</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<p>Poslední číslo má index -1, vyberu tedy prvky do -1:</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">cisla</span><span class=\"p\">[:</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n<span class=\"go\">[&#39;První&#39;, &#39;Druhý&#39;, &#39;Třetí&#39;]</span>\n</pre></div><p>Taky v zápisu pro vybrání všeho kromě posledního prvku vidíš smajlík?\n[:-1]</p>"
+                            },
+                            {
+                                "content": "<p>Vezmi jméno až po poslední písmeno a přidej <code>'y'</code>. Například:</p>\n<div class=\"highlight\"><pre><span></span><span class=\"o\">&gt;&gt;&gt;</span> <span class=\"n\">jmeno</span> <span class=\"o\">=</span> <span class=\"s1\">&#39;Růžena&#39;</span>\n<span class=\"o\">&gt;&gt;&gt;</span> <span class=\"n\">jmeno</span><span class=\"p\">[:</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span> <span class=\"o\">+</span> <span class=\"s1\">&#39;y&#39;</span>\n<span class=\"s1\">&#39;Růženy&#39;</span>\n<span class=\"o\">&gt;&gt;&gt;</span> <span class=\"n\">jmeno</span> <span class=\"o\">=</span> <span class=\"s1\">&#39;Krystýna&#39;</span>\n<span class=\"o\">&gt;&gt;&gt;</span> <span class=\"n\">jmeno</span><span class=\"p\">[:</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span> <span class=\"o\">+</span> <span class=\"s1\">&#39;y&#39;</span>\n<span class=\"s1\">&#39;Krystýny&#39;</span>\n</pre></div>"
+                            }
+                        ],
+                        "source_file": "lessons/fast-track/list/index.md",
+                        "title": "Seznamy",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/list/info.yml",
+                "static_files": {},
+                "title": "Seznamy"
+            },
+            "fast-track/pyglet": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2015-2018."
+                        ],
+                        "content": {
+                            "path": "pyglet/index.html"
+                        },
+                        "ids": [
+                            "animace",
+                            "cely_program",
+                            "dalsi_udalosti",
+                            "grafika",
+                            "kliknuti_mysi",
+                            "kostra_programu",
+                            "kresleni",
+                            "obsluha_udalosti",
+                            "solution-0",
+                            "stisk_klavesy"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#animace",
+                            "#cely_program",
+                            "#dalsi_udalosti",
+                            "#grafika",
+                            "#kliknuti_mysi",
+                            "#kostra_programu",
+                            "#kresleni",
+                            "#obsluha_udalosti",
+                            "#stisk_klavesy",
+                            "https://cs.wikipedia.org/wiki/Sn%C3%ADmkov%C3%A1_frekvence",
+                            "https://pyglet.readthedocs.io/en/latest/modules/window.html#pyglet.window.Window.on_activate",
+                            "https://pyglet.readthedocs.io/en/latest/modules/window_key.html#key-constants",
+                            "https://pyglet.readthedocs.io/en/latest/programming_guide/keyboard.html#motion-events",
+                            "naucse:solution?solution=0"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"nd\">@window</span><span class=\"o\">.</span><span class=\"n\">event</span>\n<span class=\"k\">def</span> <span class=\"nf\">on_text</span><span class=\"p\">(</span><span class=\"n\">text</span><span class=\"p\">):</span>\n    <span class=\"n\">label</span><span class=\"o\">.</span><span class=\"n\">text</span> <span class=\"o\">=</span> <span class=\"n\">label</span><span class=\"o\">.</span><span class=\"n\">text</span> <span class=\"o\">+</span> <span class=\"n\">text</span>\n</pre></div>"
+                            }
+                        ],
+                        "source_file": "lessons/fast-track/pyglet/index.md",
+                        "title": "Úvod do Pygletu",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/pyglet/info.yml",
+                "static_files": {},
+                "title": "Úvod do Pygletu"
+            },
+            "fast-track/random": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies Brno napsal Petr Viktorin, 2019."
+                        ],
+                        "content": {
+                            "path": "random/index.html"
+                        },
+                        "ids": [
+                            "nahoda",
+                            "nahodny_vyber",
+                            "shrnuti",
+                            "solution-0"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#nahoda",
+                            "#nahodny_vyber",
+                            "#shrnuti",
+                            "naucse:solution?solution=0"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<p>Čísla od 0 do 5 – šestku ne.\nProgramátoři totiž počítají od nuly, a když počítáš šest čísel od nuly,\ndostaneš se jen k pětce.</p>\n<p>Když budeš chtít „házet kostkou“ – vybírat čísla od 1 do 6 – můžeš napsat:</p>\n<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"kn\">from</span> <span class=\"nn\">random</span> <span class=\"kn\">import</span> <span class=\"n\">randrange</span>\n<span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">randrange</span><span class=\"p\">(</span><span class=\"mi\">6</span><span class=\"p\">)</span> <span class=\"o\">+</span> <span class=\"mi\">1</span>\n<span class=\"go\">4</span>\n</pre></div>"
+                            }
+                        ],
+                        "source_file": "lessons/fast-track/random/index.md",
+                        "title": "Náhoda",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/random/info.yml",
+                "static_files": {},
+                "title": "Náhoda"
+            },
+            "fast-track/repl": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "repl/index.html"
+                        },
+                        "ids": [
+                            "chyby",
+                            "interaktivni_rezim_pythonu",
+                            "shrnuti"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#chyby",
+                            "#interaktivni_rezim_pythonu",
+                            "#shrnuti"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/fast-track/repl/index.md",
+                        "title": "Interaktivní režim Pythonu",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/repl/info.yml",
+                "static_files": {},
+                "title": "Interaktivní režim Pythonu"
+            },
+            "fast-track/script": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "script/index.html"
+                        },
+                        "ids": [
+                            "komentare",
+                            "shrnuti",
+                            "uloz_to",
+                            "vstup",
+                            "vystup"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#komentare",
+                            "#shrnuti",
+                            "#uloz_to",
+                            "#vstup",
+                            "#vystup",
+                            "naucse:page?lesson=beginners/install-editor"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/fast-track/script/index.md",
+                        "title": "Ulož to!",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/script/info.yml",
+                "static_files": {},
+                "title": "Ulož to!"
+            },
+            "fast-track/str": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "str/index.html"
+                        },
+                        "ids": [
+                            "funkce_a_metody",
+                            "retezce",
+                            "shrnuti",
+                            "skladani_vyrazu",
+                            "solution-0",
+                            "solution-1",
+                            "solution-2",
+                            "uvozovani"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#funkce_a_metody",
+                            "#retezce",
+                            "#shrnuti",
+                            "#skladani_vyrazu",
+                            "#uvozovani",
+                            "naucse:solution?solution=0",
+                            "naucse:solution?solution=1",
+                            "naucse:solution?solution=2",
+                            "naucse:static?filename=quote-comic.svg"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"nb\">type</span><span class=\"p\">(</span><span class=\"mi\">123</span><span class=\"p\">)</span>\n<span class=\"go\">&lt;class &#39;int&#39;&gt;</span>\n<span class=\"gp\">&gt;&gt;&gt; </span><span class=\"nb\">type</span><span class=\"p\">(</span><span class=\"s1\">&#39;abc&#39;</span><span class=\"p\">)</span>\n<span class=\"go\">&lt;class &#39;str&#39;&gt;</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"s1\">&#39;Ola&#39;</span><span class=\"o\">.</span><span class=\"n\">lower</span><span class=\"p\">()</span>\n<span class=\"go\">&#39;ola&#39;</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<p><code>len('Ola') + 1</code> → <code>3 + 1</code> → <code>4</code></p>\n<p><code>'Já jsem ' + 'Ola'.upper()</code> → <code>'Já jsem ' + 'OLA'</code> → <code>'Já jsem OLA'</code></p>\n<p><code>len('Ola' * 3)</code> → <code>len('OlaOlaOla')</code> → <code>9</code></p>\n<p><code>len('Ola'.upper())</code> → <code>len('OLA')</code> → <code>3</code></p>"
+                            }
+                        ],
+                        "source_file": "lessons/fast-track/str/index.md",
+                        "title": "Řetězce",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/str/info.yml",
+                "static_files": {
+                    "quote-comic.svg": {
+                        "path": "str/quote-comic.svg"
+                    }
+                },
+                "title": "Řetězce"
+            },
+            "fast-track/tuple": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies CZ napsal Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "tuple/index.html"
+                        },
+                        "ids": [
+                            "shrnuti",
+                            "varnvar-tice",
+                            "zip"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#shrnuti",
+                            "#varnvar-tice",
+                            "#zip"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/fast-track/tuple/index.md",
+                        "title": "N-tice a rozbalování",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/tuple/info.yml",
+                "static_files": {},
+                "title": "N-tice a rozbalování"
+            },
+            "fast-track/variables": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Založeno na materiálech <a href=\"https://djangogirls.org/\">DjangoGirls</a>.",
+                            "Část této kapitoly je založena na kurzu <a href=\"https://github.com/ggcarrots/django-carrots\">Geek Girls Carrots</a>.",
+                            "Původní DjangoGirls tutoriál přeložila do češtiny skupina dobrovolníků.\nPoděkování patří hlavně: Davidovi (dakf), Kristýně Kumpánové,\nVeronice Gabrielové, Tomáši Ehrlichovi, Aničce Jaegerové,\nMatějovi Stuchlíkovi, Filipovi Sivákovi a Juraji M. Bezručkovi.",
+                            "Pro PyLadies CZ upravil Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "variables/index.html"
+                        },
+                        "ids": [
+                            "jmena_promennych",
+                            "promenne",
+                            "shrnuti",
+                            "solution-0",
+                            "solution-1"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#jmena_promennych",
+                            "#promenne",
+                            "#shrnuti",
+                            "naucse:solution?solution=0",
+                            "naucse:solution?solution=1"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">mesto</span> <span class=\"o\">=</span> <span class=\"s2\">&quot;Tokyo&quot;</span>\n<span class=\"gp\">&gt;&gt;&gt; </span><span class=\"n\">mmesto</span>\n<span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;&lt;stdin&gt;&quot;</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"gr\">NameError</span>: <span class=\"n\">name &#39;mmesto&#39; is not defined</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<ul>\n<li><code>tlacitko5</code> ano.</li>\n<li><code>5tlacitko</code> ne: jména musí začínat písmenkem.</li>\n<li><code>tlačítko</code> ano, ale diakritice (<code>č</code>, <code>í</code>) je lepší se vyhnout.</li>\n<li><code>oblibena barva</code> ne: to není jedno jméno, ale dvě!</li>\n<li><code>oblibena-barva</code> taky ne: to Python bere jako odečtení dvou proměnných\n(<code>oblibena</code> mínus <code>barva</code>).</li>\n<li><code>oblibenaBarva</code> ano, ale velkým písmenům je lepší se vyhnout.</li>\n</ul>"
+                            }
+                        ],
+                        "source_file": "lessons/fast-track/variables/index.md",
+                        "title": "Proměnné",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/fast-track/variables/info.yml",
+                "static_files": {},
+                "title": "Proměnné"
+            },
+            "snake/drawing": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies CZ napsal Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "drawing/index.html"
+                        },
+                        "ids": [
+                            "housenka",
+                            "jak_vybrat_ctverecky",
+                            "krmeni",
+                            "logicke_a_zobrazovaci_souradnice",
+                            "nacitani_kousku_hada",
+                            "nakresli_mi_hada",
+                            "profi_software",
+                            "reprezentace_hada",
+                            "sazeni_ctverecku",
+                            "sazeni_hada",
+                            "solution-0",
+                            "solution-1",
+                            "solution-2",
+                            "solution-3"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#housenka",
+                            "#jak_vybrat_ctverecky",
+                            "#krmeni",
+                            "#logicke_a_zobrazovaci_souradnice",
+                            "#nacitani_kousku_hada",
+                            "#nakresli_mi_hada",
+                            "#profi_software",
+                            "#reprezentace_hada",
+                            "#sazeni_ctverecku",
+                            "#sazeni_hada",
+                            "naucse:page?lesson=snake/logic",
+                            "naucse:page?lesson=snake/tile-selection",
+                            "naucse:solution?solution=0",
+                            "naucse:solution?solution=1",
+                            "naucse:solution?solution=2",
+                            "naucse:solution?solution=3",
+                            "naucse:static?filename=apple.png",
+                            "naucse:static?filename=caterpillar.png",
+                            "naucse:static?filename=coords-blocks.svg",
+                            "naucse:static?filename=coords-px.svg",
+                            "naucse:static?filename=coords.svg",
+                            "naucse:static?filename=green.png",
+                            "naucse:static?filename=screenshot-dir.png",
+                            "naucse:static?filename=snake-tiles.png",
+                            "naucse:static?filename=snake-tiles.zip",
+                            "naucse:static?filename=snake-tiles/end-end.png",
+                            "naucse:static?filename=tile-selection.svg"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"kn\">import</span> <span class=\"nn\">pyglet</span>\n\n<span class=\"n\">TILE_SIZE</span> <span class=\"o\">=</span> <span class=\"mi\">64</span>\n\n<span class=\"k\">class</span> <span class=\"nc\">GameState</span><span class=\"p\">:</span>\n    <span class=\"k\">def</span> <span class=\"nf\">initialize</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span> <span class=\"o\">=</span> <span class=\"p\">[(</span><span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">2</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">3</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">4</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">5</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">4</span><span class=\"p\">,</span> <span class=\"mi\">5</span><span class=\"p\">)]</span>\n\n<span class=\"n\">state</span> <span class=\"o\">=</span> <span class=\"n\">GameState</span><span class=\"p\">()</span>\n<span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">initialize</span><span class=\"p\">()</span>\n\n<span class=\"n\">green_image</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">image</span><span class=\"o\">.</span><span class=\"n\">load</span><span class=\"p\">(</span><span class=\"s1\">&#39;green.png&#39;</span><span class=\"p\">)</span>\n\n<span class=\"n\">window</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">Window</span><span class=\"p\">()</span>\n\n<span class=\"nd\">@window</span><span class=\"o\">.</span><span class=\"n\">event</span>\n<span class=\"k\">def</span> <span class=\"nf\">on_draw</span><span class=\"p\">():</span>\n    <span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">clear</span><span class=\"p\">()</span>\n    <span class=\"n\">green_image</span><span class=\"o\">.</span><span class=\"n\">blit</span><span class=\"p\">(</span><span class=\"mi\">4</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"mi\">5</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span>\n                     <span class=\"n\">width</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">height</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">)</span>\n\n<span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">app</span><span class=\"o\">.</span><span class=\"n\">run</span><span class=\"p\">()</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"kn\">import</span> <span class=\"nn\">pyglet</span>\n\n<span class=\"n\">TILE_SIZE</span> <span class=\"o\">=</span> <span class=\"mi\">64</span>\n\n<span class=\"k\">class</span> <span class=\"nc\">GameState</span><span class=\"p\">:</span>\n    <span class=\"k\">def</span> <span class=\"nf\">initialize</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span> <span class=\"o\">=</span> <span class=\"p\">[(</span><span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">2</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">3</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">4</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">5</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">4</span><span class=\"p\">,</span> <span class=\"mi\">5</span><span class=\"p\">)]</span>\n\n    <span class=\"k\">def</span> <span class=\"nf\">draw</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"k\">for</span> <span class=\"n\">x</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">:</span>\n            <span class=\"n\">green_image</span><span class=\"o\">.</span><span class=\"n\">blit</span><span class=\"p\">(</span><span class=\"n\">x</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span>\n                             <span class=\"n\">width</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">height</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">)</span>\n\n<span class=\"n\">state</span> <span class=\"o\">=</span> <span class=\"n\">GameState</span><span class=\"p\">()</span>\n<span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">initialize</span><span class=\"p\">()</span>\n\n<span class=\"n\">green_image</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">image</span><span class=\"o\">.</span><span class=\"n\">load</span><span class=\"p\">(</span><span class=\"s1\">&#39;green.png&#39;</span><span class=\"p\">)</span>\n\n<span class=\"n\">window</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">Window</span><span class=\"p\">()</span>\n\n<span class=\"nd\">@window</span><span class=\"o\">.</span><span class=\"n\">event</span>\n<span class=\"k\">def</span> <span class=\"nf\">on_draw</span><span class=\"p\">():</span>\n    <span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">clear</span><span class=\"p\">()</span>\n    <span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">draw</span><span class=\"p\">()</span>\n\n<span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">app</span><span class=\"o\">.</span><span class=\"n\">run</span><span class=\"p\">()</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"kn\">import</span> <span class=\"nn\">pyglet</span>\n\n<span class=\"n\">TILE_SIZE</span> <span class=\"o\">=</span> <span class=\"mi\">64</span>\n\n<span class=\"k\">class</span> <span class=\"nc\">GameState</span><span class=\"p\">:</span>\n    <span class=\"k\">def</span> <span class=\"nf\">initialize</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span> <span class=\"o\">=</span> <span class=\"p\">[(</span><span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">2</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">3</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">4</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">5</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">4</span><span class=\"p\">,</span> <span class=\"mi\">5</span><span class=\"p\">)]</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span> <span class=\"o\">=</span> <span class=\"p\">[(</span><span class=\"mi\">2</span><span class=\"p\">,</span> <span class=\"mi\">0</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">5</span><span class=\"p\">,</span> <span class=\"mi\">1</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"mi\">4</span><span class=\"p\">)]</span>\n\n    <span class=\"k\">def</span> <span class=\"nf\">draw</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"k\">for</span> <span class=\"n\">x</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">:</span>\n            <span class=\"n\">green_image</span><span class=\"o\">.</span><span class=\"n\">blit</span><span class=\"p\">(</span><span class=\"n\">x</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span>\n                             <span class=\"n\">width</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">height</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">)</span>\n        <span class=\"k\">for</span> <span class=\"n\">x</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"p\">:</span>\n            <span class=\"n\">apple_image</span><span class=\"o\">.</span><span class=\"n\">blit</span><span class=\"p\">(</span><span class=\"n\">x</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span>\n                             <span class=\"n\">width</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">height</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">)</span>\n\n<span class=\"n\">state</span> <span class=\"o\">=</span> <span class=\"n\">GameState</span><span class=\"p\">()</span>\n<span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">initialize</span><span class=\"p\">()</span>\n\n<span class=\"n\">apple_image</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">image</span><span class=\"o\">.</span><span class=\"n\">load</span><span class=\"p\">(</span><span class=\"s1\">&#39;apple.png&#39;</span><span class=\"p\">)</span>\n<span class=\"n\">green_image</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">image</span><span class=\"o\">.</span><span class=\"n\">load</span><span class=\"p\">(</span><span class=\"s1\">&#39;green.png&#39;</span><span class=\"p\">)</span>\n\n<span class=\"n\">window</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">Window</span><span class=\"p\">()</span>\n\n<span class=\"nd\">@window</span><span class=\"o\">.</span><span class=\"n\">event</span>\n<span class=\"k\">def</span> <span class=\"nf\">on_draw</span><span class=\"p\">():</span>\n    <span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">clear</span><span class=\"p\">()</span>\n    <span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">draw</span><span class=\"p\">()</span>\n\n<span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">app</span><span class=\"o\">.</span><span class=\"n\">run</span><span class=\"p\">()</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"kn\">import</span> <span class=\"nn\">pyglet</span>\n\n<span class=\"n\">TILE_SIZE</span> <span class=\"o\">=</span> <span class=\"mi\">64</span>\n\n<span class=\"k\">class</span> <span class=\"nc\">GameState</span><span class=\"p\">:</span>\n    <span class=\"k\">def</span> <span class=\"nf\">initialize</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span> <span class=\"o\">=</span> <span class=\"p\">[(</span><span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">2</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">3</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">4</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"mi\">5</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">4</span><span class=\"p\">,</span> <span class=\"mi\">5</span><span class=\"p\">)]</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span> <span class=\"o\">=</span> <span class=\"p\">[(</span><span class=\"mi\">2</span><span class=\"p\">,</span> <span class=\"mi\">0</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">5</span><span class=\"p\">,</span> <span class=\"mi\">1</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"mi\">4</span><span class=\"p\">)]</span>\n\n    <span class=\"k\">def</span> <span class=\"nf\">draw</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"k\">for</span> <span class=\"n\">x</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">:</span>\n            <span class=\"n\">snake_tiles</span><span class=\"p\">[</span><span class=\"s1\">&#39;end-end&#39;</span><span class=\"p\">]</span><span class=\"o\">.</span><span class=\"n\">blit</span><span class=\"p\">(</span><span class=\"n\">x</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span>\n                                        <span class=\"n\">width</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">height</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">)</span>\n        <span class=\"k\">for</span> <span class=\"n\">x</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"p\">:</span>\n            <span class=\"n\">apple_image</span><span class=\"o\">.</span><span class=\"n\">blit</span><span class=\"p\">(</span><span class=\"n\">x</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span>\n                             <span class=\"n\">width</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">height</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">)</span>\n\n<span class=\"n\">state</span> <span class=\"o\">=</span> <span class=\"n\">GameState</span><span class=\"p\">()</span>\n<span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">initialize</span><span class=\"p\">()</span>\n\n<span class=\"n\">apple_image</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">image</span><span class=\"o\">.</span><span class=\"n\">load</span><span class=\"p\">(</span><span class=\"s1\">&#39;apple.png&#39;</span><span class=\"p\">)</span>\n<span class=\"n\">green_image</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">image</span><span class=\"o\">.</span><span class=\"n\">load</span><span class=\"p\">(</span><span class=\"s1\">&#39;green.png&#39;</span><span class=\"p\">)</span>\n<span class=\"n\">snake_tiles</span> <span class=\"o\">=</span> <span class=\"p\">{}</span>\n<span class=\"k\">for</span> <span class=\"n\">start</span> <span class=\"ow\">in</span> <span class=\"p\">[</span><span class=\"s1\">&#39;bottom&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;end&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;left&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;right&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;top&#39;</span><span class=\"p\">]:</span>\n    <span class=\"k\">for</span> <span class=\"n\">end</span> <span class=\"ow\">in</span> <span class=\"p\">[</span><span class=\"s1\">&#39;bottom&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;end&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;left&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;right&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;top&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;dead&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;tongue&#39;</span><span class=\"p\">]:</span>\n        <span class=\"n\">key</span> <span class=\"o\">=</span> <span class=\"n\">start</span> <span class=\"o\">+</span> <span class=\"s1\">&#39;-&#39;</span> <span class=\"o\">+</span> <span class=\"n\">end</span>\n        <span class=\"n\">image</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">image</span><span class=\"o\">.</span><span class=\"n\">load</span><span class=\"p\">(</span><span class=\"s1\">&#39;snake-tiles/&#39;</span> <span class=\"o\">+</span> <span class=\"n\">key</span> <span class=\"o\">+</span> <span class=\"s1\">&#39;.png&#39;</span><span class=\"p\">)</span>\n        <span class=\"n\">snake_tiles</span><span class=\"p\">[</span><span class=\"n\">key</span><span class=\"p\">]</span> <span class=\"o\">=</span> <span class=\"n\">image</span>\n\n<span class=\"n\">window</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">Window</span><span class=\"p\">()</span>\n\n<span class=\"nd\">@window</span><span class=\"o\">.</span><span class=\"n\">event</span>\n<span class=\"k\">def</span> <span class=\"nf\">on_draw</span><span class=\"p\">():</span>\n    <span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">clear</span><span class=\"p\">()</span>\n    <span class=\"c1\"># Lepší vykreslování (pro nás zatím kouzelné zaříkadlo)</span>\n    <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">gl</span><span class=\"o\">.</span><span class=\"n\">glEnable</span><span class=\"p\">(</span><span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">gl</span><span class=\"o\">.</span><span class=\"n\">GL_BLEND</span><span class=\"p\">)</span>\n    <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">gl</span><span class=\"o\">.</span><span class=\"n\">glBlendFunc</span><span class=\"p\">(</span><span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">gl</span><span class=\"o\">.</span><span class=\"n\">GL_SRC_ALPHA</span><span class=\"p\">,</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">gl</span><span class=\"o\">.</span><span class=\"n\">GL_ONE_MINUS_SRC_ALPHA</span><span class=\"p\">)</span>\n\n    <span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">draw</span><span class=\"p\">()</span>\n\n<span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">app</span><span class=\"o\">.</span><span class=\"n\">run</span><span class=\"p\">()</span>\n</pre></div>"
+                            }
+                        ],
+                        "source_file": "lessons/snake/drawing/index.md",
+                        "title": "Kreslení hada",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/snake/drawing/info.yml",
+                "static_files": {
+                    "apple.png": {
+                        "path": "drawing/apple.png"
+                    },
+                    "caterpillar.png": {
+                        "path": "drawing/caterpillar.png"
+                    },
+                    "coords-blocks.svg": {
+                        "path": "drawing/coords-blocks.svg"
+                    },
+                    "coords-px.svg": {
+                        "path": "drawing/coords-px.svg"
+                    },
+                    "coords.svg": {
+                        "path": "drawing/coords.svg"
+                    },
+                    "green.png": {
+                        "path": "drawing/green.png"
+                    },
+                    "red.png": {
+                        "path": "drawing/red.png"
+                    },
+                    "screenshot-dir.png": {
+                        "path": "drawing/screenshot-dir.png"
+                    },
+                    "screenshot-finished.png": {
+                        "path": "drawing/screenshot-finished.png"
+                    },
+                    "screenshot-initial.png": {
+                        "path": "drawing/screenshot-initial.png"
+                    },
+                    "snake-tiles.png": {
+                        "path": "drawing/snake-tiles.png"
+                    },
+                    "snake-tiles.zip": {
+                        "path": "drawing/snake-tiles.zip"
+                    },
+                    "snake-tiles/bottom-bottom.png": {
+                        "path": "drawing/snake-tiles/bottom-bottom.png"
+                    },
+                    "snake-tiles/bottom-dead.png": {
+                        "path": "drawing/snake-tiles/bottom-dead.png"
+                    },
+                    "snake-tiles/bottom-end.png": {
+                        "path": "drawing/snake-tiles/bottom-end.png"
+                    },
+                    "snake-tiles/bottom-left.png": {
+                        "path": "drawing/snake-tiles/bottom-left.png"
+                    },
+                    "snake-tiles/bottom-right.png": {
+                        "path": "drawing/snake-tiles/bottom-right.png"
+                    },
+                    "snake-tiles/bottom-tongue.png": {
+                        "path": "drawing/snake-tiles/bottom-tongue.png"
+                    },
+                    "snake-tiles/bottom-top.png": {
+                        "path": "drawing/snake-tiles/bottom-top.png"
+                    },
+                    "snake-tiles/end-bottom.png": {
+                        "path": "drawing/snake-tiles/end-bottom.png"
+                    },
+                    "snake-tiles/end-dead.png": {
+                        "path": "drawing/snake-tiles/end-dead.png"
+                    },
+                    "snake-tiles/end-end.png": {
+                        "path": "drawing/snake-tiles/end-end.png"
+                    },
+                    "snake-tiles/end-left.png": {
+                        "path": "drawing/snake-tiles/end-left.png"
+                    },
+                    "snake-tiles/end-right.png": {
+                        "path": "drawing/snake-tiles/end-right.png"
+                    },
+                    "snake-tiles/end-tongue.png": {
+                        "path": "drawing/snake-tiles/end-tongue.png"
+                    },
+                    "snake-tiles/end-top.png": {
+                        "path": "drawing/snake-tiles/end-top.png"
+                    },
+                    "snake-tiles/left-bottom.png": {
+                        "path": "drawing/snake-tiles/left-bottom.png"
+                    },
+                    "snake-tiles/left-dead.png": {
+                        "path": "drawing/snake-tiles/left-dead.png"
+                    },
+                    "snake-tiles/left-end.png": {
+                        "path": "drawing/snake-tiles/left-end.png"
+                    },
+                    "snake-tiles/left-left.png": {
+                        "path": "drawing/snake-tiles/left-left.png"
+                    },
+                    "snake-tiles/left-right.png": {
+                        "path": "drawing/snake-tiles/left-right.png"
+                    },
+                    "snake-tiles/left-tongue.png": {
+                        "path": "drawing/snake-tiles/left-tongue.png"
+                    },
+                    "snake-tiles/left-top.png": {
+                        "path": "drawing/snake-tiles/left-top.png"
+                    },
+                    "snake-tiles/right-bottom.png": {
+                        "path": "drawing/snake-tiles/right-bottom.png"
+                    },
+                    "snake-tiles/right-dead.png": {
+                        "path": "drawing/snake-tiles/right-dead.png"
+                    },
+                    "snake-tiles/right-end.png": {
+                        "path": "drawing/snake-tiles/right-end.png"
+                    },
+                    "snake-tiles/right-left.png": {
+                        "path": "drawing/snake-tiles/right-left.png"
+                    },
+                    "snake-tiles/right-right.png": {
+                        "path": "drawing/snake-tiles/right-right.png"
+                    },
+                    "snake-tiles/right-tongue.png": {
+                        "path": "drawing/snake-tiles/right-tongue.png"
+                    },
+                    "snake-tiles/right-top.png": {
+                        "path": "drawing/snake-tiles/right-top.png"
+                    },
+                    "snake-tiles/top-bottom.png": {
+                        "path": "drawing/snake-tiles/top-bottom.png"
+                    },
+                    "snake-tiles/top-dead.png": {
+                        "path": "drawing/snake-tiles/top-dead.png"
+                    },
+                    "snake-tiles/top-end.png": {
+                        "path": "drawing/snake-tiles/top-end.png"
+                    },
+                    "snake-tiles/top-left.png": {
+                        "path": "drawing/snake-tiles/top-left.png"
+                    },
+                    "snake-tiles/top-right.png": {
+                        "path": "drawing/snake-tiles/top-right.png"
+                    },
+                    "snake-tiles/top-tongue.png": {
+                        "path": "drawing/snake-tiles/top-tongue.png"
+                    },
+                    "snake-tiles/top-top.png": {
+                        "path": "drawing/snake-tiles/top-top.png"
+                    },
+                    "tile-selection.svg": {
+                        "path": "drawing/tile-selection.svg"
+                    }
+                },
+                "title": "Kreslení hada"
+            },
+            "snake/handling": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies CZ napsal Petr Viktorin, 2019."
+                        ],
+                        "content": {
+                            "path": "handling/index.html"
+                        },
+                        "ids": [
+                            "fronta_pokynu",
+                            "vylepseni_ovladani_hada",
+                            "zpatky_ni_krok"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#fronta_pokynu",
+                            "#vylepseni_ovladani_hada",
+                            "#zpatky_ni_krok"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/snake/handling/index.md",
+                        "title": "Vylepšené ovládání",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/snake/handling/info.yml",
+                "static_files": {},
+                "title": "Vylepšené ovládání"
+            },
+            "snake/logic": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies CZ napsal Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "logic/index.html"
+                        },
+                        "ids": [
+                            "a_to_je_vse",
+                            "co_dal",
+                            "konec",
+                            "krmeni",
+                            "logika_hry",
+                            "nove_jidlo",
+                            "ovladani",
+                            "pauza",
+                            "rozhybejme_hada",
+                            "solution-0",
+                            "solution-1",
+                            "solution-2",
+                            "solution-3",
+                            "solution-4",
+                            "solution-5",
+                            "solution-6",
+                            "solution-7",
+                            "solution-8",
+                            "zatim_dobry_ted_ale_narazime"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#a_to_je_vse",
+                            "#co_dal",
+                            "#konec",
+                            "#krmeni",
+                            "#logika_hry",
+                            "#nove_jidlo",
+                            "#ovladani",
+                            "#pauza",
+                            "#rozhybejme_hada",
+                            "#zatim_dobry_ted_ale_narazime",
+                            "https://pyglet.readthedocs.io/en/pyglet-1.3-maintenance/modules/window_key.html#key-constants",
+                            "naucse:page?lesson=snake/handling",
+                            "naucse:page?lesson=snake/toroid",
+                            "naucse:solution?solution=0",
+                            "naucse:solution?solution=1",
+                            "naucse:solution?solution=2",
+                            "naucse:solution?solution=3",
+                            "naucse:solution?solution=4",
+                            "naucse:solution?solution=5",
+                            "naucse:solution?solution=6",
+                            "naucse:solution?solution=7",
+                            "naucse:solution?solution=8",
+                            "naucse:static?filename=coord-vectors.svg"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<p>V metodě <code>move</code> je potřeba jinak nastavit proměnné <code>new_x</code> a <code>new_y</code>:</p>\n<p>Pro pohyb nahoru:</p>\n<div class=\"highlight\"><pre><span></span>        <span class=\"n\">new_x</span> <span class=\"o\">=</span> <span class=\"n\">old_x</span>\n        <span class=\"n\">new_y</span> <span class=\"o\">=</span> <span class=\"n\">old_y</span> <span class=\"o\">+</span> <span class=\"mi\">1</span>\n</pre></div><p>A dolů:</p>\n<div class=\"highlight\"><pre><span></span>        <span class=\"n\">new_x</span> <span class=\"o\">=</span> <span class=\"n\">old_x</span>\n        <span class=\"n\">new_y</span> <span class=\"o\">=</span> <span class=\"n\">old_y</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span>    <span class=\"k\">def</span> <span class=\"nf\">move</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"n\">old_x</span><span class=\"p\">,</span> <span class=\"n\">old_y</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n        <span class=\"n\">dir_x</span><span class=\"p\">,</span> <span class=\"n\">dir_y</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake_direction</span>\n        <span class=\"n\">new_x</span> <span class=\"o\">=</span> <span class=\"n\">old_x</span> <span class=\"o\">+</span> <span class=\"n\">dir_x</span>\n        <span class=\"n\">new_y</span> <span class=\"o\">=</span> <span class=\"n\">old_y</span> <span class=\"o\">+</span> <span class=\"n\">dir_y</span>\n\n        <span class=\"c1\"># Kontrola vylezení z hrací plochy</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_x</span> <span class=\"o\">&lt;</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n            <span class=\"n\">exit</span><span class=\"p\">(</span><span class=\"s1\">&#39;GAME OVER&#39;</span><span class=\"p\">)</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_y</span> <span class=\"o\">&lt;</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n            <span class=\"n\">exit</span><span class=\"p\">(</span><span class=\"s1\">&#39;GAME OVER&#39;</span><span class=\"p\">)</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_x</span> <span class=\"o\">&gt;=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">width</span><span class=\"p\">:</span>\n            <span class=\"n\">exit</span><span class=\"p\">(</span><span class=\"s1\">&#39;GAME OVER&#39;</span><span class=\"p\">)</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_y</span> <span class=\"o\">&gt;=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">height</span><span class=\"p\">:</span>\n            <span class=\"n\">exit</span><span class=\"p\">(</span><span class=\"s1\">&#39;GAME OVER&#39;</span><span class=\"p\">)</span>\n\n        <span class=\"n\">new_head</span> <span class=\"o\">=</span> <span class=\"n\">new_x</span><span class=\"p\">,</span> <span class=\"n\">new_y</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">new_head</span><span class=\"p\">)</span>\n        <span class=\"k\">del</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span>        <span class=\"k\">if</span> <span class=\"n\">new_head</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"p\">:</span>\n            <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"o\">.</span><span class=\"n\">remove</span><span class=\"p\">(</span><span class=\"n\">new_head</span><span class=\"p\">)</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span>    <span class=\"k\">def</span> <span class=\"nf\">move</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"n\">old_x</span><span class=\"p\">,</span> <span class=\"n\">old_y</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n        <span class=\"n\">dir_x</span><span class=\"p\">,</span> <span class=\"n\">dir_y</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake_direction</span>\n        <span class=\"n\">new_x</span> <span class=\"o\">=</span> <span class=\"n\">old_x</span> <span class=\"o\">+</span> <span class=\"n\">dir_x</span>\n        <span class=\"n\">new_y</span> <span class=\"o\">=</span> <span class=\"n\">old_y</span> <span class=\"o\">+</span> <span class=\"n\">dir_y</span>\n        <span class=\"n\">new_head</span> <span class=\"o\">=</span> <span class=\"n\">new_x</span><span class=\"p\">,</span> <span class=\"n\">new_y</span>\n\n        <span class=\"c1\"># Kontrola vylezení z hrací plochy</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_x</span> <span class=\"o\">&lt;</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n            <span class=\"n\">exit</span><span class=\"p\">(</span><span class=\"s1\">&#39;GAME OVER&#39;</span><span class=\"p\">)</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_y</span> <span class=\"o\">&lt;</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n            <span class=\"n\">exit</span><span class=\"p\">(</span><span class=\"s1\">&#39;GAME OVER&#39;</span><span class=\"p\">)</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_x</span> <span class=\"o\">&gt;=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">width</span><span class=\"p\">:</span>\n            <span class=\"n\">exit</span><span class=\"p\">(</span><span class=\"s1\">&#39;GAME OVER&#39;</span><span class=\"p\">)</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_y</span> <span class=\"o\">&gt;=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">height</span><span class=\"p\">:</span>\n            <span class=\"n\">exit</span><span class=\"p\">(</span><span class=\"s1\">&#39;GAME OVER&#39;</span><span class=\"p\">)</span>\n\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">new_head</span><span class=\"p\">)</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_head</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"p\">:</span>\n            <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"o\">.</span><span class=\"n\">remove</span><span class=\"p\">(</span><span class=\"n\">new_head</span><span class=\"p\">)</span>\n        <span class=\"k\">else</span><span class=\"p\">:</span>\n            <span class=\"k\">del</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span>    <span class=\"k\">def</span> <span class=\"nf\">add_food</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"n\">x</span> <span class=\"o\">=</span> <span class=\"n\">random</span><span class=\"o\">.</span><span class=\"n\">randrange</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">width</span><span class=\"p\">)</span>\n        <span class=\"n\">y</span> <span class=\"o\">=</span> <span class=\"n\">random</span><span class=\"o\">.</span><span class=\"n\">randrange</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">height</span><span class=\"p\">)</span>\n        <span class=\"n\">position</span> <span class=\"o\">=</span> <span class=\"n\">x</span><span class=\"p\">,</span> <span class=\"n\">y</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">position</span><span class=\"p\">)</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<p>V metodě <code>initialize</code> se dá místo nastavení <code>self.food</code> na seznam s pozicemi\njídla napsat:</p>\n<div class=\"highlight\"><pre><span></span>        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span> <span class=\"o\">=</span> <span class=\"p\">[]</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">add_food</span><span class=\"p\">()</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">add_food</span><span class=\"p\">()</span>\n</pre></div><p>Pak budou na začátku hry na hada čekat dvě náhodná jídla.</p>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span>        <span class=\"c1\"># Kontrola, jestli had narazil</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_head</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">:</span>\n            <span class=\"n\">exit</span><span class=\"p\">(</span><span class=\"s1\">&#39;GAME OVER&#39;</span><span class=\"p\">)</span>\n</pre></div>"
+                            },
+                            {
+                                "content": "<ul>\n<li>„Prvotní nastavení atributu“ do metody <code>initialize</code>.</li>\n<li>„Zastavení hada“ místo <em>všech</em> výskytů <code>raise(\"Game Over\")</code>.</li>\n<li>„Zabránění pohybu“ na úplný začátek metody <code>move</code> (příkaz <code>return</code>\nokamžitě ukončí provádění metody).</li>\n<li>„Grafická indikace“ za sekci pro vybírání obrázku pro kousek\nhada.</li>\n</ul>"
+                            },
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span><span class=\"kn\">import</span> <span class=\"nn\">random</span>\n<span class=\"kn\">import</span> <span class=\"nn\">pyglet</span>\n\n<span class=\"n\">TILE_SIZE</span> <span class=\"o\">=</span> <span class=\"mi\">64</span>\n\n<span class=\"k\">class</span> <span class=\"nc\">GameState</span><span class=\"p\">:</span>\n    <span class=\"k\">def</span> <span class=\"nf\">initialize</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span> <span class=\"o\">=</span> <span class=\"p\">[(</span><span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"mi\">0</span><span class=\"p\">),</span> <span class=\"p\">(</span><span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"mi\">0</span><span class=\"p\">)]</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake_direction</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"mi\">1</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">width</span> <span class=\"o\">=</span> <span class=\"mi\">10</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">height</span> <span class=\"o\">=</span> <span class=\"mi\">10</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span> <span class=\"o\">=</span> <span class=\"p\">[]</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">add_food</span><span class=\"p\">()</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">add_food</span><span class=\"p\">()</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">alive</span> <span class=\"o\">=</span> <span class=\"kc\">True</span>\n\n    <span class=\"k\">def</span> <span class=\"nf\">draw</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"k\">for</span> <span class=\"n\">x</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">:</span>\n            <span class=\"n\">before</span> <span class=\"o\">=</span> <span class=\"s1\">&#39;end&#39;</span>     <span class=\"c1\"># (Tady případně je nějaké</span>\n            <span class=\"n\">after</span> <span class=\"o\">=</span> <span class=\"s1\">&#39;end&#39;</span>      <span class=\"c1\">#  složitější vybírání políčka)</span>\n            <span class=\"k\">if</span> <span class=\"n\">after</span> <span class=\"o\">==</span> <span class=\"s1\">&#39;end&#39;</span> <span class=\"ow\">and</span> <span class=\"ow\">not</span> <span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">alive</span><span class=\"p\">:</span>\n                <span class=\"n\">after</span> <span class=\"o\">=</span> <span class=\"s1\">&#39;dead&#39;</span>\n            <span class=\"n\">key</span> <span class=\"o\">=</span> <span class=\"n\">before</span> <span class=\"o\">+</span> <span class=\"s1\">&#39;-&#39;</span> <span class=\"o\">+</span> <span class=\"n\">after</span>\n            <span class=\"n\">snake_tiles</span><span class=\"p\">[</span><span class=\"n\">key</span><span class=\"p\">]</span><span class=\"o\">.</span><span class=\"n\">blit</span><span class=\"p\">(</span><span class=\"n\">x</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span>\n                                  <span class=\"n\">width</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">height</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">)</span>\n        <span class=\"k\">for</span> <span class=\"n\">x</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"p\">:</span>\n            <span class=\"n\">apple_image</span><span class=\"o\">.</span><span class=\"n\">blit</span><span class=\"p\">(</span>\n                <span class=\"n\">x</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">y</span> <span class=\"o\">*</span> <span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">width</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">,</span> <span class=\"n\">height</span><span class=\"o\">=</span><span class=\"n\">TILE_SIZE</span><span class=\"p\">)</span>\n\n    <span class=\"k\">def</span> <span class=\"nf\">move</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"k\">if</span> <span class=\"ow\">not</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">alive</span><span class=\"p\">:</span>\n            <span class=\"k\">return</span>\n\n        <span class=\"n\">old_x</span><span class=\"p\">,</span> <span class=\"n\">old_y</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">[</span><span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">]</span>\n        <span class=\"n\">dir_x</span><span class=\"p\">,</span> <span class=\"n\">dir_y</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake_direction</span>\n        <span class=\"n\">new_x</span> <span class=\"o\">=</span> <span class=\"n\">old_x</span> <span class=\"o\">+</span> <span class=\"n\">dir_x</span>\n        <span class=\"n\">new_y</span> <span class=\"o\">=</span> <span class=\"n\">old_y</span> <span class=\"o\">+</span> <span class=\"n\">dir_y</span>\n\n        <span class=\"c1\"># Kontrola vylezení z hrací plochy</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_x</span> <span class=\"o\">&lt;</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n            <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">alive</span> <span class=\"o\">=</span> <span class=\"kc\">False</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_y</span> <span class=\"o\">&lt;</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n            <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">alive</span> <span class=\"o\">=</span> <span class=\"kc\">False</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_x</span> <span class=\"o\">&gt;=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">width</span><span class=\"p\">:</span>\n            <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">alive</span> <span class=\"o\">=</span> <span class=\"kc\">False</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_y</span> <span class=\"o\">&gt;=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">height</span><span class=\"p\">:</span>\n            <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">alive</span> <span class=\"o\">=</span> <span class=\"kc\">False</span>\n\n        <span class=\"n\">new_head</span> <span class=\"o\">=</span> <span class=\"n\">new_x</span><span class=\"p\">,</span> <span class=\"n\">new_y</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_head</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">:</span>\n            <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">alive</span> <span class=\"o\">=</span> <span class=\"kc\">False</span>\n        <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">new_head</span><span class=\"p\">)</span>\n\n        <span class=\"k\">if</span> <span class=\"n\">new_head</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"p\">:</span>\n            <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"o\">.</span><span class=\"n\">remove</span><span class=\"p\">(</span><span class=\"n\">new_head</span><span class=\"p\">)</span>\n            <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">add_food</span><span class=\"p\">()</span>\n        <span class=\"k\">else</span><span class=\"p\">:</span>\n            <span class=\"k\">del</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">[</span><span class=\"mi\">0</span><span class=\"p\">]</span>\n\n    <span class=\"k\">def</span> <span class=\"nf\">add_food</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"k\">for</span> <span class=\"n\">try_number</span> <span class=\"ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span class=\"mi\">100</span><span class=\"p\">):</span>\n            <span class=\"n\">x</span> <span class=\"o\">=</span> <span class=\"n\">random</span><span class=\"o\">.</span><span class=\"n\">randrange</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">width</span><span class=\"p\">)</span>\n            <span class=\"n\">y</span> <span class=\"o\">=</span> <span class=\"n\">random</span><span class=\"o\">.</span><span class=\"n\">randrange</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">height</span><span class=\"p\">)</span>\n            <span class=\"n\">position</span> <span class=\"o\">=</span> <span class=\"n\">x</span><span class=\"p\">,</span> <span class=\"n\">y</span>\n            <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"n\">position</span> <span class=\"ow\">not</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">snake</span><span class=\"p\">)</span> <span class=\"ow\">and</span> <span class=\"p\">(</span><span class=\"n\">position</span> <span class=\"ow\">not</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"p\">):</span>\n                <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">food</span><span class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span class=\"n\">position</span><span class=\"p\">)</span>\n                <span class=\"k\">return</span>\n\n<span class=\"n\">apple_image</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">image</span><span class=\"o\">.</span><span class=\"n\">load</span><span class=\"p\">(</span><span class=\"s1\">&#39;apple.png&#39;</span><span class=\"p\">)</span>\n<span class=\"n\">snake_tiles</span> <span class=\"o\">=</span> <span class=\"p\">{}</span>\n<span class=\"k\">for</span> <span class=\"n\">start</span> <span class=\"ow\">in</span> <span class=\"p\">[</span><span class=\"s1\">&#39;bottom&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;end&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;left&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;right&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;top&#39;</span><span class=\"p\">]:</span>\n    <span class=\"k\">for</span> <span class=\"n\">end</span> <span class=\"ow\">in</span> <span class=\"p\">[</span><span class=\"s1\">&#39;bottom&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;end&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;left&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;right&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;top&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;dead&#39;</span><span class=\"p\">,</span> <span class=\"s1\">&#39;tongue&#39;</span><span class=\"p\">]:</span>\n        <span class=\"n\">key</span> <span class=\"o\">=</span> <span class=\"n\">start</span> <span class=\"o\">+</span> <span class=\"s1\">&#39;-&#39;</span> <span class=\"o\">+</span> <span class=\"n\">end</span>\n        <span class=\"n\">image</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">image</span><span class=\"o\">.</span><span class=\"n\">load</span><span class=\"p\">(</span><span class=\"s1\">&#39;snake-tiles/&#39;</span> <span class=\"o\">+</span> <span class=\"n\">key</span> <span class=\"o\">+</span> <span class=\"s1\">&#39;.png&#39;</span><span class=\"p\">)</span>\n        <span class=\"n\">snake_tiles</span><span class=\"p\">[</span><span class=\"n\">key</span><span class=\"p\">]</span> <span class=\"o\">=</span> <span class=\"n\">image</span>\n\n<span class=\"n\">window</span> <span class=\"o\">=</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">Window</span><span class=\"p\">()</span>\n\n<span class=\"n\">state</span> <span class=\"o\">=</span> <span class=\"n\">GameState</span><span class=\"p\">()</span>\n<span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">initialize</span><span class=\"p\">()</span>\n<span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">width</span> <span class=\"o\">=</span> <span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">width</span> <span class=\"o\">//</span> <span class=\"n\">TILE_SIZE</span>\n<span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">height</span> <span class=\"o\">=</span> <span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">height</span> <span class=\"o\">//</span> <span class=\"n\">TILE_SIZE</span>\n\n\n<span class=\"nd\">@window</span><span class=\"o\">.</span><span class=\"n\">event</span>\n<span class=\"k\">def</span> <span class=\"nf\">on_draw</span><span class=\"p\">():</span>\n    <span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">clear</span><span class=\"p\">()</span>\n    <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">gl</span><span class=\"o\">.</span><span class=\"n\">glEnable</span><span class=\"p\">(</span><span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">gl</span><span class=\"o\">.</span><span class=\"n\">GL_BLEND</span><span class=\"p\">)</span>\n    <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">gl</span><span class=\"o\">.</span><span class=\"n\">glBlendFunc</span><span class=\"p\">(</span><span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">gl</span><span class=\"o\">.</span><span class=\"n\">GL_SRC_ALPHA</span><span class=\"p\">,</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">gl</span><span class=\"o\">.</span><span class=\"n\">GL_ONE_MINUS_SRC_ALPHA</span><span class=\"p\">)</span>\n    <span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">draw</span><span class=\"p\">()</span>\n\n\n<span class=\"nd\">@window</span><span class=\"o\">.</span><span class=\"n\">event</span>\n<span class=\"k\">def</span> <span class=\"nf\">on_key_press</span><span class=\"p\">(</span><span class=\"n\">key_code</span><span class=\"p\">,</span> <span class=\"n\">modifier</span><span class=\"p\">):</span>\n    <span class=\"k\">if</span> <span class=\"n\">key_code</span> <span class=\"o\">==</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">key</span><span class=\"o\">.</span><span class=\"n\">LEFT</span><span class=\"p\">:</span>\n        <span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">snake_direction</span> <span class=\"o\">=</span> <span class=\"o\">-</span><span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"mi\">0</span>\n    <span class=\"k\">if</span> <span class=\"n\">key_code</span> <span class=\"o\">==</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">key</span><span class=\"o\">.</span><span class=\"n\">RIGHT</span><span class=\"p\">:</span>\n        <span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">snake_direction</span> <span class=\"o\">=</span> <span class=\"mi\">1</span><span class=\"p\">,</span> <span class=\"mi\">0</span>\n    <span class=\"k\">if</span> <span class=\"n\">key_code</span> <span class=\"o\">==</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">key</span><span class=\"o\">.</span><span class=\"n\">DOWN</span><span class=\"p\">:</span>\n        <span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">snake_direction</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"o\">-</span><span class=\"mi\">1</span>\n    <span class=\"k\">if</span> <span class=\"n\">key_code</span> <span class=\"o\">==</span> <span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">window</span><span class=\"o\">.</span><span class=\"n\">key</span><span class=\"o\">.</span><span class=\"n\">UP</span><span class=\"p\">:</span>\n        <span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">snake_direction</span> <span class=\"o\">=</span> <span class=\"mi\">0</span><span class=\"p\">,</span> <span class=\"mi\">1</span>\n\n\n<span class=\"k\">def</span> <span class=\"nf\">move</span><span class=\"p\">(</span><span class=\"n\">dt</span><span class=\"p\">):</span>\n    <span class=\"n\">state</span><span class=\"o\">.</span><span class=\"n\">move</span><span class=\"p\">()</span>\n\n\n<span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">clock</span><span class=\"o\">.</span><span class=\"n\">schedule_interval</span><span class=\"p\">(</span><span class=\"n\">move</span><span class=\"p\">,</span> <span class=\"mi\">1</span><span class=\"o\">/</span><span class=\"mi\">6</span><span class=\"p\">)</span>\n\n<span class=\"n\">pyglet</span><span class=\"o\">.</span><span class=\"n\">app</span><span class=\"o\">.</span><span class=\"n\">run</span><span class=\"p\">()</span>\n</pre></div>"
+                            }
+                        ],
+                        "source_file": "lessons/snake/logic/index.md",
+                        "title": "Logika hry Had",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/snake/logic/info.yml",
+                "static_files": {
+                    "coord-vectors.svg": {
+                        "path": "logic/coord-vectors.svg"
+                    }
+                },
+                "title": "Logika hry Had"
+            },
+            "snake/tile-selection": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies CZ napsal Petr Viktorin, 2018-2019."
+                        ],
+                        "content": {
+                            "path": "tile-selection/index.html"
+                        },
+                        "ids": [
+                            "jednodussi_podproblemy",
+                            "projit_vsechny_souradnice",
+                            "tohle_neni_evangelium",
+                            "vybirani_kousku_hada",
+                            "zjistit_smer"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#jednodussi_podproblemy",
+                            "#projit_vsechny_souradnice",
+                            "#tohle_neni_evangelium",
+                            "#vybirani_kousku_hada",
+                            "#zjistit_smer",
+                            "naucse:static?filename=lettered.svg",
+                            "naucse:static?filename=snake-tiles/bottom-right.png",
+                            "naucse:static?filename=snake-tiles/bottom-top.png",
+                            "naucse:static?filename=snake-tiles/end-right.png",
+                            "naucse:static?filename=snake-tiles/left-end.png",
+                            "naucse:static?filename=snake-tiles/left-right.png",
+                            "naucse:static?filename=snake-tiles/left-top.png",
+                            "naucse:static?filename=tile-selection.svg"
+                        ],
+                        "slug": "index",
+                        "solutions": [],
+                        "source_file": "lessons/snake/tile-selection/index.md",
+                        "title": "Vybírání kousků hada",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/snake/tile-selection/info.yml",
+                "static_files": {
+                    "lettered.svg": {
+                        "path": "tile-selection/lettered.svg"
+                    },
+                    "snake-tiles/bottom-bottom.png": {
+                        "path": "tile-selection/snake-tiles/bottom-bottom.png"
+                    },
+                    "snake-tiles/bottom-dead.png": {
+                        "path": "tile-selection/snake-tiles/bottom-dead.png"
+                    },
+                    "snake-tiles/bottom-end.png": {
+                        "path": "tile-selection/snake-tiles/bottom-end.png"
+                    },
+                    "snake-tiles/bottom-left.png": {
+                        "path": "tile-selection/snake-tiles/bottom-left.png"
+                    },
+                    "snake-tiles/bottom-right.png": {
+                        "path": "tile-selection/snake-tiles/bottom-right.png"
+                    },
+                    "snake-tiles/bottom-tongue.png": {
+                        "path": "tile-selection/snake-tiles/bottom-tongue.png"
+                    },
+                    "snake-tiles/bottom-top.png": {
+                        "path": "tile-selection/snake-tiles/bottom-top.png"
+                    },
+                    "snake-tiles/end-bottom.png": {
+                        "path": "tile-selection/snake-tiles/end-bottom.png"
+                    },
+                    "snake-tiles/end-dead.png": {
+                        "path": "tile-selection/snake-tiles/end-dead.png"
+                    },
+                    "snake-tiles/end-end.png": {
+                        "path": "tile-selection/snake-tiles/end-end.png"
+                    },
+                    "snake-tiles/end-left.png": {
+                        "path": "tile-selection/snake-tiles/end-left.png"
+                    },
+                    "snake-tiles/end-right.png": {
+                        "path": "tile-selection/snake-tiles/end-right.png"
+                    },
+                    "snake-tiles/end-tongue.png": {
+                        "path": "tile-selection/snake-tiles/end-tongue.png"
+                    },
+                    "snake-tiles/end-top.png": {
+                        "path": "tile-selection/snake-tiles/end-top.png"
+                    },
+                    "snake-tiles/left-bottom.png": {
+                        "path": "tile-selection/snake-tiles/left-bottom.png"
+                    },
+                    "snake-tiles/left-dead.png": {
+                        "path": "tile-selection/snake-tiles/left-dead.png"
+                    },
+                    "snake-tiles/left-end.png": {
+                        "path": "tile-selection/snake-tiles/left-end.png"
+                    },
+                    "snake-tiles/left-left.png": {
+                        "path": "tile-selection/snake-tiles/left-left.png"
+                    },
+                    "snake-tiles/left-right.png": {
+                        "path": "tile-selection/snake-tiles/left-right.png"
+                    },
+                    "snake-tiles/left-tongue.png": {
+                        "path": "tile-selection/snake-tiles/left-tongue.png"
+                    },
+                    "snake-tiles/left-top.png": {
+                        "path": "tile-selection/snake-tiles/left-top.png"
+                    },
+                    "snake-tiles/right-bottom.png": {
+                        "path": "tile-selection/snake-tiles/right-bottom.png"
+                    },
+                    "snake-tiles/right-dead.png": {
+                        "path": "tile-selection/snake-tiles/right-dead.png"
+                    },
+                    "snake-tiles/right-end.png": {
+                        "path": "tile-selection/snake-tiles/right-end.png"
+                    },
+                    "snake-tiles/right-left.png": {
+                        "path": "tile-selection/snake-tiles/right-left.png"
+                    },
+                    "snake-tiles/right-right.png": {
+                        "path": "tile-selection/snake-tiles/right-right.png"
+                    },
+                    "snake-tiles/right-tongue.png": {
+                        "path": "tile-selection/snake-tiles/right-tongue.png"
+                    },
+                    "snake-tiles/right-top.png": {
+                        "path": "tile-selection/snake-tiles/right-top.png"
+                    },
+                    "snake-tiles/top-bottom.png": {
+                        "path": "tile-selection/snake-tiles/top-bottom.png"
+                    },
+                    "snake-tiles/top-dead.png": {
+                        "path": "tile-selection/snake-tiles/top-dead.png"
+                    },
+                    "snake-tiles/top-end.png": {
+                        "path": "tile-selection/snake-tiles/top-end.png"
+                    },
+                    "snake-tiles/top-left.png": {
+                        "path": "tile-selection/snake-tiles/top-left.png"
+                    },
+                    "snake-tiles/top-right.png": {
+                        "path": "tile-selection/snake-tiles/top-right.png"
+                    },
+                    "snake-tiles/top-tongue.png": {
+                        "path": "tile-selection/snake-tiles/top-tongue.png"
+                    },
+                    "snake-tiles/top-top.png": {
+                        "path": "tile-selection/snake-tiles/top-top.png"
+                    },
+                    "tile-selection.svg": {
+                        "path": "tile-selection/tile-selection.svg"
+                    }
+                },
+                "title": "Vybírání kousků hada"
+            },
+            "snake/toroid": {
+                "pages": {
+                    "index": {
+                        "attribution": [
+                            "Pro PyLadies CZ napsal Petr Viktorin, 2018."
+                        ],
+                        "content": {
+                            "path": "toroid/index.html"
+                        },
+                        "ids": [
+                            "nekonecna_klec",
+                            "solution-0",
+                            "zbytkove_reseni"
+                        ],
+                        "license": "cc-by-sa-40",
+                        "links": [
+                            "#nekonecna_klec",
+                            "#zbytkove_reseni",
+                            "https://docs.python.org/3/reference/expressions.html#binary-arithmetic-operations",
+                            "https://en.wikipedia.org/wiki/Torus#Topology",
+                            "naucse:solution?solution=0"
+                        ],
+                        "slug": "index",
+                        "solutions": [
+                            {
+                                "content": "<div class=\"highlight\"><pre><span></span>        <span class=\"c1\"># Kontrola vylezení z hrací plochy</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_x</span> <span class=\"o\">&lt;</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n            <span class=\"n\">new_x</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">width</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_y</span> <span class=\"o\">&lt;</span> <span class=\"mi\">0</span><span class=\"p\">:</span>\n            <span class=\"n\">new_y</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">height</span> <span class=\"o\">-</span> <span class=\"mi\">1</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_x</span> <span class=\"o\">&gt;=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">width</span><span class=\"p\">:</span>\n            <span class=\"n\">new_x</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n        <span class=\"k\">if</span> <span class=\"n\">new_y</span> <span class=\"o\">&gt;=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">height</span><span class=\"p\">:</span>\n            <span class=\"n\">new_y</span> <span class=\"o\">=</span> <span class=\"mi\">0</span>\n</pre></div>"
+                            }
+                        ],
+                        "source_file": "lessons/snake/toroid/index.md",
+                        "title": "Rozšíření Hada – Nekonečná klec",
+                        "vars": {
+                            "coach-present": true,
+                            "user-gender": "f"
+                        }
+                    }
+                },
+                "source_file": "lessons/snake/toroid/info.yml",
+                "static_files": {},
+                "title": "Rozšíření Hada – Nekonečná klec"
+            }
+        },
+        "long_description": "<p>Chceš se naučit programovat, ale nevíš kde začít?\nMáme tu workshop právě pro tebe!</p>\n<p>Pod vedením instruktora vytvoříš variantu klasické videohry Had,\nkterou můžeš znát třeba ze starších mobilů Nokia.\nNa vlastní kůži si vyzkoušíš jak se píše kód,\njaké jsou základní programovací koncepty, a jaké to je,\nkdyž počítač přestane trucovat a začne poslouchat tvoje příkazy.</p>\n<p>(Přijde-li ti projekt málo praktický, nezoufej! Spíš než o hru jde\no základní programovací principy, které dál využiješ např. při tvorbě\nwebových aplikací, analýze dat, strojovém učení,\nprogramování robotů nebo návrhu systémových nástrojů.)</p>\n<p>Workshop je pro úplné začátečníky.\nNení potřeba vědět nic o programování, stačí mít počítač a umět ho používat\n(např. otevřít/uložit soubor, nainstalovat program).</p>\n<p>Workshop je v češtině a zdarma.\nKapacita je ale omezená a na workshop je nutná registrace přes stránky\n<a href=\"https://pyladies.cz/hradec\">pyladies.cz</a>.</p>\n<p>Zalíbí-li se ti tahle ochutnávka, je možnost pokračovat jedním\nz jarních začátečnických kurzů PyLadies, které začnou nedlouho\npo workshopu.</p>",
+        "place": "Univerzita Hradec Králové, Hradecká 1285, Hradec Králové",
+        "sessions": [
+            {
+                "materials": [
+                    {
+                        "lesson_slug": "beginners/install",
+                        "title": "Instalace Pythonu",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "beginners/venv-setup",
+                        "title": "Nastavení prostředí",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "beginners/install-editor",
+                        "title": "Instalace editoru",
+                        "type": "lesson"
+                    }
+                ],
+                "serial": "0",
+                "slug": "preparation",
+                "source_file": "course.yml",
+                "title": "Příprava"
+            },
+            {
+                "date": "2024-04-13",
+                "materials": [
+                    {
+                        "external_url": "https://docs.google.com/presentation/d/1pM5t3B4Qn-xVsWksDycYvHG5pxJbzmOZwLFPd9lDmGo/edit",
+                        "title": "Úvod",
+                        "type": "none-link"
+                    },
+                    {
+                        "external_url": "https://pyvec.github.io/cheatsheets/keyboard/keyboard-cs.pdf",
+                        "title": "Tahák na klávesnici (PDF)",
+                        "type": "cheatsheet"
+                    },
+                    {
+                        "lesson_slug": "fast-track/repl",
+                        "title": "Interaktivní režim Pythonu",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/str",
+                        "title": "Řetězce",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/conversion",
+                        "title": "Převádění typů",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/variables",
+                        "title": "Proměnné",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/list",
+                        "title": "Seznamy",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/random",
+                        "title": "Náhoda",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/dict",
+                        "title": "Slovníky",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/bool",
+                        "title": "Porovnávání a logika",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/script",
+                        "title": "Ulož to!",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/if",
+                        "title": "Podmínky",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/def",
+                        "title": "Vlastní funkce",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/for",
+                        "title": "Cykly",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/tuple",
+                        "title": "N-tice a rozbalování",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "fast-track/class",
+                        "title": "Třídy",
+                        "type": "lesson"
+                    }
+                ],
+                "serial": "1",
+                "slug": "intro",
+                "source_file": "course.yml",
+                "time": {
+                    "end": "13:00",
+                    "start": "8:30"
+                },
+                "title": "Úvod do Pythonu"
+            },
+            {
+                "date": "2024-04-13",
+                "materials": [
+                    {
+                        "lesson_slug": "fast-track/pyglet",
+                        "title": "Úvod do Pygletu",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "snake/drawing",
+                        "title": "Kreslení hada",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "snake/logic",
+                        "title": "Logika hry Had",
+                        "type": "lesson"
+                    }
+                ],
+                "serial": "2",
+                "slug": "workshop",
+                "source_file": "course.yml",
+                "time": {
+                    "end": "18:00",
+                    "start": "13:30"
+                },
+                "title": "Had"
+            },
+            {
+                "materials": [
+                    {
+                        "lesson_slug": "snake/handling",
+                        "title": "Vylepšené ovládání",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "snake/toroid",
+                        "title": "Rozšíření Hada – Nekonečná klec",
+                        "type": "lesson"
+                    },
+                    {
+                        "lesson_slug": "snake/tile-selection",
+                        "title": "Vybírání kousků hada",
+                        "type": "lesson"
+                    }
+                ],
+                "serial": "3",
+                "slug": "extensions",
+                "source_file": "course.yml",
+                "title": "Rozšíření"
+            }
+        ],
+        "source_file": "course.yml",
+        "subtitle": "Hradec Králove",
+        "time_description": "8:30 až 18:00",
+        "timezone": "Europe/Prague",
+        "title": "Hadí workshop",
+        "vars": {
+            "coach-present": true,
+            "user-gender": "f"
+        }
+    }
+}

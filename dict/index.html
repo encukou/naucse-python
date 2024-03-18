@@ -1,0 +1,73 @@
+<h1 id="slovniky">Slovníky
+<a href="#slovniky" class="header-link">#</a>
+</h1>
+<p>Jiný typ hodnot, které v sobě mohou obsahovat další hodnoty, je <em>slovník</em>.
+Představ si překladový slovník, třeba tenhle česko-anglický:</p>
+<ul>
+<li><strong>Jablko</strong>: Apple</li>
+<li><strong>Knoflík</strong>: Button</li>
+<li><strong>Myš</strong>: Mouse</li>
+</ul>
+<p>Slovník v Pythonu obsahuje <em>záznamy</em>, a každý záznam přiřazuje
+nějakému <em>klíči</em> nějakou <em>hodnotu</em>.
+V našem příkladu je klíči <em>Jablko</em> přiřazena hodnota <em>Apple</em>,
+klíči <em>Knoflík</em> náleží hodnota <em>Button</em>
+a klíč <em>Myš</em> ukazuje na <em>Mouse</em>.</p>
+<p>V Pythonu by se takový slovník napsal následovně:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">slovnik</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Jablko&#39;</span><span class="p">:</span> <span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Knoflík&#39;</span><span class="p">:</span> <span class="s1">&#39;Button&#39;</span><span class="p">,</span> <span class="s1">&#39;Myš&#39;</span><span class="p">:</span> <span class="s1">&#39;Mouse&#39;</span><span class="p">}</span>
+</pre></div><p>Tyto klíče a hodnoty jsou slova – krátké texty, tedy řetězce,
+které je potřeba dát do uvozovek.
+Každý klíč je od své hodnoty oddělený dvojtečkou,
+jednotlivé dvojice se od sebe oddělují čárkou,
+a celý slovník je uzavřený ve složených závorkách.</p>
+<p>Když budeš chtít v takovém slovníku něco najít, potřebuješ vědět co hledat.
+Potřebuješ <em>klíč</em>.
+Pomocí hranatých závorek můžeš zjistit hodnotu, která danému klíči odpovídá:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">slovnik</span><span class="p">[</span><span class="s1">&#39;Jablko&#39;</span><span class="p">]</span>
+<span class="go">&#39;Apple&#39;</span>
+</pre></div><p>Je to podobné jako u seznamů, jen v hranatých závorkách není index
+(pořadí prvku) nebo rozmezí s dvojtečkou, ale právě klíč.</p>
+<div class="admonition note"><p>Naopak to nejde – slovník neumožňuje podle hodnoty přímo zjistit klíč.
+Na překlad z angličtiny do češtiny bys potřebovala druhý slovník.</p>
+</div><h2 id="meneni_slovniku">Měnění slovníků
+<a href="#meneni_slovniku" class="header-link">#</a>
+</h2>
+<p>Co se stane, když klíč ve slovníku není?</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">slovnik</span><span class="p">[</span><span class="s1">&#39;Pes&#39;</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">KeyError</span>: <span class="n">&#39;Pes&#39;</span>
+</pre></div><p>Python si postěžuje na <code>KeyError</code> – chybu klíče.</p>
+<p>Podobně jako seznamy se ale slovníky dají měnit.
+Nový záznam vytvoříš takhle:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">slovnik</span><span class="p">[</span><span class="s1">&#39;Pes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Dog&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">slovnik</span>
+<span class="go">{&#39;Jablko&#39;: &#39;Apple&#39;, &#39;Knoflík&#39;: &#39;Button&#39;, &#39;Myš&#39;: &#39;Mouse&#39;, &#39;Pes&#39;: &#39;Dog&#39;}</span>
+</pre></div><div class="admonition note"><p>Na rozdíl od překladového slovníku nemusí být Pythonní slovník seřazený
+podle abecedy.
+Není to potřeba, počítač umí rychle vyhledávat i bez seřazení.</p>
+</div><p>Kdybys potřebovala změnit už existující záznam, použij stejný příkaz.
+K jednomu klíči může patřit jen jedna hodnota.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">slovnik</span><span class="p">[</span><span class="s1">&#39;Pes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Extension cord&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">slovnik</span>
+<span class="go">{&#39;Jablko&#39;: &#39;Apple&#39;, &#39;Knoflík&#39;: &#39;Button&#39;, &#39;Myš&#39;: &#39;Mouse&#39;, &#39;Pes&#39;: &#39;Extension cord&#39;}</span>
+</pre></div><p>Chceš-li ze zlovníku nějaký záznam smazat, dělá se to podobně jako
+u seznamů příkazem <code>del</code>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">slovnik</span><span class="p">[</span><span class="s1">&#39;Pes&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">slovnik</span>
+<span class="go">{&#39;Jablko&#39;: &#39;Apple&#39;, &#39;Knoflík&#39;: &#39;Button&#39;, &#39;Myš&#39;: &#39;Mouse&#39;}</span>
+</pre></div><p>A když budeš chtít zjistit kolik je ve slovníku záznamů,
+zeptáš se podobně jako na počet znaků řetězce nebo prvků seznamu.
+Použiješ funkci <code>len()</code>.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">slovnik</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div><h2 id="shrnuti">Shrnutí
+<a href="#shrnuti" class="header-link">#</a>
+</h2>
+<p>Skvělé! Co víš o slovnících:</p>
+<ul>
+<li><strong>Záznam</strong> se skládá z <strong>klíče</strong> a <strong>hodnoty</strong>.</li>
+<li>Ve slovníku se hledá pomocí <strong>klíče</strong>.</li>
+<li>Záznamy se dají přepsat, přidat, nebo pomocí <code>del</code> smazat.</li>
+</ul>
+<p>Jsi připravena na další část?</p>
