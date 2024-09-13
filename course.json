@@ -1799,7 +1799,7 @@
                 "title": "Příprava"
             },
             {
-                "date": "2024-02-17",
+                "date": "2024-09-14",
                 "materials": [
                     {
                         "external_url": "https://docs.google.com/presentation/d/1pM5t3B4Qn-xVsWksDycYvHG5pxJbzmOZwLFPd9lDmGo/edit",
@@ -1892,7 +1892,7 @@
                 "title": "Úvod do Pythonu"
             },
             {
-                "date": "2024-02-17",
+                "date": "2024-09-14",
                 "materials": [
                     {
                         "lesson_slug": "fast-track/pyglet",
