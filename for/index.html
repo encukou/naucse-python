@@ -1,0 +1,69 @@
+<h1 id="cykly">Cykly
+<a href="#cykly" class="header-link">#</a>
+</h1>
+<p>Programátoři se neradi opakují.
+Programování je o automatizaci: nebudeme zdravit každého člověka zvlášť,
+vezměme seznam padesáti lidí a pozdravíme je všechny najednou!</p>
+<p>(No, někteří programátoři asi nejsou moc sociálně nadaní.
+Ale jinde se ta automatizace fakt hodí!)</p>
+<p>Ještě si vzpomínáš na seznamy?
+Udělej si seznam jmen:</p>
+<div class="highlight"><pre><span></span><span class="n">jmena</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rachel&#39;</span><span class="p">,</span> <span class="s1">&#39;Monica&#39;</span><span class="p">,</span> <span class="s1">&#39;Phoebe&#39;</span><span class="p">,</span> <span class="s1">&#39;Ola&#39;</span><span class="p">,</span> <span class="s1">&#39;Ty&#39;</span><span class="p">]</span>
+</pre></div><p>Se seznamem pak budeš chtít udělat tohle:</p>
+<ul>
+<li>Pro každé jméno ze seznamu jmen:<ul>
+<li>pozdrav daným jménem</li>
+</ul>
+</li>
+</ul>
+<p>V Pythonu se takový <em>cyklus</em> – opakování „pro každý prvek seznamu“ – píše
+pomocí příkazu <code>for</code>:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">jmeno</span> <span class="ow">in</span> <span class="n">jmena</span><span class="p">:</span>
+    <span class="n">pozdrav</span><span class="p">(</span><span class="n">jmeno</span><span class="p">)</span>
+</pre></div><p>Celý program bude tedy vypadat takto:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pozdrav</span><span class="p">(</span><span class="n">jmeno</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vítam tě,&#39;</span><span class="p">,</span> <span class="n">jmeno</span><span class="p">)</span>
+
+<span class="n">jmena</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rachel&#39;</span><span class="p">,</span> <span class="s1">&#39;Monica&#39;</span><span class="p">,</span> <span class="s1">&#39;Phoebe&#39;</span><span class="p">,</span> <span class="s1">&#39;Ola&#39;</span><span class="p">,</span> <span class="s1">&#39;Ty&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">jmeno</span> <span class="ow">in</span> <span class="n">jmena</span><span class="p">:</span>
+    <span class="n">pozdrav</span><span class="p">(</span><span class="n">jmeno</span><span class="p">)</span>
+</pre></div><p>A když ho spustíme:</p>
+<div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>python_intro.py
+<span class="go">Vitam ťa, Rachel</span>
+<span class="go">Vitam ťa, Monica</span>
+<span class="go">Vitam ťa, Phoebe</span>
+<span class="go">Vitam ťa, Ola</span>
+<span class="go">Vitam ťa, Ty</span>
+</pre></div><p>Jak vidíš, vše, co jsi vložila dovnitř příkazu <code>for</code> s odsazením,
+se zopakuje pro každý prvek seznamu <code>jmena</code>.</p>
+<h2 id="opakuj_varnvar-krat">Opakuj <var>n</var>-krát
+<a href="#opakuj_varnvar-krat" class="header-link">#</a>
+</h2>
+<p>Cyklus <code>for</code> můžeš použít i s jinými hodnotami než se seznamy.</p>
+<p>Často se používá s funkcí <code>range()</code>.
+Když chceš něco 200-krát zopakovat, napiš:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">):</span>
+     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Už nikdy nebudu házet igelit do táboráku!&quot;</span><span class="p">)</span>
+</pre></div><p>Jak to funguje?
+<code>for i in range(X)</code> se dá přeložit jako „pro každé číslo
+od nuly do <var>X</var>“.
+Funkce <code>range</code> onu posloupnost čísel od nuly do <var>X</var> vytvoří.
+Do proměnné <code>i</code> Python postupně uloží každé číslo, podle toho po kolikáté
+cyklem prochází.</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div><div class="highlight"><pre><code>0
+1
+2
+3
+4</code></pre></div><p>Všimni si, že samotné <code>5</code> není zahrnuto ve výsledku:
+<code>range(5)</code> počítá od 0 do 4.
+Když počítáš od nuly a chceš pět čísel, skončíš u čtyřky.</p>
+<h2 id="shrnuti">Shrnutí
+<a href="#shrnuti" class="header-link">#</a>
+</h2>
+<p>Naučila ses:</p>
+<ul>
+<li><strong>Cyklus</strong> je způsob, jak opakovat nějaký postup několikrát po sobě</li>
+<li><code>range</code> pomáhá když potřebuješ určitý konkrétní počet opakování.</li>
+</ul>

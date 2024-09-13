@@ -1,0 +1,71 @@
+<h1 id="interaktivni_rezim_pythonu">Interaktivní režim Pythonu
+<a href="#interaktivni_rezim_pythonu" class="header-link">#</a>
+</h1>
+<p>Chceš-li si začít hrát s Pythonem, otevři <em>příkazový řádek</em> a aktivuj virtuální prostředí.  Zkontroluj si, že na začátku příkazové řádky ti svítí <code>(venv)</code>.</p>
+<p>Je-li tomu tak, nezbývá než – konečně – pustit Python. K tomu použij příkaz <code>python</code>:</p>
+<div class="highlight"><pre><span></span><span class="gp">$ </span>python
+<span class="go">Python 3.6.6 (...)</span>
+<span class="go">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div><p>Příkaz vypíše několik informací. Z prvního řádku se můžeš ujistit, že používáš Python 3. (Vidíš-li číslo jako <code>2.7.11</code>, něco je špatně – popros o radu kouče.)</p>
+<p>Třemi „zobáčky“ <code>`&gt;&gt;&gt;</code> pak Python poprosí o instrukce. Je to jako v příkazové řádce, ale místo příkazů jako <code>cd</code> a <code>mkdir</code> sem budeš psát příkazy Pythonu.</p>
+<p>Jako první instrukci použijeme Pythonu jako kalkulačku.
+Za tři zobáčky napiš třeba <code>2 + 3</code> a zmáčkni <kbd>Enter</kbd>.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="go">5</span>
+</pre></div><p>Zobrazila se ti správná odpověď?
+Pokud ano, gratuluji! První příkaz v Pythonu máš za sebou.</p>
+<p>Zkusíš i odečítání?</p>
+<p>A jak je to s násobením?
+Na kalkulačce bys zadala <code>4 × 5</code>, což se na klávesnici píše špatně.
+Python proto používá symbol <code>*</code>.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="go">20</span>
+</pre></div><p>Symboly jako <code>+</code> a <code>*</code> se odborně nazývají <em>operátory</em>.</p>
+<p>Operátor pro dělení je <code>/</code>.</p>
+<p>Při dělení může vzniknout necelé číslo, třeba dva a půl.
+Python používá desetinnou <em>tečku</em>, ukáže se tedy <code>2.5</code>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="go">2.5</span>
+</pre></div><p>Z důvodů, do kterých teď nebudeme zabíhat, se při dělení desetinná tečka
+objeví i když vyjde číslo celé:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="go">2.0</span>
+</pre></div><p>Občas se hodí použít dělení se zbytkem.
+Výsledek tak zůstane jako celé číslo.
+Na to má Python operátory <code>//</code> (podíl) a <code>%</code> (zbytek):</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="go">1</span>
+</pre></div><h2 id="chyby">Chyby
+<a href="#chyby" class="header-link">#</a>
+</h2>
+<p>Někdy se stane, že zadáš něco špatně – tak, že tomu Python nebude rozumět.
+Třeba když omylem použiješ neexistující operátor <code>%%</code>, dostaneš
+jako odpověď <em>chybovou hlášku</em>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">%%</span> <span class="mi">2</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>
+<span class="w">    </span><span class="mi">5</span> <span class="o">%%</span> <span class="mi">2</span>
+<span class="w">       </span><span class="pm">^</span>
+<span class="gr">SyntaxError</span>: <span class="n">invalid syntax</span>
+</pre></div><p>Stává se to dost často – začátečníkům i profesionálním programátorům.
+Chybových hlášek se nemusíš bát.
+I když je něco špatně, stačí na dalším řádku zadat opravený příkaz.</p>
+<p>V hlášce ti Python říká, že něco nepochopil nebo je něco jinak špatně.
+Snaží se co nejlíp naznačit, <em>co</em> a <em>kde</em> je špatně (ale je to jen hloupý
+stroj, tak mu to občas nevyjde).
+V chybové hlášce nahoře si všimni šipečky, <code>^</code>, která ukazuje na místo kde
+si Python chyby všiml.</p>
+<p>Orientace v chybových hláškách patří k základním schopnostem programátorů.
+Až příště nějakou chybu dostaneš, zkus se zamyslet co ti v ní Python chce říct.</p>
+<h3 id="shrnuti">Shrnutí
+<a href="#shrnuti" class="header-link">#</a>
+</h3>
+<p>Co ses zatím naučila?</p>
+<ul>
+<li><strong>Interaktivní režim Pythonu</strong> umožňuje zadávat příkazy (kód) pro
+Python a zobrazuje výsledky/odpovědi.</li>
+<li><strong>Čísla</strong> se používají na matematiku a práci s textem.</li>
+<li><strong>Operátor</strong> jako <code>+</code> a <code>*</code> kombinuje hodnoty a vytvoří výsledek.</li>
+</ul>

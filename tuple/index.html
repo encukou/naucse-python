@@ -1,0 +1,73 @@
+<h1 id="varnvar-tice"><var>N</var>-tice
+<a href="#varnvar-tice" class="header-link">#</a>
+</h1>
+<p>Už víš, že pomocí <code>return</code> lze z funkce vracet hodnotu:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dvojnasobek</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div><p>Jak ale napsat funkci, která vrátí dvě hodnoty?
+Chci třeba napsat funkci, která spočítá podíl a zbytek po dělení.</p>
+<p>Dvě hodnoty se dají vrátit jako seznam:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">podil_a_zbytek</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">podil</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="n">b</span>
+    <span class="n">zbytek</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span>
+
+    <span class="k">return</span> <span class="p">[</span><span class="n">podil</span><span class="p">,</span> <span class="n">zbytek</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">podil_a_zbytek</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div><p>Lepší je ale vrátit <em>dvojici</em> čísel – dvě čísla oddělená čárkou:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">podil_a_zbytek</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">podil</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="n">b</span>
+    <span class="n">zbytek</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span>
+
+    <span class="k">return</span> <span class="n">podil</span><span class="p">,</span> <span class="n">zbytek</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">podil_a_zbytek</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div><p>Tomuhle se říká dvojice – a podobně se tvoří trojice, čtveřice, pětice,
+šestice, prostě <var>n</var>-tice (angl. <em>tuple</em>) hodnot.
+Funguje podobně jako seznam, ale nedá se měnit – např. se do ní nedají
+přidávat další prvky pomocí <code>append</code>.
+Když mám trojici, vždycky zůstane jako trojice.</p>
+<p>Když máš <var>n</var>-tici, můžeš ji přiřazením <em>rozbalit</em> (angl. <em>unpack</em>)
+do několika proměnných:</p>
+<div class="highlight"><pre><span></span><span class="n">podil</span><span class="p">,</span> <span class="n">zbytek</span> <span class="o">=</span> <span class="n">podil_a_zbytek</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">podil</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">zbytek</span><span class="p">)</span>
+</pre></div><p><var>N</var>-tice mají spoustu využití, například:</p>
+<ul>
+<li>Bod v prostoru má 3 souřadnice – trojice čísel!</li>
+<li>Hrací karta má barvu a hodotu – dvojice čísla a řetězce, např. <code>(2, 'piky')</code></li>
+</ul>
+<p>Občas je potřeba dát <var>n</var>-tice do seznamu, např. abys uložila
+informace o celém balíčku hracích karet.
+V podobných případech je potřeba každou <var>n</var>-tici uzavřít do závorek,
+aby bylo jasné kde začíná a kde končí.
+Tady je seznam dvojic:</p>
+<div class="highlight"><pre><span></span><span class="n">ruka</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;piky&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;kříže&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;káry&#39;</span><span class="p">)]</span>
+</pre></div><p>Když takový seznam máš, můžeš ho projít v cyklu <code>for</code> s pomocí rozbalování:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">hodnota</span><span class="p">,</span> <span class="n">barva</span> <span class="ow">in</span> <span class="n">ruka</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hraju&#39;</span><span class="p">,</span> <span class="n">hodnota</span><span class="p">,</span> <span class="s1">&#39;a jsou to&#39;</span><span class="p">,</span> <span class="n">barva</span><span class="p">)</span>
+</pre></div><h2 id="zip">Zip
+<a href="#zip" class="header-link">#</a>
+</h2>
+<p><var>N</var>-tice, respektive sekvenci <var>n</var>-tic, vrací funkce <code>zip</code>,
+která umožňuje projít zároveň několik seznamů,
+jejichž prvky si navzájem odpovídají:</p>
+<div class="highlight"><pre><span></span><span class="n">veci</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tráva&#39;</span><span class="p">,</span> <span class="s1">&#39;slunce&#39;</span><span class="p">,</span> <span class="s1">&#39;mrkev&#39;</span><span class="p">,</span> <span class="s1">&#39;řeka&#39;</span><span class="p">]</span>
+<span class="n">barvy</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;zelená&#39;</span><span class="p">,</span> <span class="s1">&#39;žluté&#39;</span><span class="p">,</span> <span class="s1">&#39;oranžová&#39;</span><span class="p">,</span> <span class="s1">&#39;modrá&#39;</span><span class="p">]</span>
+<span class="n">mista</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;na zemi&#39;</span><span class="p">,</span> <span class="s1">&#39;nahoře&#39;</span><span class="p">,</span> <span class="s1">&#39;na talíři&#39;</span><span class="p">,</span> <span class="s1">&#39;za zídkou&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">vec</span><span class="p">,</span> <span class="n">barva</span><span class="p">,</span> <span class="n">misto</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">veci</span><span class="p">,</span> <span class="n">barvy</span><span class="p">,</span> <span class="n">mista</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">barva</span><span class="p">,</span> <span class="n">vec</span><span class="p">,</span> <span class="s1">&#39;je&#39;</span><span class="p">,</span> <span class="n">misto</span><span class="p">)</span>
+</pre></div><p>V tomhle cyklu dostaneš napřed trojici prvních prvků ze všech tří seznamů,
+pak trojici všech druhých prvků, pak třetích, a tak dále.</p>
+<h2 id="shrnuti">Shrnutí
+<a href="#shrnuti" class="header-link">#</a>
+</h2>
+<p>Co ses dozvěděla tentokrát?</p>
+<ul>
+<li>Pomocí <em><var>n</var>-tice</em> se dá spojit několik hodnot do jedné.</li>
+<li><var>N</var>-tice se dají rozbalit do několika proměnných.</li>
+<li>Funkce <code>zip</code> vrací sekvenci <var>n</var>-tic, ve kterých jsou prvky
+z několika seznamů.</li>
+</ul>

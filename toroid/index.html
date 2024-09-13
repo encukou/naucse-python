@@ -1,0 +1,68 @@
+<h1 id="nekonecna_klec">Nekonečná klec
+<a href="#nekonecna_klec" class="header-link">#</a>
+</h1>
+<p>Místo konce hry při naražení do okraje okýnka můžeš nechat hada „projít“
+a objevit se na druhé straně.</p>
+<p>Z pohledu logiky hry to není tak složité, jak to může znít.
+Stačí v <code>move</code> místo ukončení hry správně nastavit příslušnou hodnotu.
+Je ale potřeba si dát pozor kde použít <code>new_x</code> a kde <code>new_y</code>, kde <code>width</code> a kde
+<code>height</code>, a kde přičíst nebo odečíst jedničku, aby při číslování od nuly
+všechno sedělo.
+Zkus to!</p>
+<div class="solution" id="solution-0">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=0"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span>        <span class="c1"># Kontrola vylezení z hrací plochy</span>
+        <span class="k">if</span> <span class="n">new_x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">new_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">new_y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">new_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">new_x</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">:</span>
+            <span class="n">new_x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">new_y</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">:</span>
+            <span class="n">new_y</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+    </div>
+</div><p>Jestli ale vykresluješ hada (místo housenky), narazíš teď na problém
+s vybíráním správných dílků – okraj herní plochy hada vizuálně rozdělí
+na dva menší.
+Řešení tohoto problému nechávám na čtenáři – s tím, že je to hodně těžký
+problém.</p>
+<h2 id="zbytkove_reseni">Zbytkové řešení
+<a href="#zbytkove_reseni" class="header-link">#</a>
+</h2>
+<p>Jde logiku vylézání z okýnka vyřešit jednodušeji? Jde!
+Matematikové vymysleli operaci, která se jmenuje <em>zbytek po dělení</em>.
+Ta dělá přesně to, co tu potřebuješ – zbytek po dělení nové souřadnice velikostí
+hřiště dá souřadnici, která leží v hřišti.
+Když byla předchozí souřadnice o jedna větší než maximum,
+zbytek po dělení bude nula; když byla -1, dostaneme maximum.</p>
+<p>Python moužívá pro zbytek po dělení operátor <code>%</code>. Zkus si to:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="o">%</span> <span class="mi">10</span>      <span class="c1"># Zbytek po dělení šesti desíti</span>
+<span class="go">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">%</span> <span class="mi">10</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">-</span><span class="mi">1</span> <span class="o">%</span> <span class="mi">10</span>
+<span class="go">9</span>
+</pre></div><p>Celý kód pro kontrolu a ošetření vylézání z hrací plochy tak jde
+nahradit dvěma řádky:</p>
+<div class="highlight"><pre><span></span>        <span class="n">new_x</span> <span class="o">=</span> <span class="n">new_x</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+        <span class="n">new_y</span> <span class="o">=</span> <span class="n">new_y</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+</pre></div><p>Podobné matematické „zkratky“ umí programátorům často usnadnit život.
+Jen přijít na ně nebývá jednoduché.
+Ale nevěš hlavu: neláká-li tě studovat informatiku na škole, věz, že to jde
+i bez „zkratek“. Jen občas trochu krkoloměji.</p>
+<div class="admonition note"><p>To, že existuje přesně operace kterou potřebujeme, není až tak úplně náhoda.
+Ona matematická jednoduchost je spíš  <em>důvod</em>, proč se hrací plocha
+u spousty starých her chová právě takhle.
+Odborně se tomu „takhle“ říká
+<a href="https://en.wikipedia.org/wiki/Torus#Topology">toroidální topologie</a>.</p>
+</div><div class="admonition note"><p class="admonition-title">Pro matematiky</p>
+<p>Zkušení matematici si teď možná stěžují na nutnost definovat zbytek po
+dělení záporného čísla. Proto dodám, že ho Python schválně
+<a href="https://docs.python.org/3/reference/expressions.html#binary-arithmetic-operations">definuje vhodně</a>
+pro tento účel; <code>a % b</code> má vždy stejné znaménko jako <code>b</code>.</p>
+</div>

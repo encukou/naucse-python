@@ -1,0 +1,114 @@
+<h1 id="porovnavani_veci">Porovnávání věcí
+<a href="#porovnavani_veci" class="header-link">#</a>
+</h1>
+<p>Programátoři často porovnávají různé hodnoty. Pojďme se podívat jak na to.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">8</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">8</span>
+<span class="go">True</span>
+</pre></div><p>Když se Pythonu zeptáš, jestli je jedno číslo větší než druhé, odpoví ti
+<code>True</code> (pravda) nebo <code>False</code> (nepravda).</p>
+<p>Funguje to i se složitějšími výrazy:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">False</span>
+</pre></div><p>„Větší než“ a „menší než“ jsou značky známé z matematiky.
+Chceš-li se ale zeptat, jestli jsou dvě čísla stejná, je potřba použít
+trochu jiný zápis:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="go">True</span>
+</pre></div><p>Jedno rovnítko <code>=</code> používáme pro <em>přiřazení</em> hodnoty do proměnné.
+Když chceš zkontrolovat, jestli se věci navzájem <em>rovnají</em>, vždy, <strong>vždy</strong>
+musíš dát dvě rovnítka <code>==</code>.</p>
+<p>Další možnosti porovnávání jsou nerovnost (≠), větší nebo rovno (≤)
+a meší nebo rovno (≥).
+Většina lidí tyhle symboly nemá na klávesnici, a tak Python používá <code>!=</code>, <code>&lt;=</code>
+a <code>&gt;=</code>.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">!=</span> <span class="mi">2</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">&lt;=</span> <span class="mi">2</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="o">&gt;=</span> <span class="mi">12</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="go">True</span>
+</pre></div><p>Už jsi někdy slyšela výraz „srovnávat jablka a hrušky“? Zkusme v Pythonu ekvivalent:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">&gt;</span> <span class="s1">&#39;krajta&#39;</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">&#39;&gt;&#39; not supported between instances of &#39;int&#39; and &#39;str&#39;</span>
+</pre></div><p>Stejně jako nelze srovnávat „jablka a hrušky“,
+Python není schopen porovnávat řetězce (<code>str</code>) a čísla (<code>int</code>).
+Místo toho zobrazí <code>TypeError</code> a říká nám, že tyto dva typy nelze porovnat.</p>
+<p>Co se stane, když v minulé ukázce zaměníš <code>&gt;</code> za <code>==</code>?</p>
+<div class="solution" id="solution-0">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=0"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">==</span> <span class="s1">&#39;krajta&#39;</span>
+<span class="go">False</span>
+</pre></div><p>Jablka a hrušky nemůžeš porovnávat, ale můžeš si potvrdit že jsou to dvě různé
+věci.</p>
+    </div>
+</div><h2 id="logika">Logika
+<a href="#logika" class="header-link">#</a>
+</h2>
+<p>Chceš zkusit ještě něco? Zadej tohle:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<span class="go">False</span>
+</pre></div><p>V Pythonu můžeš zkombinovat několik porovnání do jednoho!</p>
+<ul>
+<li>Pokud použiješ operátor <code>and</code>, obě strany musí být pravdivé, aby byl celý výraz pravdivý.</li>
+<li>Pokud použiješ operátor <code>or</code>, stačí aby jen jedna strana z porovnání byla pravdivá.</li>
+<li>Operátor <code>not</code> “obrátí” výsledek porovnání.</li>
+</ul>
+<h2 id="pritomnost">Přítomnost
+<a href="#pritomnost" class="header-link">#</a>
+</h2>
+<p>Nebylo by pěkné zjistit, jestli tvoje číslo vyhrálo v loterii?
+Máš-li seznam, operátorem <code>in</code> se můžeš zeptat, jestli je v něm daný prvek:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">59</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">18</span> <span class="ow">in</span> <span class="n">loterie</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">42</span> <span class="ow">in</span> <span class="n">loterie</span>
+<span class="go">True</span>
+</pre></div><p>Není to úplně porovnání, ale dostaneš stejný druh výsledku jako s <code>&lt;</code> či <code>==</code>.</p>
+<h2 id="pravdivostni_hodnoty">Pravdivostní hodnoty
+<a href="#pravdivostni_hodnoty" class="header-link">#</a>
+</h2>
+<p>Právě ses dozvěděla o novém typu objektu v Pythonu.
+Už známe typy řetězc, číslo, seznam nebo slovník; přidali jsme k nim
+<em>pravdivostní hodnotu</em>, nebo častěji anglicky <em>boolean</em>.</p>
+<p>Pravdivostní hodnoty jsou jenom dvě: <code>True</code> (pravda) nebo <code>False</code> (nepravda).</p>
+<p>Aby Python pochopil, že se jedná o tento typ,
+je potřeba dávat pozor na velikost písmen.
+<code>true</code>, <code>TRUE</code>, <code>tRUE</code> nebude fungovat – jedině <code>True</code> je správně.</p>
+<p>Jako každou hodnotu, i <em>boolean</em> můžeš uložit do proměnné:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">True</span>
+</pre></div><p>Stejně tak můžeš uložit i výsledek porovnání:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">False</span>
+</pre></div><p>A všechno to můžeš použít v logických výrazech:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="ow">and</span> <span class="kc">True</span>
+<span class="go">False</span>
+</pre></div><h2 id="shrnuti">Shrnutí
+<a href="#shrnuti" class="header-link">#</a>
+</h2>
+<p>V této sekci ses dozvěděla:</p>
+<ul>
+<li>V Pythonu můžeš <strong>porovnávat</strong> pomocí operátorů <code>&gt;</code>, <code>&gt;=</code>, <code>==</code> <code>&lt;=</code>, <code>&lt;</code>, <code>!=</code> a <code>in</code></li>
+<li>Operátory <code>and</code> a <code>or</code> umí <strong>zkombinovat</strong> dvě pravdivostní hodnoty.</li>
+<li>Operátor <code>not</code> umí <strong>obrátit</strong> pravdivostní hodnotu.</li>
+<li><strong>Boolean</strong> (pravdivostní hodnota) je typ, který může mít jednu ze dvou
+hodnot: <code>True</code> (pravda) nebo <code>False</code> (nepravda).</li>
+</ul>

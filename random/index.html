@@ -1,0 +1,58 @@
+<h1 id="nahoda">Náhoda
+<a href="#nahoda" class="header-link">#</a>
+</h1>
+<p>Občas je potřeba vybrat náhodnou hodnotu.
+Na to není v Pythonu funkce k dispozici přímo, ale dá se zpřístupnit
+pomocí příkazu <code>import</code>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">randrange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div><p>Neboli:</p>
+<ul>
+<li>Z modulu <code>random</code> (který obsahuje funkce kolem náhodných hodnot)
+zpřístupni (<code>import</code>) funkci <code>randrange</code> (která umí vybírat náhodná čísla).</li>
+<li>Vyber náhodné číslo ze šesti možností.</li>
+</ul>
+<p>Volání funkce <code>randrange</code> několikrát opakuj.
+Jaká čísla můžeš dostat?</p>
+<div class="solution" id="solution-0">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=0"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <p>Čísla od 0 do 5 – šestku ne.
+Programátoři totiž počítají od nuly, a když počítáš šest čísel od nuly,
+dostaneš se jen k pětce.</p>
+<p>Když budeš chtít „házet kostkou“ – vybírat čísla od 1 do 6 – můžeš napsat:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">randrange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="go">4</span>
+</pre></div>
+    </div>
+</div><p>Modulů jako <code>random</code>, ze kterých se dají <em>naimportovat</em> užitečná rozšiření,
+je spousta – na práci s textem, kreslení obrázků, práci se soubory nebo dny
+v kalendáři, kompresi dat, posílání e-mailů, stahování z internetu…
+Stačí jen vědět (nebo umět najít), jak se ten správný modul a funkce jmenuje.
+A kdyby nestačilo to, co má Python zabudované v sobě, další rozšiřující moduly
+se dají doinstalovat.</p>
+<h2 id="nahodny_vyber">Náhodný výběr
+<a href="#nahodny_vyber" class="header-link">#</a>
+</h2>
+<p>Když už jsme u náhody, zkusme si ještě vylosovat náhodné číslo v loterii.
+Na výběr ze seznamu má modul <code>random</code> funkci <code>choice</code>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">59</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">choice</span><span class="p">(</span><span class="n">loterie</span><span class="p">)</span>
+<span class="go">12</span>
+</pre></div><p>Podobně se dá vybrat náhodná karta z ruky, náhodný účastník kurzu,
+náhodná barva – cokoli, co umíš dát do seznamu.</p>
+<h2 id="shrnuti">Shrnutí
+<a href="#shrnuti" class="header-link">#</a>
+</h2>
+<ul>
+<li>Příkaz <strong>import</strong> ti dá k dispozici funkčnost, která není k dispozici přímo
+v Pythonu.</li>
+<li>Modul <strong>random</strong> obsahuje funkce <strong>randrange</strong> (náhodné číslo) a <strong>choice</strong>
+(náhodný prvek seznamu).</li>
+</ul>
