@@ -48,7 +48,7 @@ plan:
   - lesson: beginners/install-editor
 - title: Úvod do Pythonu
   slug: intro
-  date: 2024-02-17
+  date: 2024-09-14
   time:
     start: '8:00'
     end: '13:00'
@@ -74,7 +74,7 @@ plan:
   - lesson: fast-track/class
 - title: Had
   slug: workshop
-  date: 2024-02-17
+  date: 2024-09-14
   time:
     start: '13:30'
     end: '18:00'
