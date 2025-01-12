@@ -19,8 +19,8 @@ jsou seřadit.</p>
 <p>Úkol pro tuto sekci bude vytvořit třídu <em>koťátek</em>, která můžou mít různá jména,
 ale všechna umí mňoukat a jíst.</p>
 <p>Začni mňoukáním:</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Kotatko</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">zamnoukej</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Kotatko</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">zamnoukej</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mňau!&quot;</span><span class="p">)</span>
 </pre></div><p>Tak jako se funkce definují pomocí <code>def</code>,
 třídy mají klíčové slovo <code>class</code>,
@@ -75,8 +75,8 @@ atribut <code>jmeno</code> na jiný řetězec.</p>
 kterém pracuje, právě přes argument <code>self</code>.
 Teď, když máš koťátka pojmenovaná, můžeš v metodě <code>zamnoukej</code> použít <code>self</code>
 a dostat se tak ke jménu daného koťátka:</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Kotatko</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">zamnoukej</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Kotatko</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">zamnoukej</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">: Mňau!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">jmeno</span><span class="p">))</span>
 
 <span class="n">mourek</span> <span class="o">=</span> <span class="n">Kotatko</span><span class="p">()</span>
@@ -94,11 +94,11 @@ objekt <code>mourek</code> se předá funkci <code>zamnoukej</code> jako první 
 Může – <code>self</code> se doplní na první místo,
 zbytek argumentů se vezme z volání metody.
 Třeba:</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Kotatko</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">zamnoukej</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Kotatko</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">zamnoukej</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">: Mňau!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">jmeno</span><span class="p">))</span>
 
-    <span class="k">def</span> <span class="nf">snez</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jidlo</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">snez</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jidlo</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">: Mňau mňau! </span><span class="si">{}</span><span class="s2"> mi chutná!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">jmeno</span><span class="p">,</span> <span class="n">jidlo</span><span class="p">))</span>
 
 <span class="n">mourek</span> <span class="o">=</span> <span class="n">Kotatko</span><span class="p">()</span>

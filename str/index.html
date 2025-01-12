@@ -77,12 +77,14 @@ Jak bys ji zavolala na číslo <code>123</code> nebo řetězec <code>'abc'</code
     </div>
     <div class="solution-body" aria-hidden="true">
         <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="go">&lt;class &#39;int&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>
-<span class="go">&lt;class &#39;str&#39;&gt;</span>
-</pre></div>
+<span></span><span class="go">&lt;class &#39;int&#39;&gt;</span>
+<span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>
+<span></span><span class="go">&lt;class &#39;str&#39;&gt;</span>
+<span></span></pre></div>
     </div>
-</div><p>Kromě funkcí existují <em>metody</em>, které se zapisují trochu jinak.</p>
+</div>
+
+<p>Kromě funkcí existují <em>metody</em>, které se zapisují trochu jinak.</p>
 <p>Chceš-li vidět své jméno velkými písmeny, zavolej metodu <code>upper</code>.
 Napiš řetězec, pak tečku, jméno metody <code>upper</code> (bez uvozovek) a prázdné
 závorky:</p>
@@ -96,10 +98,12 @@ závorky:</p>
     </div>
     <div class="solution-body" aria-hidden="true">
         <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Ola&#39;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<span class="go">&#39;ola&#39;</span>
-</pre></div>
+<span></span><span class="go">&#39;ola&#39;</span>
+<span></span></pre></div>
     </div>
-</div><p>Co je metoda (kterou voláš s tečkou, jako <code>'Ola'.upper()</code>) a co je funkce
+</div>
+
+<p>Co je metoda (kterou voláš s tečkou, jako <code>'Ola'.upper()</code>) a co je funkce
 (kde vložíš informaci do závorek jako <code>len('Ola')</code>),
 to si budeš muset u každé nové funkce/metody zapamatovat nebo vyhledat.</p>
 <h2 id="skladani_vyrazu">Skládání výrazů
@@ -129,11 +133,13 @@ To vydělí a dostane <code>2.0</code>.</p>
     </div>
     <div class="solution-body" aria-hidden="true">
         <p><code>len('Ola') + 1</code> → <code>3 + 1</code> → <code>4</code></p>
-<p><code>'Já jsem ' + 'Ola'.upper()</code> → <code>'Já jsem ' + 'OLA'</code> → <code>'Já jsem OLA'</code></p>
-<p><code>len('Ola' * 3)</code> → <code>len('OlaOlaOla')</code> → <code>9</code></p>
-<p><code>len('Ola'.upper())</code> → <code>len('OLA')</code> → <code>3</code></p>
+<span></span><p><code>'Já jsem ' + 'Ola'.upper()</code> → <code>'Já jsem ' + 'OLA'</code> → <code>'Já jsem OLA'</code></p>
+<span></span><p><code>len('Ola' * 3)</code> → <code>len('OlaOlaOla')</code> → <code>9</code></p>
+<span></span><p><code>len('Ola'.upper())</code> → <code>len('OLA')</code> → <code>3</code></p>
     </div>
-</div><p>Podobné skládání je v programování velice časté.
+</div>
+
+<p>Podobné skládání je v programování velice časté.
 Většinu základních stavebních bloků se začátečník naučí za pár
 týdnů či měsíců – a pak po celou svou progrmátorskou kariéru objevuje nové způsoby,
 jak je poskládat do složitějších a složitějších konstrukcí.</p>

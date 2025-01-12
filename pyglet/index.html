@@ -12,12 +12,16 @@ zadat následující dva příkazy.
 (Existují i jednodušší způsoby, které ovšem vyžadují „správně“
 nastavený systém.)</p>
 <ul>
-<li>Aktualizace nástroje <code>pip</code>, který umí instalovat knihovny pro Python:<div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
-</pre></div>(V překladu: <strong>Python</strong>e, spusť <strong>m</strong>odul <strong>pip</strong> a řekni mu,
-ať na<strong>instal</strong>uje a kdyžtak aktualizuje (<em>upgrade</em>) knihovnu <strong>pip</strong>.)</li>
-<li>Samotné nainstalování Pygletu:<div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pyglet
-</pre></div>(V překladu: <strong>Python</strong>e, spusť <strong>m</strong>odul <strong>pip</strong> a řekni mu,
-ať na<strong>instal</strong>uje knihovnu <strong>pyglet</strong>.)</li>
+<li><p>Aktualizace nástroje <code>pip</code>, který umí instalovat knihovny pro Python:</p>
+<div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</pre></div><p>(V překladu: <strong>Python</strong>e, spusť <strong>m</strong>odul <strong>pip</strong> a řekni mu,
+ať na<strong>instal</strong>uje a kdyžtak aktualizuje (<em>upgrade</em>) knihovnu <strong>pip</strong>.)</p>
+</li>
+<li><p>Samotné nainstalování Pygletu:</p>
+<div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pyglet
+</pre></div><p>(V překladu: <strong>Python</strong>e, spusť <strong>m</strong>odul <strong>pip</strong> a řekni mu,
+ať na<strong>instal</strong>uje knihovnu <strong>pyglet</strong>.)</p>
+</li>
 </ul>
 <p>U mě vypadá instalace nějak takto:</p>
 <div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
@@ -35,7 +39,7 @@ To znamená že je knihovna připravená k použití!</p>
 </h2>
 <p>Teď zkus v editoru vytvořit nový soubor, uložit ho jako <code>grafika.py</code>
 a napsat do něj následující program:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyglet</span>
 <span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
 <span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hotovo!&#39;</span><span class="p">)</span>
@@ -74,9 +78,15 @@ automechanika.
 Popisují, co se má stát v jaké situaci.
 Třeba program pro textový editor by mohl vypadat takhle:</p>
 <ul>
-<li><p>Když uživatel zmáčkne písmenko na klávesnici, přidej ho do dokumentu.</p></li>
-<li><p>Když uživatel zmáčkne <kbd>⌫ Backspace</kbd>, poslední písmenko umaž.</p></li>
-<li><p>Když uživatel zmáčkne tlačítko Uložit, zapiš soubor na disk.</p></li>
+<li><p>Když uživatel zmáčkne písmenko na klávesnici, přidej ho do dokumentu.</p>
+
+</li>
+<li><p>Když uživatel zmáčkne <kbd>⌫ Backspace</kbd>, poslední písmenko umaž.</p>
+
+</li>
+<li><p>Když uživatel zmáčkne tlačítko Uložit, zapiš soubor na disk.</p>
+
+</li>
 </ul>
 <p>I takový program se dá napsat i jako „recept“ – ale ten recept je pro všechny
 aplikace stejný:</p>
@@ -99,7 +109,7 @@ a jak na ně reagovat.</p>
 <p>Nejjednodušší událost, kterou můžeš obsloužit, je psaní textu na klávesnici.</p>
 <p>Zkus do programu těsně nad řádek <code>pyglet.app.run()</code> dát následující kód:</p>
 <div class="highlight"><pre><span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div><p>Co to je?
 Je to definice funkce, ale na začátku má <em>dekorátor</em> – tu řádku začínající
@@ -123,9 +133,9 @@ Text tu může mít různé barvy, velikosti, druhy písma,
 může být všelijak posunutý nebo natočený…</p>
 <p>Všechny tyhle <em>atributy</em> písma je potřeba (i se samotným textem) uložit
 do objektu  <code>Label</code> („popisek“).
-Zkus to – dej následující kód pod řádek s <code>window =</code>:</p>
+Zkus to – dej následující kód pod řádek s <code>window = </code>:</p>
 <div class="highlight"><pre><span></span><span class="n">label</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s2">&quot;Ahoj!&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-</pre></div><p>V proměnné <code>label</code> teď budeš mít máš popisek s textem <code>"Ahoj"</code>, který patří
+</pre></div><p>V proměnné <code>label</code> teď budeš mít máš popisek s textem <code>&quot;Ahoj&quot;</code>, který patří
 na pozici (10, 20) – 10 bodů od pravého okraje okna, 20 od spodního.</p>
 <div class="admonition note"><p>Ostatní vlastnosti kromě pozice tu nejsou zadané, tak se použijí
 rozumné „výchozí“ hodnoty: bílá barva, malý ale čitelný font.</p>
@@ -135,7 +145,7 @@ pro nakreslení textu je potřeba reagovat na událost
 <em>vykreslení okna</em> – <code>on_draw</code>.</p>
 <p>Dej pod funkci <code>on_text</code> tento kód:</p>
 <div class="highlight"><pre><span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_draw</span><span class="p">():</span>
     <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">label</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 </pre></div><p>Tuhle funkci Pyglet zavolá vždycky, když je potřeba nakreslit obsah okýnka.
@@ -151,7 +161,7 @@ U animací (filmů nebo her) to často bývá třeba 60× za sekundu
 ukázal v okýnku.
 To se dělá přiřazením do <em>atributu</em> <code>label.text</code>:</p>
 <div class="highlight"><pre><span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starý text:&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
     <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nový text:&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
@@ -164,11 +174,13 @@ aby program fungoval jako jednoduchý textový editor?</p>
     </div>
     <div class="solution-body" aria-hidden="true">
         <div class="highlight"><pre><span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-    <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="n">text</span>
-</pre></div>
+<span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span></span>    <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="n">text</span>
+<span></span></pre></div>
     </div>
-</div><h2 id="dalsi_udalosti">Další události
+</div>
+
+<h2 id="dalsi_udalosti">Další události
 <a href="#dalsi_udalosti" class="header-link">#</a>
 </h2>
 <p>Na jaké další události se dá reagovat?
@@ -183,14 +195,14 @@ Tady uvádím pár zajímavých.</p>
 který můžeš porovnat s konstantou z <a href="https://pyglet.readthedocs.io/en/latest/modules/window_key.html#key-constants">pyglet.window.key</a>.
 Druhý určuje stisknuté modifikátory jako <kbd>Shift</kbd> nebo <kbd>Ctrl</kbd>.</p>
 <div class="highlight"><pre><span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_key_press</span><span class="p">(</span><span class="n">key_code</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_key_press</span><span class="p">(</span><span class="n">key_code</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">key_code</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">BACKSPACE</span><span class="p">:</span>
         <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">text</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="k">if</span> <span class="n">key_code</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">ENTER</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zadaná zpráva:&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
         <span class="n">window</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div><p>Na macOS budeš možná muset zaměňit <code>BACKSPACE</code> za <code>DELETE</code>. 
+</pre></div><p>Na macOS budeš možná muset zaměňit <code>BACKSPACE</code> za <code>DELETE</code>.
 (Nebo si doma nastuduj <a href="https://pyglet.readthedocs.io/en/latest/programming_guide/keyboard.html#motion-events">způsob</a>, jak to dělat automaticky a správně.)</p>
 <h3 id="kliknuti_mysi">Kliknutí myši
 <a href="#kliknuti_mysi" class="header-link">#</a>
@@ -200,7 +212,7 @@ kliknutí (<var>x</var>-ovou a <var>x</var>-ovou souřadnici)
 a navíc informaci o stisknutém tlačítku myši a modifikátoru.</p>
 <p>Takhle se třeba popisek přesune na místo kliknutí:</p>
 <div class="highlight"><pre><span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_mouse_press</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_mouse_press</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
     <span class="n">label</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
     <span class="n">label</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
 </pre></div><h2 id="animace">Animace
@@ -216,7 +228,7 @@ Pyglet potřebuje vědět, jak často má funkci volat.
 To mu pověz zavoláním <code>pyglet.clock.schedule_interval</code> se dvěma argumenty:
 jménem funkce a časem mezi jednotlivými voláními – ¹/₆₀ vteřiny.
 Celé to opět napiš před řádek <code>pyglet.app.run()</code>:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tik</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">tik</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
     <span class="n">label</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
 
 <span class="n">pyglet</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">tik</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span>
@@ -226,24 +238,24 @@ Celé to opět napiš před řádek <code>pyglet.app.run()</code>:</p>
 </h2>
 <p>Pro případ, že by ses ztratila nebo nevěděla,
 kam který kousek kódu patří, uvádím výsledný ukázkový program.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyglet</span>
 <span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
 <span class="n">label</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s2">&quot;Ahoj!&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 
 
 <span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_draw</span><span class="p">():</span>
     <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">label</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 
 <span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="n">text</span>
 
 
 <span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_key_press</span><span class="p">(</span><span class="n">key_code</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_key_press</span><span class="p">(</span><span class="n">key_code</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">key_code</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">BACKSPACE</span><span class="p">:</span>
         <span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">text</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
@@ -253,11 +265,11 @@ kam který kousek kódu patří, uvádím výsledný ukázkový program.</p>
 
 
 <span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_mouse_press</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_mouse_press</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
     <span class="n">label</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
     <span class="n">label</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
 
-<span class="k">def</span> <span class="nf">tik</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">tik</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
     <span class="n">label</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
 
 <span class="n">pyglet</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">tik</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span>

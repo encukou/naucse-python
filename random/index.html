@@ -4,7 +4,7 @@
 <p>Občas je potřeba vybrat náhodnou hodnotu.
 Na to není v Pythonu funkce k dispozici přímo, ale dá se zpřístupnit
 pomocí příkazu <code>import</code>:</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randrange</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">randrange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="go">3</span>
 </pre></div><p>Neboli:</p>
@@ -22,15 +22,17 @@ Jaká čísla můžeš dostat?</p>
     </div>
     <div class="solution-body" aria-hidden="true">
         <p>Čísla od 0 do 5 – šestku ne.
-Programátoři totiž počítají od nuly, a když počítáš šest čísel od nuly,
-dostaneš se jen k pětce.</p>
-<p>Když budeš chtít „házet kostkou“ – vybírat čísla od 1 do 6 – můžeš napsat:</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">randrange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="go">4</span>
-</pre></div>
+<span></span>Programátoři totiž počítají od nuly, a když počítáš šest čísel od nuly,
+<span></span>dostaneš se jen k pětce.</p>
+<span></span><p>Když budeš chtít „házet kostkou“ – vybírat čísla od 1 do 6 – můžeš napsat:</p>
+<span></span><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randrange</span>
+<span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">randrange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span></span><span class="go">4</span>
+<span></span></pre></div>
     </div>
-</div><p>Modulů jako <code>random</code>, ze kterých se dají <em>naimportovat</em> užitečná rozšiření,
+</div>
+
+<p>Modulů jako <code>random</code>, ze kterých se dají <em>naimportovat</em> užitečná rozšiření,
 je spousta – na práci s textem, kreslení obrázků, práci se soubory nebo dny
 v kalendáři, kompresi dat, posílání e-mailů, stahování z internetu…
 Stačí jen vědět (nebo umět najít), jak se ten správný modul a funkce jmenuje.
@@ -41,7 +43,7 @@ se dají doinstalovat.</p>
 </h2>
 <p>Když už jsme u náhody, zkusme si ještě vylosovat náhodné číslo v loterii.
 Na výběr ze seznamu má modul <code>random</code> funkci <code>choice</code>:</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">choice</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">59</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">choice</span><span class="p">(</span><span class="n">loterie</span><span class="p">)</span>
 <span class="go">12</span>

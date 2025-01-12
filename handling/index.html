@@ -33,7 +33,7 @@ atributu se nový směr přidá do seznamu.
 Abys nemusela psát čtyřikrát <code>append</code>,
 můžeš uložit nový směr do pomocné proměnné:</p>
 <div class="highlight"><pre><span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_key_press</span><span class="p">(</span><span class="n">key_code</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_key_press</span><span class="p">(</span><span class="n">key_code</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">key_code</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">LEFT</span><span class="p">:</span>
         <span class="n">new_direction</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="n">key_code</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">RIGHT</span><span class="p">:</span>
@@ -54,7 +54,7 @@ Nezapomeň ho pak z fronty smazat, ať se dostane i na další:</p>
 <h3 id="zpatky_ni_krok">Zpátky ni krok
 <a href="#zpatky_ni_krok" class="header-link">#</a>
 </h3>
-<p>Když hráč zmáčkne šipku opačného směru, než se had právě plazí, had se otočí a 
+<p>Když hráč zmáčkne šipku opačného směru, než se had právě plazí, had se otočí a
 hlavou si narazí do krku.</p>
 <p>Z pohledu programu to opět dává smysl: plazí-li se had doleva,
 políčko napravo od hlavy je plné.

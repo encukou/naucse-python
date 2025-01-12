@@ -78,8 +78,8 @@ Se třídou to nakonec bude jednodušší, věř mi.</p>
 stav hry a metody pro funkčnost okolo.
 První metoda se bude jmenovat <code>initialize</code> a nastaví úvodní stav hry – tedy
 pozici hada.</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GameState</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">GameState</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
 
 <span class="c1"># Vytvoření konkrétního objektu</span>
@@ -122,22 +122,22 @@ se souřadnicemi (10, 20).</p>
 </h2>
 <p>Na to, abychom hada vykreslili, použijeme okýnko z Pygletu.
 Tady je základní kostra Pygletí aplikace, které už bys měla rozumět:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyglet</span>
 
 <span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
 
 <span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_draw</span><span class="p">():</span>
     <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 
 <span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div><p>Kostru Pygletí aplikace připiš do svého programu.
 Řádek s importem patří podle konvencí úplně na začátek; zbytek připiš
 <em>za</em> svůj odsavadní kód.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyglet</span>
 
-<span class="k">class</span> <span class="nc">GameState</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GameState</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
 
 <span class="n">state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">()</span>
@@ -146,13 +146,14 @@ Tady je základní kostra Pygletí aplikace, které už bys měla rozumět:</p>
 <span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
 
 <span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_draw</span><span class="p">():</span>
     <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 
 <span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div><p><img src="naucse:static?filename=green.png" alt="" style="display:block; float:right; margin: 2px; border: 1px solid #ccc; border-radius: 1px;">
-Stáhni si soubor <a href="naucse:static?filename=green.png">green.png</a> – zelený čtvereček –
-a dej ho do adresáře, kam píšeš kód.</p>
+</pre></div><img src="naucse:static?filename=green.png" alt="" style="display:block; float:right; margin: 2px; border: 1px solid #ccc; border-radius: 1px;">
+Stáhni si soubor [green.png](naucse:static?filename=green.png) – zelený čtvereček –
+a dej ho do adresáře, kam píšeš kód.
+
 <p>Před <code>window = ...</code> přidej řádek, který tento obrázek načte.</p>
 <div class="highlight"><pre><span></span><span class="n">green_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;green.png&#39;</span><span class="p">)</span>
 </pre></div><p>Potom zkus dovnitř do funkce <code>on_draw</code> přidat vykreslení obrázku na souřadnice
@@ -185,31 +186,33 @@ se naučíš).</p>
         <a href="naucse:solution?solution=0"><span class="link-text">Ukázat řešení</span></a>
     </div>
     <div class="solution-body" aria-hidden="true">
-        <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
-
-<span class="n">TILE_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
-
-<span class="k">class</span> <span class="nc">GameState</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
-
-<span class="n">state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">()</span>
-<span class="n">state</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
-
-<span class="n">green_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;green.png&#39;</span><span class="p">)</span>
-
-<span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
-
-<span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
-    <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">green_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
-                     <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
-
-<span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
+        <div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyglet</span>
+<span></span>
+<span></span><span class="n">TILE_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
+<span></span>
+<span></span><span class="k">class</span><span class="w"> </span><span class="nc">GameState</span><span class="p">:</span>
+<span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+<span></span>
+<span></span><span class="n">state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">()</span>
+<span></span><span class="n">state</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+<span></span>
+<span></span><span class="n">green_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;green.png&#39;</span><span class="p">)</span>
+<span></span>
+<span></span><span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
+<span></span>
+<span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
+<span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_draw</span><span class="p">():</span>
+<span></span>    <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span></span>    <span class="n">green_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
+<span></span>                     <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
+<span></span>
+<span></span><span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span></span></pre></div>
     </div>
-</div><h2 id="sazeni_hada">Sázení hada
+</div>
+
+<h2 id="sazeni_hada">Sázení hada
 <a href="#sazeni_hada" class="header-link">#</a>
 </h2>
 <p>Nechceme ale zobrazovat čtvereček, ale hada.
@@ -218,16 +221,16 @@ Vlastně budeme chtít zobrazit celý stav hry – had bude jen ta nejdůležit�
 Udělej si proto ve třídě <code>GameState</code> novou metodu <code>draw</code> a vykreslení čtverečku
 (volání <code>green_image.blit</code>) zatím dej do ní.</p>
 <div class="highlight"><pre><span></span><span class="o">...</span>
-<span class="k">class</span> <span class="nc">GameState</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GameState</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
 
-    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">green_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
                          <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
 <span class="o">...</span>
 <span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_draw</span><span class="p">():</span>
     <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">state</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 </pre></div><p>Změněný program by měl dělat to samé co předtím: vyktreslit čtvereček.
@@ -235,7 +238,7 @@ Teď se ale kreslí v metodě <code>draw</code>, která má lepší přístup k 
 Zkus ho vykreslit!</p>
 <p>Vzpomeň si, že seznam dvojic můžeš „projít“ pomocí cyklu <code>for</code> a „rozbalení“
 <var>n</var>-tice:</p>
-<div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight"><pre><span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">snake</span><span class="p">:</span>
             <span class="o">...</span>
             <span class="c1"># (Sem dej kód na vykreslení čtverečku se souřadnicemi x, y)</span>
@@ -251,47 +254,50 @@ Anebo pro kontrolu!</p>
         <a href="naucse:solution?solution=1"><span class="link-text">Ukázat řešení</span></a>
     </div>
     <div class="solution-body" aria-hidden="true">
-        <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
-
-<span class="n">TILE_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
-
-<span class="k">class</span> <span class="nc">GameState</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
-
-    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">snake</span><span class="p">:</span>
-            <span class="n">green_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
-                             <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
-
-<span class="n">state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">()</span>
-<span class="n">state</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
-
-<span class="n">green_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;green.png&#39;</span><span class="p">)</span>
-
-<span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
-
-<span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
-    <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">state</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-
-<span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
+        <div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyglet</span>
+<span></span>
+<span></span><span class="n">TILE_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
+<span></span>
+<span></span><span class="k">class</span><span class="w"> </span><span class="nc">GameState</span><span class="p">:</span>
+<span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+<span></span>
+<span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span></span>        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">snake</span><span class="p">:</span>
+<span></span>            <span class="n">green_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
+<span></span>                             <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
+<span></span>
+<span></span><span class="n">state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">()</span>
+<span></span><span class="n">state</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+<span></span>
+<span></span><span class="n">green_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;green.png&#39;</span><span class="p">)</span>
+<span></span>
+<span></span><span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
+<span></span>
+<span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
+<span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_draw</span><span class="p">():</span>
+<span></span>    <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span></span>    <span class="n">state</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span></span>
+<span></span><span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span></span></pre></div>
     </div>
-</div><h2 id="krmeni">Krmení
+</div>
+
+<h2 id="krmeni">Krmení
 <a href="#krmeni" class="header-link">#</a>
 </h2>
-<p><img src="naucse:static?filename=apple.png" alt="" style="display:block; float:right; margin: 2px; border: 1px solid #ccc; border-radius: 1px;">
+<img src="naucse:static?filename=apple.png" alt="" style="display:block; float:right; margin: 2px; border: 1px solid #ccc; border-radius: 1px;">
 Aby bylo ve hře co dělat, budeme potřebovat pro hada krmení.
 Stáhni si do adresáře s projektem obrázek
-<a href="naucse:static?filename=apple.png">apple.png</a> a do metody <code>initialize</code>
-přidej souřadnice pro jídlo:</p>
+[apple.png](naucse:static?filename=apple.png) a do metody `initialize`
+přidej souřadnice pro jídlo:
+
 <div class="highlight"><pre><span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">food</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
 </pre></div><p>Pak zkus v metodě <code>draw</code> na tyhle souřadnice vykreslit jablíčka.</p>
 <p>Budeš na to potřebovat několik věcí:</p>
 <ul>
-<li>načíst obrázek <code>apple_image</code> podobně jako načítáš zelený čtvereček – 
+<li>načíst obrázek <code>apple_image</code> podobně jako načítáš zelený čtvereček –
 nastavuješ proměnnou <code>green_image</code> a</li>
 <li>několikrát vykreslit obrázek <code>apple_image</code> podobně jako vykresluješ
 zelené čtverečky – voláním <code>green_image.blit</code> v cyklu</li>
@@ -302,40 +308,42 @@ zelené čtverečky – voláním <code>green_image.blit</code> v cyklu</li>
         <a href="naucse:solution?solution=2"><span class="link-text">Ukázat řešení</span></a>
     </div>
     <div class="solution-body" aria-hidden="true">
-        <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
-
-<span class="n">TILE_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
-
-<span class="k">class</span> <span class="nc">GameState</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">food</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
-
-    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">snake</span><span class="p">:</span>
-            <span class="n">green_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
-                             <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">:</span>
-            <span class="n">apple_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
-                             <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
-
-<span class="n">state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">()</span>
-<span class="n">state</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
-
-<span class="n">apple_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;apple.png&#39;</span><span class="p">)</span>
-<span class="n">green_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;green.png&#39;</span><span class="p">)</span>
-
-<span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
-
-<span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
-    <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">state</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-
-<span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
+        <div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyglet</span>
+<span></span>
+<span></span><span class="n">TILE_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
+<span></span>
+<span></span><span class="k">class</span><span class="w"> </span><span class="nc">GameState</span><span class="p">:</span>
+<span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+<span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">food</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<span></span>
+<span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span></span>        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">snake</span><span class="p">:</span>
+<span></span>            <span class="n">green_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
+<span></span>                             <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
+<span></span>        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">:</span>
+<span></span>            <span class="n">apple_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
+<span></span>                             <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
+<span></span>
+<span></span><span class="n">state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">()</span>
+<span></span><span class="n">state</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+<span></span>
+<span></span><span class="n">apple_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;apple.png&#39;</span><span class="p">)</span>
+<span></span><span class="n">green_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;green.png&#39;</span><span class="p">)</span>
+<span></span>
+<span></span><span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
+<span></span>
+<span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
+<span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_draw</span><span class="p">():</span>
+<span></span>    <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span></span>    <span class="n">state</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span></span>
+<span></span><span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span></span></pre></div>
     </div>
-</div><p>Možná si všimneš, že obrázek má ve hře trošičku „zubaté“ hrany.
+</div>
+
+<p>Možná si všimneš, že obrázek má ve hře trošičku „zubaté“ hrany.
 To je dáno způsobem, jakým v Pygletu vykreslujeme.
 Úplné vysvětlení by se do tohoto návodu nevešlo, potřebuje trochu hlubší
 znalosti počítačové grafiky.
@@ -358,7 +366,7 @@ Struktura adresáře by měla vypadat takhle:</p>
 Kousky vypadají následovně.
 Všimni si pojmenování – každý kousek hada buď spojuje dvě strany obrázku,
 nebo stranu obrázku s hlavou či ocasem.
-Podle toho, odkud kam se had na daném políčku plazí, se obrázek se jmenuje 
+Podle toho, odkud kam se had na daném políčku plazí, se obrázek se jmenuje
 <code><var>odkud</var>-<var>kam</var>.png</code>.</p>
 <p><span class="figure"><a href="naucse:static?filename=snake-tiles.png"><img src="naucse:static?filename=snake-tiles.png" alt="Kousky hada"></a></span></p>
 <div class="admonition note"><p>Co jsou taková ta divná „hadí vajíčka”?
@@ -405,7 +413,8 @@ Výpis bude vypadat dost nepřehledně, ale třeba v něm poznáš slovník –
  'right-top': &lt;ImageData 64x64&gt;, 'left-bottom': &lt;ImageData 64x64&gt;,
  'end-left': &lt;ImageData 64x64&gt;, 'bottom-tongue': &lt;ImageData 64x64&gt;,
  'left-top': &lt;ImageData 64x64&gt;, 'bottom-bottom': &lt;ImageData 64x64&gt;,
- ...</code></pre></div><h2 id="housenka">Housenka
+ ...
+</code></pre></div><h2 id="housenka">Housenka
 <a href="#housenka" class="header-link">#</a>
 </h2>
 <p>A teď zkus načtení obrázků začlenit do programu s hadem!</p>
@@ -419,50 +428,52 @@ třeba <code>snake_tiles['end-end']</code>.</p>
         <a href="naucse:solution?solution=3"><span class="link-text">Ukázat řešení</span></a>
     </div>
     <div class="solution-body" aria-hidden="true">
-        <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyglet</span>
-
-<span class="n">TILE_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
-
-<span class="k">class</span> <span class="nc">GameState</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">food</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
-
-    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">snake</span><span class="p">:</span>
-            <span class="n">snake_tiles</span><span class="p">[</span><span class="s1">&#39;end-end&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
-                                        <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">:</span>
-            <span class="n">apple_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
-                             <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
-
-<span class="n">state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">()</span>
-<span class="n">state</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
-
-<span class="n">apple_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;apple.png&#39;</span><span class="p">)</span>
-<span class="n">green_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;green.png&#39;</span><span class="p">)</span>
-<span class="n">snake_tiles</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">start</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">end</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="s1">&#39;dead&#39;</span><span class="p">,</span> <span class="s1">&#39;tongue&#39;</span><span class="p">]:</span>
-        <span class="n">key</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">end</span>
-        <span class="n">image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;snake-tiles/&#39;</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">)</span>
-        <span class="n">snake_tiles</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span>
-
-<span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
-
-<span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
-<span class="k">def</span> <span class="nf">on_draw</span><span class="p">():</span>
-    <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="c1"># Lepší vykreslování (pro nás zatím kouzelné zaříkadlo)</span>
-    <span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">glEnable</span><span class="p">(</span><span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_BLEND</span><span class="p">)</span>
-    <span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">glBlendFunc</span><span class="p">(</span><span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_SRC_ALPHA</span><span class="p">,</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_ONE_MINUS_SRC_ALPHA</span><span class="p">)</span>
-
-    <span class="n">state</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-
-<span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
+        <div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyglet</span>
+<span></span>
+<span></span><span class="n">TILE_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
+<span></span>
+<span></span><span class="k">class</span><span class="w"> </span><span class="nc">GameState</span><span class="p">:</span>
+<span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+<span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">food</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<span></span>
+<span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span></span>        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">snake</span><span class="p">:</span>
+<span></span>            <span class="n">snake_tiles</span><span class="p">[</span><span class="s1">&#39;end-end&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
+<span></span>                                        <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
+<span></span>        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">:</span>
+<span></span>            <span class="n">apple_image</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span>
+<span></span>                             <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
+<span></span>
+<span></span><span class="n">state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">()</span>
+<span></span><span class="n">state</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+<span></span>
+<span></span><span class="n">apple_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;apple.png&#39;</span><span class="p">)</span>
+<span></span><span class="n">green_image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;green.png&#39;</span><span class="p">)</span>
+<span></span><span class="n">snake_tiles</span> <span class="o">=</span> <span class="p">{}</span>
+<span></span><span class="k">for</span> <span class="n">start</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">]:</span>
+<span></span>    <span class="k">for</span> <span class="n">end</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="s1">&#39;dead&#39;</span><span class="p">,</span> <span class="s1">&#39;tongue&#39;</span><span class="p">]:</span>
+<span></span>        <span class="n">key</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">end</span>
+<span></span>        <span class="n">image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;snake-tiles/&#39;</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+<span></span>        <span class="n">snake_tiles</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span>
+<span></span>
+<span></span><span class="n">window</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
+<span></span>
+<span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
+<span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_draw</span><span class="p">():</span>
+<span></span>    <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span></span>    <span class="c1"># Lepší vykreslování (pro nás zatím kouzelné zaříkadlo)</span>
+<span></span>    <span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">glEnable</span><span class="p">(</span><span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_BLEND</span><span class="p">)</span>
+<span></span>    <span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">glBlendFunc</span><span class="p">(</span><span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_SRC_ALPHA</span><span class="p">,</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_ONE_MINUS_SRC_ALPHA</span><span class="p">)</span>
+<span></span>
+<span></span>    <span class="n">state</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span></span>
+<span></span><span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span></span></pre></div>
     </div>
-</div><h2 id="jak_vybrat_ctverecky">Jak vybrat čtverečky?
+</div>
+
+<h2 id="jak_vybrat_ctverecky">Jak vybrat čtverečky?
 <a href="#jak_vybrat_ctverecky" class="header-link">#</a>
 </h2>
 <p>Místo toho, aby byl všude stejný kousek hada,
@@ -495,7 +506,7 @@ kousek, na kterém se had plazí zleva nahoru – tedy <code>snake_tiles['left-t
 <p>Toto je <strong>těžký úkol</strong>.
 I když všechny potřebné informace a nástroje k tomu teď teoreticky znáš,
 je potřeba je správným způsobem poskládat dohromady.
-Tohle skládání dohromady, <em>návrh algoritmů</em>, je nejsložitější programátorská 
+Tohle skládání dohromady, <em>návrh algoritmů</em>, je nejsložitější programátorská
 disciplína.</p>
 <p>Zkus nad tím ale přemýšlet, nech si to rozležet v hlavě třeba přes noc,
 vrať se k materiálům k předchozím lekcím (hlavně k úvodu do Pythonu),

@@ -25,140 +25,139 @@ tedy směr k <em>předchozí</em> a <em>následující</em> souřadnici:</p>
         <th></th>
     </tr>
 
+<div class="highlight"><pre><code>    &lt;tr&gt;
+        &lt;td&gt;(1, 2)&lt;/td&gt;
+        &lt;td&gt;&lt;em&gt;není&lt;/em&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;end&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            (2, 2)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;right&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            &lt;img
+                src=&quot;naucse:static?filename=snake-tiles/end-right.png&quot;
+                style=&quot;width: 1em&quot;
+                alt=&quot;end-right.png&quot;
+            &gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
 
-        <tr>
-            <td>(1, 2)</td>
-            <td><em>není</em></td>
-            <td><code>end</code></td>
-            <td>
-                (2, 2)
-            </td>
-            <td><code>right</code></td>
-            <td>
-                <img
-                    src="naucse:static?filename=snake-tiles/end-right.png"
-                    style="width: 1em"
-                    alt="end-right.png"
-                >
-            </td>
-        </tr>
+    &lt;tr&gt;
+        &lt;td&gt;(2, 2)&lt;/td&gt;
+        &lt;td&gt;
+            (1, 2)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;left&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            (3, 2)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;right&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            &lt;img
+                src=&quot;naucse:static?filename=snake-tiles/left-right.png&quot;
+                style=&quot;width: 1em&quot;
+                alt=&quot;left-right.png&quot;
+            &gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
 
-        <tr>
-            <td>(2, 2)</td>
-            <td>
-                (1, 2)
-            </td>
-            <td><code>left</code></td>
-            <td>
-                (3, 2)
-            </td>
-            <td><code>right</code></td>
-            <td>
-                <img
-                    src="naucse:static?filename=snake-tiles/left-right.png"
-                    style="width: 1em"
-                    alt="left-right.png"
-                >
-            </td>
-        </tr>
+    &lt;tr&gt;
+        &lt;td&gt;(3, 2)&lt;/td&gt;
+        &lt;td&gt;
+            (2, 2)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;left&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            (3, 3)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;top&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            &lt;img
+                src=&quot;naucse:static?filename=snake-tiles/left-top.png&quot;
+                style=&quot;width: 1em&quot;
+                alt=&quot;left-top.png&quot;
+            &gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
 
-        <tr>
-            <td>(3, 2)</td>
-            <td>
-                (2, 2)
-            </td>
-            <td><code>left</code></td>
-            <td>
-                (3, 3)
-            </td>
-            <td><code>top</code></td>
-            <td>
-                <img
-                    src="naucse:static?filename=snake-tiles/left-top.png"
-                    style="width: 1em"
-                    alt="left-top.png"
-                >
-            </td>
-        </tr>
+    &lt;tr&gt;
+        &lt;td&gt;(3, 3)&lt;/td&gt;
+        &lt;td&gt;
+            (3, 2)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;bottom&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            (3, 4)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;top&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            &lt;img
+                src=&quot;naucse:static?filename=snake-tiles/bottom-top.png&quot;
+                style=&quot;width: 1em&quot;
+                alt=&quot;bottom-top.png&quot;
+            &gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
 
-        <tr>
-            <td>(3, 3)</td>
-            <td>
-                (3, 2)
-            </td>
-            <td><code>bottom</code></td>
-            <td>
-                (3, 4)
-            </td>
-            <td><code>top</code></td>
-            <td>
-                <img
-                    src="naucse:static?filename=snake-tiles/bottom-top.png"
-                    style="width: 1em"
-                    alt="bottom-top.png"
-                >
-            </td>
-        </tr>
+    &lt;tr&gt;
+        &lt;td&gt;(3, 4)&lt;/td&gt;
+        &lt;td&gt;
+            (3, 3)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;bottom&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            (3, 5)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;top&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            &lt;img
+                src=&quot;naucse:static?filename=snake-tiles/bottom-top.png&quot;
+                style=&quot;width: 1em&quot;
+                alt=&quot;bottom-top.png&quot;
+            &gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
 
-        <tr>
-            <td>(3, 4)</td>
-            <td>
-                (3, 3)
-            </td>
-            <td><code>bottom</code></td>
-            <td>
-                (3, 5)
-            </td>
-            <td><code>top</code></td>
-            <td>
-                <img
-                    src="naucse:static?filename=snake-tiles/bottom-top.png"
-                    style="width: 1em"
-                    alt="bottom-top.png"
-                >
-            </td>
-        </tr>
+    &lt;tr&gt;
+        &lt;td&gt;(3, 5)&lt;/td&gt;
+        &lt;td&gt;
+            (3, 4)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;bottom&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            (4, 5)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;right&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            &lt;img
+                src=&quot;naucse:static?filename=snake-tiles/bottom-right.png&quot;
+                style=&quot;width: 1em&quot;
+                alt=&quot;bottom-right.png&quot;
+            &gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
 
-        <tr>
-            <td>(3, 5)</td>
-            <td>
-                (3, 4)
-            </td>
-            <td><code>bottom</code></td>
-            <td>
-                (4, 5)
-            </td>
-            <td><code>right</code></td>
-            <td>
-                <img
-                    src="naucse:static?filename=snake-tiles/bottom-right.png"
-                    style="width: 1em"
-                    alt="bottom-right.png"
-                >
-            </td>
-        </tr>
+    &lt;tr&gt;
+        &lt;td&gt;(4, 5)&lt;/td&gt;
+        &lt;td&gt;
+            (3, 5)
+        &lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;left&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;em&gt;není&lt;/em&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;end&lt;/code&gt;&lt;/td&gt;
+        &lt;td&gt;
+            &lt;img
+                src=&quot;naucse:static?filename=snake-tiles/left-end.png&quot;
+                style=&quot;width: 1em&quot;
+                alt=&quot;left-end.png&quot;
+            &gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;</code></pre></div></table>
 
-        <tr>
-            <td>(4, 5)</td>
-            <td>
-                (3, 5)
-            </td>
-            <td><code>left</code></td>
-            <td><em>není</em></td>
-            <td><code>end</code></td>
-            <td>
-                <img
-                    src="naucse:static?filename=snake-tiles/left-end.png"
-                    style="width: 1em"
-                    alt="left-end.png"
-                >
-            </td>
-        </tr>
-
-</table><p>Toto je <strong>těžký úkol</strong>.
+<p>Toto je <strong>těžký úkol</strong>.
 I když všechny potřebné informace a nástroje k tomu teď teoreticky znáš,
 je potřeba je správným způsobem poskládat dohromady.
-Tohle skládání dohromady, <em>návrh algoritmů</em>, je nejsložitější programátorská 
+Tohle skládání dohromady, <em>návrh algoritmů</em>, je nejsložitější programátorská
 disciplína.</p>
 <p>Zkus nad tím ale přemýšlet, nech si to rozležet v hlavě třeba přes noc,
 vrať se k materiálům k předchozím lekcím (hlavně k úvodu do Pythonu),
@@ -245,7 +244,7 @@ Taková situace ve hře nemůže nastat (nebo ano?), ale přesto je dobré ji
 podchytit a na konec postupu přidat třeba „Jinak je výsledek <code>'end'</code>”.</p>
 <p>Vymyslet tenhle postup je složitější část řešení našeho problému.
 Zbytek je jen téměř doslovný překlad z češtiny do Pythonu:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">direction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">direction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;end&#39;</span>
 
@@ -290,113 +289,114 @@ Budu psát A místo (1, 2); B místo (2, 2); atd.:</p>
 </ul>
 <table class="table">
 
-    <tr>
-        <th>K vykreslení</th>
+<div class="highlight"><pre><code>&lt;tr&gt;
+    &lt;th&gt;K vykreslení&lt;/th&gt;
 
-            <td>A</td>
+        &lt;td&gt;A&lt;/td&gt;
 
-            <td>B</td>
+        &lt;td&gt;B&lt;/td&gt;
 
-            <td>C</td>
+        &lt;td&gt;C&lt;/td&gt;
 
-            <td>D</td>
+        &lt;td&gt;D&lt;/td&gt;
 
-            <td>E</td>
+        &lt;td&gt;E&lt;/td&gt;
 
-            <td>F</td>
+        &lt;td&gt;F&lt;/td&gt;
 
-            <td>G</td>
+        &lt;td&gt;G&lt;/td&gt;
 
-    </tr>
-    <tr>
-        <th>Předchozí</th>
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;th&gt;Předchozí&lt;/th&gt;
 
-            <td>
-            ×
-            </td>
+        &lt;td&gt;
+        ×
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                A
+            A
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                B
+            B
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                C
+            C
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                D
+            D
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                E
+            E
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                F
+            F
 
-            </td>
+        &lt;/td&gt;
 
-    </tr>
-    <tr>
-        <th>Následující</th>
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;th&gt;Následující&lt;/th&gt;
 
-            <td>
+        &lt;td&gt;
 
-                B
+            B
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                C
+            C
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                D
+            D
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                E
+            E
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                F
+            F
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
+        &lt;td&gt;
 
-                G
+            G
 
-            </td>
+        &lt;/td&gt;
 
-            <td>
-            ×
-            </td>
+        &lt;td&gt;
+        ×
+        &lt;/td&gt;
 
-    </tr>
-</table><p>Jak na to?
+&lt;/tr&gt;</code></pre></div></table>
+
+<p>Jak na to?
 První řádek tabulky, seznam [A, B, C, D, E, F, G] už máš – to jsou souřadnice
 hada, <code>snake</code>.
 Kdyz se ti k tomu podaří připravit seznamy s druhým řádkem,

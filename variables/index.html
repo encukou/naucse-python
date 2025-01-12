@@ -49,13 +49,15 @@ Zkus tohle:</p>
     </div>
     <div class="solution-body" aria-hidden="true">
         <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesto</span> <span class="o">=</span> <span class="s2">&quot;Tokyo&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mmesto</span>
-<span class="gt">Traceback (most recent call last):</span>
-  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
-<span class="gr">NameError</span>: <span class="n">name &#39;mmesto&#39; is not defined</span>
-</pre></div>
+<span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mmesto</span>
+<span></span><span class="gt">Traceback (most recent call last):</span>
+<span></span>  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span></span><span class="gr">NameError</span>: <span class="n">name &#39;mmesto&#39; is not defined</span>
+<span></span></pre></div>
     </div>
-</div><p>Chyba!</p>
+</div>
+
+<p>Chyba!</p>
 <p>Python má různé typy chyb. Tato se nazývá <code>NameError</code>.
 Python ti vrátí tuto chybu, pokud se pokusíš použít proměnnou,
 která dosud nebyla nastavena.
@@ -90,16 +92,18 @@ Která z těchto jmen ti Python dovolí použít jako proměnnou?</p>
     </div>
     <div class="solution-body" aria-hidden="true">
         <ul>
-<li><code>tlacitko5</code> ano.</li>
-<li><code>5tlacitko</code> ne: jména musí začínat písmenkem.</li>
-<li><code>tlačítko</code> ano, ale diakritice (<code>č</code>, <code>í</code>) je lepší se vyhnout.</li>
-<li><code>oblibena barva</code> ne: to není jedno jméno, ale dvě!</li>
-<li><code>oblibena-barva</code> taky ne: to Python bere jako odečtení dvou proměnných
-(<code>oblibena</code> mínus <code>barva</code>).</li>
-<li><code>oblibenaBarva</code> ano, ale velkým písmenům je lepší se vyhnout.</li>
-</ul>
+<span></span><li><code>tlacitko5</code> ano.</li>
+<span></span><li><code>5tlacitko</code> ne: jména musí začínat písmenkem.</li>
+<span></span><li><code>tlačítko</code> ano, ale diakritice (<code>č</code>, <code>í</code>) je lepší se vyhnout.</li>
+<span></span><li><code>oblibena barva</code> ne: to není jedno jméno, ale dvě!</li>
+<span></span><li><code>oblibena-barva</code> taky ne: to Python bere jako odečtení dvou proměnných
+<span></span>(<code>oblibena</code> mínus <code>barva</code>).</li>
+<span></span><li><code>oblibenaBarva</code> ano, ale velkým písmenům je lepší se vyhnout.</li>
+<span></span></ul>
     </div>
-</div><p>Ve složitějších jménech proměnných se používá podtržítko.
+</div>
+
+<p>Ve složitějších jménech proměnných se používá podtržítko.
 Např. <code>oblibena_barva</code> bude Python považovat za jedno slovo, název jedné
 proměnné, ale člověk vidí slova dvě.</p>
 <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">oblibena_barva</span> <span class="o">=</span> <span class="s1">&#39;žlutá&#39;</span>
