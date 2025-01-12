@@ -1592,6 +1592,12 @@
                             "#vybirani_kousku_hada",
                             "#zjistit_smer",
                             "naucse:static?filename=lettered.svg",
+                            "naucse:static?filename=snake-tiles/bottom-right.png",
+                            "naucse:static?filename=snake-tiles/bottom-top.png",
+                            "naucse:static?filename=snake-tiles/end-right.png",
+                            "naucse:static?filename=snake-tiles/left-end.png",
+                            "naucse:static?filename=snake-tiles/left-right.png",
+                            "naucse:static?filename=snake-tiles/left-top.png",
                             "naucse:static?filename=tile-selection.svg"
                         ],
                         "slug": "index",

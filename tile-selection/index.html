@@ -23,136 +23,122 @@ tedy směr k <em>předchozí</em> a <em>následující</em> souřadnici:</p>
         <th>Následující</th>
         <th>Směr k následující</th>
         <th></th>
-    </tr>
-
-<div class="highlight"><pre><code>    &lt;tr&gt;
-        &lt;td&gt;(1, 2)&lt;/td&gt;
-        &lt;td&gt;&lt;em&gt;není&lt;/em&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;end&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            (2, 2)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;right&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            &lt;img
-                src=&quot;naucse:static?filename=snake-tiles/end-right.png&quot;
-                style=&quot;width: 1em&quot;
-                alt=&quot;end-right.png&quot;
-            &gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-
-    &lt;tr&gt;
-        &lt;td&gt;(2, 2)&lt;/td&gt;
-        &lt;td&gt;
-            (1, 2)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;left&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            (3, 2)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;right&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            &lt;img
-                src=&quot;naucse:static?filename=snake-tiles/left-right.png&quot;
-                style=&quot;width: 1em&quot;
-                alt=&quot;left-right.png&quot;
-            &gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-
-    &lt;tr&gt;
-        &lt;td&gt;(3, 2)&lt;/td&gt;
-        &lt;td&gt;
-            (2, 2)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;left&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            (3, 3)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;top&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            &lt;img
-                src=&quot;naucse:static?filename=snake-tiles/left-top.png&quot;
-                style=&quot;width: 1em&quot;
-                alt=&quot;left-top.png&quot;
-            &gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-
-    &lt;tr&gt;
-        &lt;td&gt;(3, 3)&lt;/td&gt;
-        &lt;td&gt;
-            (3, 2)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;bottom&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            (3, 4)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;top&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            &lt;img
-                src=&quot;naucse:static?filename=snake-tiles/bottom-top.png&quot;
-                style=&quot;width: 1em&quot;
-                alt=&quot;bottom-top.png&quot;
-            &gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-
-    &lt;tr&gt;
-        &lt;td&gt;(3, 4)&lt;/td&gt;
-        &lt;td&gt;
-            (3, 3)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;bottom&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            (3, 5)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;top&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            &lt;img
-                src=&quot;naucse:static?filename=snake-tiles/bottom-top.png&quot;
-                style=&quot;width: 1em&quot;
-                alt=&quot;bottom-top.png&quot;
-            &gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-
-    &lt;tr&gt;
-        &lt;td&gt;(3, 5)&lt;/td&gt;
-        &lt;td&gt;
-            (3, 4)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;bottom&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            (4, 5)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;right&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            &lt;img
-                src=&quot;naucse:static?filename=snake-tiles/bottom-right.png&quot;
-                style=&quot;width: 1em&quot;
-                alt=&quot;bottom-right.png&quot;
-            &gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;
-
-    &lt;tr&gt;
-        &lt;td&gt;(4, 5)&lt;/td&gt;
-        &lt;td&gt;
-            (3, 5)
-        &lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;left&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;em&gt;není&lt;/em&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;code&gt;end&lt;/code&gt;&lt;/td&gt;
-        &lt;td&gt;
-            &lt;img
-                src=&quot;naucse:static?filename=snake-tiles/left-end.png&quot;
-                style=&quot;width: 1em&quot;
-                alt=&quot;left-end.png&quot;
-            &gt;
-        &lt;/td&gt;
-    &lt;/tr&gt;</code></pre></div></table>
+    </tr><tr>
+            <td>(1, 2)</td>
+            <td><em>není</em></td>
+            <td><code>end</code></td>
+            <td>
+                (2, 2)
+            </td>
+            <td><code>right</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/end-right.png"
+                    style="width: 1em"
+                    alt="end-right.png"
+                >
+            </td>
+        </tr><tr>
+            <td>(2, 2)</td>
+            <td>
+                (1, 2)
+            </td>
+            <td><code>left</code></td>
+            <td>
+                (3, 2)
+            </td>
+            <td><code>right</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/left-right.png"
+                    style="width: 1em"
+                    alt="left-right.png"
+                >
+            </td>
+        </tr><tr>
+            <td>(3, 2)</td>
+            <td>
+                (2, 2)
+            </td>
+            <td><code>left</code></td>
+            <td>
+                (3, 3)
+            </td>
+            <td><code>top</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/left-top.png"
+                    style="width: 1em"
+                    alt="left-top.png"
+                >
+            </td>
+        </tr><tr>
+            <td>(3, 3)</td>
+            <td>
+                (3, 2)
+            </td>
+            <td><code>bottom</code></td>
+            <td>
+                (3, 4)
+            </td>
+            <td><code>top</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/bottom-top.png"
+                    style="width: 1em"
+                    alt="bottom-top.png"
+                >
+            </td>
+        </tr><tr>
+            <td>(3, 4)</td>
+            <td>
+                (3, 3)
+            </td>
+            <td><code>bottom</code></td>
+            <td>
+                (3, 5)
+            </td>
+            <td><code>top</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/bottom-top.png"
+                    style="width: 1em"
+                    alt="bottom-top.png"
+                >
+            </td>
+        </tr><tr>
+            <td>(3, 5)</td>
+            <td>
+                (3, 4)
+            </td>
+            <td><code>bottom</code></td>
+            <td>
+                (4, 5)
+            </td>
+            <td><code>right</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/bottom-right.png"
+                    style="width: 1em"
+                    alt="bottom-right.png"
+                >
+            </td>
+        </tr><tr>
+            <td>(4, 5)</td>
+            <td>
+                (3, 5)
+            </td>
+            <td><code>left</code></td>
+            <td><em>není</em></td>
+            <td><code>end</code></td>
+            <td>
+                <img
+                    src="naucse:static?filename=snake-tiles/left-end.png"
+                    style="width: 1em"
+                    alt="left-end.png"
+                >
+            </td>
+        </tr></table>
 
 <p>Toto je <strong>těžký úkol</strong>.
 I když všechny potřebné informace a nástroje k tomu teď teoreticky znáš,
@@ -288,113 +274,13 @@ Budu psát A místo (1, 2); B místo (2, 2); atd.:</p>
 <li>… a tak dál:</li>
 </ul>
 <table class="table">
-
-<div class="highlight"><pre><code>&lt;tr&gt;
-    &lt;th&gt;K vykreslení&lt;/th&gt;
-
-        &lt;td&gt;A&lt;/td&gt;
-
-        &lt;td&gt;B&lt;/td&gt;
-
-        &lt;td&gt;C&lt;/td&gt;
-
-        &lt;td&gt;D&lt;/td&gt;
-
-        &lt;td&gt;E&lt;/td&gt;
-
-        &lt;td&gt;F&lt;/td&gt;
-
-        &lt;td&gt;G&lt;/td&gt;
-
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;th&gt;Předchozí&lt;/th&gt;
-
-        &lt;td&gt;
-        ×
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            A
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            B
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            C
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            D
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            E
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            F
-
-        &lt;/td&gt;
-
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;th&gt;Následující&lt;/th&gt;
-
-        &lt;td&gt;
-
-            B
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            C
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            D
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            E
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            F
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-
-            G
-
-        &lt;/td&gt;
-
-        &lt;td&gt;
-        ×
-        &lt;/td&gt;
-
-&lt;/tr&gt;</code></pre></div></table>
+    <tr>
+        <th>K vykreslení</th><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td></tr>
+    <tr>
+        <th>Předchozí</th><td>×</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td></tr>
+    <tr>
+        <th>Následující</th><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>×</td></tr>
+</table>
 
 <p>Jak na to?
 První řádek tabulky, seznam [A, B, C, D, E, F, G] už máš – to jsou souřadnice
