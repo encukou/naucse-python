@@ -1,0 +1,55 @@
+<h1 id="prevadeni_typu">Převádění typů
+<a href="#prevadeni_typu" class="header-link">#</a>
+</h1>
+<p>Pojď zkusit něco nového: zjistit délku čísla stejným způsobem,
+jakým jsi zjišťovala délku svého jména.
+Zadej <code>len(304023)</code> a stiskni <kbd>Enter</kbd>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="mi">304023</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">object of type &#39;int&#39; has no len()</span>
+</pre></div><p>Zobrazila se ti chyba!
+Ta říká, že objekty typu <code>int</code> (zkratka anglického <em>integer</em>, celé číslo)
+nemají délku.
+Co můžeš udělat teď?
+Možná můžeš zkusit napsat číslo jako řetězec?
+Řetězce mají délku, že?</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;304023&quot;</span><span class="p">)</span>
+<span class="go">6</span>
+</pre></div><p>Jde to ale i bez uvozovek
+Existuje i funkce, která <em>převede</em> číslo na řetězec.
+Jmenuje se <code>str</code>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="mi">304023</span><span class="p">)</span>
+<span class="go">&quot;304023&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">304023</span><span class="p">))</span>
+<span class="go">6</span>
+</pre></div><p>Když zadáváš číslo přímo, bude asi příjemnější použít uvozovky.
+Funkce <code>str</code> ale začne být užitečnější až budeš chtít výpočet
+čísla přenechat Pythonu:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="mi">304023</span> <span class="o">*</span> <span class="mi">12345</span> <span class="o">*</span> <span class="mi">83845</span><span class="p">)</span>
+<span class="go">&#39;314684030130075&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">304023</span> <span class="o">*</span> <span class="mi">12345</span> <span class="o">*</span> <span class="mi">83845</span><span class="p">))</span>
+<span class="go">15</span>
+</pre></div><p>Podobně jako <code>str</code> převádí na řetězce, funkce <code>int</code> převádí věci na celá čísla:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;304023&quot;</span><span class="p">)</span>
+</pre></div><p>Číslo na text můžeš převést vždy, ale naopak to vždy nejde.
+Co se stane, když se pokusíš na číslo převést řetězec bez
+číslic – třeba <code>'ahoj'</code>?</p>
+<div class="solution" id="solution-0">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=0"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <p>Nastane chyba!</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;ahoj&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">ValueError</span>: <span class="n">invalid literal for int() with base 10: &#39;ahoj&#39;</span>
+</pre></div><p>Hláška obsahuje užitečné informace, i když je k nim potřeba angličtina
+a pokročilejší znalost (infor)matiky.
+V doslovnějším překladu hláška zní <em>Chyba hodnoty: špatný zápis celého čísla
+v desítkové soustavě: <code>'ahoj'</code></em>.
+Důležité je ale hlavně to <code>ValueError</code>, chyba hodnoty.</p>
+    </div>
+</div>

@@ -1,0 +1,254 @@
+<h1 id="seznamy">Seznamy
+<a href="#seznamy" class="header-link">#</a>
+</h1>
+<p>Vedle řetězců a celých čísel má Python další druhy hodnot.</p>
+<p>Teď se podíváme na jeden, který se nazývá <em>seznam</em> (anglicky <em>list</em>).
+To je hodnota, která v sobě obsahuje jiné hodnoty.</p>
+<p>Seznamy se zadávají tak, že dáš několik hodnot, oddělených čárkami,
+do hranatých závorek.
+Zkus si vytvořit třeba seznam čísel z loterie:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">59</span><span class="p">]</span>
+<span class="go">[3, 42, 12, 19, 30, 59]</span>
+</pre></div><p>Abys s takovým seznamem mohla pracovat,
+ulož si ho do proměnné:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">59</span><span class="p">]</span>
+</pre></div><p>Tak, a máš seznam! Co s ním ale můžeš dělat?
+Podívej se, kolik čísel v seznamu je.
+Dá se na to použít funkce, kterou už znáš.
+Tipneš si, která to je?</p>
+<div class="solution" id="solution-0">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=0"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">loterie</span><span class="p">)</span>
+<span class="go">6</span>
+</pre></div><p>Funkce <code>len()</code> umí zjistit nejen délku řetězce, ale i délku seznamu – tedy
+počet jeho prvků.</p>
+    </div>
+</div><p>Teď si zkus seznam seřadit. Na to existuje metoda <code>sort</code>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div><p>Tato metoda nic nevrátí, ale „potichu“ změní pořadí čísel v seznamu.
+Znovu si ho vypiš, ať vidíš co se stalo:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span>
+<span class="go">[3, 12, 19, 30, 42, 59]</span>
+</pre></div><p>Čísla v seznamu jsou nyní seřazena od nejnižší k nejvyšší hodnotě.</p>
+<p>Podobně funguje metoda <code>reverse</code>, která obrátí pořadí prvků.
+Vyzkoušej si ji!</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span>
+<span class="go">[59, 42, 30, 19, 12, 3]</span>
+</pre></div><h2 id="pridavani_do_seznamu">Přidávání do seznamu
+<a href="#pridavani_do_seznamu" class="header-link">#</a>
+</h2>
+<p>Podobně jako u řetězců se seznamy dají spojovat pomocí <code>+</code>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span> <span class="o">+</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="go">[59, 42, 30, 19, 12, 3, 5, 6, 7, 8]</span>
+</pre></div><p>Tím se vytvoří nový seznam, ten původní zůstává nezměněný:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span>
+<span class="go">[59, 42, 30, 19, 12, 3]</span>
+</pre></div><p>Pokud chceš něco přidat do původního seznamu, můžeš to provést pomocí metody
+<code>append</code>.
+Ale pozor! Tahle metoda potřebuje vědět co má do seznamu přidat.
+Nová hodnota se zadává do závorek:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">199</span><span class="p">)</span>
+</pre></div><p>Metoda opět nic nevrací, takže je potřeba seznam pro kontrolu vypsat:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span>
+<span class="go">[59, 42, 30, 19, 12, 3, 199]</span>
+</pre></div><h2 id="vybirani_prvku">Vybírání prvků
+<a href="#vybirani_prvku" class="header-link">#</a>
+</h2>
+<p>Když se budeš chtít na jednu věc ze seznamu podívat podrobněji,
+přijde vhod možnost vybrat si konkrétní prvek.
+Na to se v Pythonu používají hranaté závorky.</p>
+<p>Chceš-li vybrat prvek, zadej jméno seznamu a hned za ním hranaté závorky
+s pořadovým číslem prvku, který chceš:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div><p>Dostaneš první prvek?</p>
+<div class="solution" id="solution-1">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=1"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span>
+<span class="go">[59, 42, 30, 19, 12, 3, 199]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">42</span>
+</pre></div><p>Ne, dostaneš druhý prvek.</p>
+<p>Programátoři počítají od nuly.
+Chceš li tedy první prvek, popros Python o prvek číslo nula:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">42</span>
+</pre></div><p>Je to zpočátku divné, ale dá se na to zvyknout.</p>
+    </div>
+</div><p>Číslu prvku se také říká <em>index</em> a procesu vybírání prvků <em>indexování</em>.</p>
+<p>Zkus si indexování s dalšími indexy: 3, 100, 7, -1, -2, -6 nebo -100.
+Pokus se předpovědět výsledek před zadáním příkazu.
+Jak ti to půjde?</p>
+<div class="solution" id="solution-2">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=2"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span>
+<span class="go">[59, 42, 30, 19, 12, 3, 199]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">19</span>
+</pre></div><p>Index 3 označuje čtvrtý prvek.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">IndexError</span>: <span class="n">list index out of range</span>
+</pre></div><p>Prvek s indexem 100 v seznamu není – nastane chyba.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="p">[</span><span class="mi">1000</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">IndexError</span>: <span class="n">list index out of range</span>
+</pre></div><p>Prvek s indexem 7 v seznamu taky není.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">199</span>
+</pre></div><p>Index -1 označuje <em>poslední</em> prvek.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">3</span>
+</pre></div><p>Index -2 označuje předposlední prvek.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+<span class="go">42</span>
+</pre></div><p>Index -6 označuje šestý prvek od konce.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">IndexError</span>: <span class="n">list index out of range</span>
+</pre></div><p>Stý prvek od konce v seznamu není. Nastane chyba.</p>
+    </div>
+</div><h2 id="odstranovani">Odstraňování
+<a href="#odstranovani" class="header-link">#</a>
+</h2>
+<p>Chceš-li ze seznamu něco odstranit, můžeš opět použít indexy.
+Tentokrát s příkazem <code>del</code>.
+Následujícím kódem odstraň počáteční číslo seznamu, tedy prvek číslo 0:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">loterie</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div><p>Pak si seznam opět vypiš. Kousek chybí!</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span>
+<span class="go">[42, 30, 19, 12, 3, 199]</span>
+</pre></div><p>Zkusíš odstranit poslední prvek?</p>
+<div class="solution" id="solution-3">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=3"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">loterie</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span>
+<span class="go">[42, 30, 19, 12, 3]</span>
+</pre></div>
+    </div>
+</div><p>Občase se stane, že nechceš smazat prvek podle pozice, ale podle toho,
+co v seznamu je.
+K tomu slouží hodnota <code>remove</code>, která najde a odstraní danou hodnotu:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span>
+<span class="go">[42, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loterie</span>
+<span class="go">[42]</span>
+</pre></div><h2 id="rezani">Řezání
+<a href="#rezani" class="header-link">#</a>
+</h2>
+<p>Ze seznamu se dá kromě jednoho prvku vybrat i prvků několik – část seznamu,
+takzvaný <em>podseznam</em>.</p>
+<p>Udělej si opět delší seznam čísel:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;První&quot;</span><span class="p">,</span> <span class="s2">&quot;Druhý&quot;</span><span class="p">,</span> <span class="s2">&quot;Třetí&quot;</span><span class="p">,</span> <span class="s2">&quot;Čtvrtý&quot;</span><span class="p">]</span>
+</pre></div><p>Budeš-li chtít vybrat prvky od druhého dál, dej do hranatých závorek číslo
+tohohle prvku, a za něj dvojtečku.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">&#39;Druhý&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="go">[&#39;Druhý&#39;, &#39;Třetí&quot;&#39;, &#39;Čtvrtý&#39;]</span>
+</pre></div><p>Vybráním podseznamu se seznam nemění, tak můžeš vybírat dál:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span>
+<span class="go">[&#39;První&#39;, &#39;Druhý&#39;, &#39;Třetí&#39;, &#39;Čtvrtý&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="go">[&#39;Druhý&#39;, &#39;Třetí&quot;&#39;, &#39;Čtvrtý&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<span class="go">[&#39;Třetí&#39;, &#39;Čtvrtý&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="go">[&#39;Čtvrtý&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+<span class="go">[]</span>
+</pre></div><p>Budeš-li chtít vybrat prvky od začátku <em>až po</em> některý prvek, dej dvojtečku
+<em>před</em> číslo prvku, který už ve výsledku nechceš</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;Třetí&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[&#39;První&#39;, &#39;Druhý&#39;]</span>
+</pre></div><p>Úkol: máš-li nějaký seznam, jak z něj vybereš všechny prvky kromě posledního?</p>
+<div class="solution" id="solution-4">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=4"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <p>Poslední číslo má index -1, vyberu tedy prvky do -1:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">[&#39;První&#39;, &#39;Druhý&#39;, &#39;Třetí&#39;]</span>
+</pre></div><p>Taky v zápisu pro vybrání všeho kromě posledního prvku vidíš smajlík?
+[:-1]</p>
+    </div>
+</div><p>Začátek a konec se dá kombinovat – číslo můžeš dát před i za dvojtečku:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span>
+<span class="go">[&#39;První&#39;, &#39;Druhý&#39;, &#39;Třetí&#39;, &#39;Čtvrtý&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">[&#39;Druhý&#39;, &#39;Třetí&#39;]</span>
+</pre></div><p>Řezání funguje i pro příkaz <code>del</code>.
+Zkus vymazat prostřední dvě čísla:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span>
+<span class="go">[&#39;První&#39;, &#39;Druhý&#39;, &#39;Třetí&#39;, &#39;Čtvrtý&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">cisla</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cisla</span>
+<span class="go">[&#39;První&#39;, &#39;Čtvrtý&#39;]</span>
+</pre></div><h2 id="rezani_retezcu">Řezání řetězců
+<a href="#rezani_retezcu" class="header-link">#</a>
+</h2>
+<p>Hranaté závorky fungují i u řetězců, kde vybírají písmenka:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">jidlo</span> <span class="o">=</span> <span class="s1">&#39;čokoláda&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">jidlo</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">&#39;o&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">jidlo</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">&#39;oko&#39;</span>
+</pre></div><p>Řetězce se ale nedají měnit: <code>del</code>, <code>sort</code> nebo <code>append</code> fungují jen
+na seznamech.</p>
+<p>Úkol: Představ si, že máš v proměnné <code>jmeno</code> ženské jméno jako <code>'Ola'</code>,
+<code>'Krystýna'</code> nebo <code>'Růžena'</code>.
+Jak z něj vytvoříš druhý pád (např. bez <code>'Růženy'</code>)?</p>
+<div class="solution" id="solution-5">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=5"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <p>Vezmi jméno až po poslední písmeno a přidej <code>'y'</code>. Například:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">jmeno</span> <span class="o">=</span> <span class="s1">&#39;Růžena&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">jmeno</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;y&#39;</span>
+<span class="s1">&#39;Růženy&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">jmeno</span> <span class="o">=</span> <span class="s1">&#39;Krystýna&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">jmeno</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;y&#39;</span>
+<span class="s1">&#39;Krystýny&#39;</span>
+</pre></div>
+    </div>
+</div><h2 id="shrnuti">Shrnutí
+<a href="#shrnuti" class="header-link">#</a>
+</h2>
+<p>Uf! O seznamech toho bylo k naučení celkem hodně. Shrňme si, co už umíš:</p>
+<ul>
+<li><strong>Seznam</strong> je seřazená sekvence hodnot.</li>
+<li>Pomocí <strong>metod</strong> se seznam dá řadit (<code>sort</code>) a obrátit (<code>reverse</code>),
+nebo se do něj dá přidat (<code>append</code>) či odebrat (<code>remove</code>) prvek.</li>
+<li>Prvky se dají <strong>vybrat</strong> nebo <strong>odstranit</strong> (<code>del</code>) podle indexu.</li>
+<li>Číslování začíná <strong>od nuly</strong>, záporná čísla berou prvky od konce.</li>
+<li><strong>Podseznam</strong> je určitá část seznamu.</li>
+<li>U <strong>řetězců</strong> funguje vybírání prvků a podřetězců podobně</li>
+</ul>
+<p>Jsi připravena na další část?</p>

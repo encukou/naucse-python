@@ -1,0 +1,152 @@
+<h1 id="retezce">Řetězce
+<a href="#retezce" class="header-link">#</a>
+</h1>
+<p>Čísla jsou pro počítače dost užitečná (ostatně slovo <em>počítač</em> to naznačuje),
+ale Python umí pracovat i s jinými druhy informací.
+Třeba s textem.</p>
+<p>Zkus si to: zadej své jméno do uvozovek, jak vidíš níže:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Ola&#39;</span>
+<span class="go">&#39;Ola&#39;</span>
+</pre></div><p>Nyní jsi vytvořila svůj první <em>řetězec</em>!
+Řetězec (angl. <em>string</em>) je programátorský termín pro <em>text</em> – posloupnost
+znaků (písmenek),
+které mohou být zpracovány počítačem.</p>
+<p>Když řetězec zadáváš, musíš ho vždy uzavřít do uvozovek (apostrofů).
+Jinak by Python nepoznal, co je text se kterým má pracovat a co jsou instrukce
+které má provést.
+To je pro počítač docela důležité – lidem podobné věci dojdou z kontextu,
+ale počítač je hloupé zařízení.</p>
+<p><span class="figure"><a href="naucse:static?filename=quote-comic.svg"><img src="naucse:static?filename=quote-comic.svg" alt="(Ilustrační komiks. Člověk říká robotovi: &#34;Řekni Pavlovi, ať mi zavolá!&#34;. Robot odpoví: &#34;PAVLOVI AŤ MI ZAVOLÁ!&#34;)"></a></span></p>
+<p>Řetězce se dají spojovat – „sečítat“ – pomocí <code>+</code>. Zkus toto:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Já jsem &#39;</span> <span class="o">+</span> <span class="s1">&#39;Ola&#39;</span>
+<span class="go">&#39;Já jsem Ola&#39;</span>
+</pre></div><p>Pozor na mezeru! Když zadáš <code>'Já jsem' + 'Ola'</code>, spojí se ti dvě slova dohromady.
+Počítač považuje i mezeru za <em>znak</em>; chová se k ní stejně jako k jakémukoli
+písmenku.
+Když nedáš mezeru do uvozovek, nebude součástí řetězce.</p>
+<p>Mezery mezi řetězcem a operátorem (<code>+</code>) naopak nehrají roli.
+Všechny následující příkazy dělají to samé:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Já jsem &#39;</span> <span class="o">+</span> <span class="s1">&#39;Ola&#39;</span>
+<span class="go">&#39;Já jsem Ola&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Já jsem &#39;</span><span class="o">+</span><span class="s1">&#39;Ola&#39;</span>
+<span class="go">&#39;Já jsem Ola&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Já jsem &#39;</span>                <span class="o">+</span>     <span class="s1">&#39;Ola&#39;</span>
+<span class="go">&#39;Já jsem Ola&#39;</span>
+</pre></div><p>Je ale zvykem psát kolem operátoru jednu mezeru z každé strany – tak jako
+v těchto materiálech.
+Kód je pak čitelnější.</p>
+<p>Zkus si dát do uvozovek i mezeru samotnou – sečti tři řetězce:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Já jsem&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="s1">&#39;Ola&#39;</span>
+<span class="go">&#39;Já jsem Ola&#39;</span>
+</pre></div><p>Kromě „sečítání“ můžeš řetězce i opakovat – násobit číslem:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Ola&#39;</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="go">&#39;OlaOlaOla&#39;</span>
+</pre></div><h2 id="uvozovani">Uvozování
+<a href="#uvozovani" class="header-link">#</a>
+</h2>
+<p>A co když budeš chtít dát dovnitř do svého řetězce apostrof?
+Můžeš kolem řetězce použít dvojité uvozovky:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;To bych řek&#39;, že jsou pořádně praštěný!&quot;</span>
+<span class="go">&quot;To bych řek&#39;, že jsou pořádně praštěný!&quot;</span>
+</pre></div><p>Pythonu je jedno, se kterým druhem uvozovek řetězec zadáš.
+Podstatná jsou jen písmenka uvnitř.
+Když Python řetězec vypisuje, může si vybrat jiný druh uvozovek
+než jsi použila ty:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;Ola&quot;</span>
+<span class="go">&#39;Ola&#39;</span>
+</pre></div><h2 id="funkce_a_metody">Funkce a metody
+<a href="#funkce_a_metody" class="header-link">#</a>
+</h2>
+<p>Už umíš řetězce „sčítat“ (<code>'Ahoj ' + 'Olo!'</code>)
+a „násobit“ (<code>'la' * 3</code>).
+Na všechny ostatní věci, které se s textem dají dělat,
+ale na klávesnici není dost symbolů.
+Proto jsou některé operace pojmenované slovně – třeba takzvané <em>funkce</em>.</p>
+<p>Chceš-li znát počet písmen ve svém jméně, zavolej funkci <code>len</code>.
+Napiš <code>len</code> (bez uvozovek), pak kulaté závorky, a do těch závorek
+své jméno jako řetězec (v uvozovkách).
+Tím funkci <code>len</code> <em>zavoláš</em> na řetězec se svým jménem:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Ola&#39;</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div><p>Existuje funkce <code>type</code>, která zjistí jestli je něco číslo nebo řetězec.
+Jak bys ji zavolala na číslo <code>123</code> nebo řetězec <code>'abc'</code>?</p>
+<div class="solution" id="solution-0">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=0"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="go">&lt;class &#39;int&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+</pre></div>
+    </div>
+</div><p>Kromě funkcí existují <em>metody</em>, které se zapisují trochu jinak.</p>
+<p>Chceš-li vidět své jméno velkými písmeny, zavolej metodu <code>upper</code>.
+Napiš řetězec, pak tečku, jméno metody <code>upper</code> (bez uvozovek) a prázdné
+závorky:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Ola&#39;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="go">&#39;OLA&#39;</span>
+</pre></div><p>Řetězce mají i metodu <code>lower</code>. Zkus ji zavolat na své jméno.</p>
+<div class="solution" id="solution-1">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=1"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Ola&#39;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="go">&#39;ola&#39;</span>
+</pre></div>
+    </div>
+</div><p>Co je metoda (kterou voláš s tečkou, jako <code>'Ola'.upper()</code>) a co je funkce
+(kde vložíš informaci do závorek jako <code>len('Ola')</code>),
+to si budeš muset u každé nové funkce/metody zapamatovat nebo vyhledat.</p>
+<h2 id="skladani_vyrazu">Skládání výrazů
+<a href="#skladani_vyrazu" class="header-link">#</a>
+</h2>
+<p>Volání funkce nebo metody můžeš použít jako jinou hodnotu.</p>
+<p>Nech Python spočítat matematický výraz <code>(1 + 3) / 2</code>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">8</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">2.0</span>
+</pre></div><p>Python napřed sečte <code>1 + 3</code> a vyjde mu 4.
+Čtverku doplní místo <code>1 + 3</code> do původního příkladu, a dostane <code>8 / 4</code>.
+To vydělí a dostane <code>2.0</code>.</p>
+<p>Neboli: <code>8 / (1 + 3)</code> = <code>8 / 4</code> = <code>2.0</code></p>
+<p>Zkus se zamyslet, jak Python zpracuje tyto výrazy:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Ola&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="go">4</span>
+</pre></div><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Já jsem &#39;</span> <span class="o">+</span> <span class="s1">&#39;Ola&#39;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="go">&#39;Já jsem OLA&#39;</span>
+</pre></div><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Ola&#39;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">9</span>
+</pre></div><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Ola&#39;</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="go">3</span>
+</pre></div><div class="solution" id="solution-2">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=2"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <p><code>len('Ola') + 1</code> → <code>3 + 1</code> → <code>4</code></p>
+<p><code>'Já jsem ' + 'Ola'.upper()</code> → <code>'Já jsem ' + 'OLA'</code> → <code>'Já jsem OLA'</code></p>
+<p><code>len('Ola' * 3)</code> → <code>len('OlaOlaOla')</code> → <code>9</code></p>
+<p><code>len('Ola'.upper())</code> → <code>len('OLA')</code> → <code>3</code></p>
+    </div>
+</div><p>Podobné skládání je v programování velice časté.
+Většinu základních stavebních bloků se začátečník naučí za pár
+týdnů či měsíců – a pak po celou svou progrmátorskou kariéru objevuje nové způsoby,
+jak je poskládat do složitějších a složitějších konstrukcí.</p>
+<h3 id="shrnuti">Shrnutí
+<a href="#shrnuti" class="header-link">#</a>
+</h3>
+<p>OK, dost bylo řetězců. Co ses zatím naučila:</p>
+<ul>
+<li><strong>Řetězce</strong> se používají na práci s textem.</li>
+<li><strong>Operátory</strong> <code>+</code> a <code>*</code> se používají na spojování a opakování řetězců.</li>
+<li><strong>Funkce</strong> a <strong>metody</strong> jako <code>len()</code> a <code>upper()</code> provádí na řetězcích
+nějaké akce.</li>
+<li><strong>Výrazy</strong> se dají skládat dohromady.</li>
+</ul>
+<p>Čísla, řetězce a operátory a funkce jsou základy většiny programovacích jazyků.</p>
+<p>Připravena na něco dalšího? Vsadíme se, že ano!</p>

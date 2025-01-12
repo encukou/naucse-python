@@ -1,0 +1,116 @@
+<h1 id="promenne">Proměnné
+<a href="#promenne" class="header-link">#</a>
+</h1>
+<p>Důležitým konceptem v programování jsou <em>proměnné</em>.
+Proměnná není nic jiného než <em>pojmenování</em> něčeho,
+co budeme chtít použít později.
+Programátoři proměnné používají k ukládání dat,
+aby byl jejich kód čitelnější a nemuseli si pamatovat konkrétní hodnoty.</p>
+<p>Řekněme, že chceš řetězec se svým jménem pojmenovat jako <code>jmeno</code>.
+To se zapíše takto:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">jmeno</span> <span class="o">=</span> <span class="s1">&#39;Ola&#39;</span>
+</pre></div><p>Proměnná <code>jmeno</code> teď bude mít hodnotu <code>'Ola'</code>.</p>
+<p>Jak sis mohla všimnout, tenhle příkaz nic nevrátil – Python nevypsal
+žádný výsledek.
+Jak pak zjistíš, že proměnná skutečně existuje?</p>
+<p>Zadej samotné jméno proměnné (tedy <code>jmeno</code>, bez uvozovek) a stiskni
+<kbd>Enter</kbd>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">jmeno</span>
+<span class="go">&#39;Ola&#39;</span>
+</pre></div><p>Zkus si nastavit i jinou proměnnou – třeba svoji oblíbenou barvu:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">barva</span> <span class="o">=</span> <span class="s1">&#39;modrá&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">barva</span>
+<span class="go">&#39;modrá&#39;</span>
+</pre></div><p>Kdykoli můžeš do proměnné přiřadit znovu a změnit tak co se pod
+daným jménem skrývá:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">jmeno</span>
+<span class="go">&#39;Ola&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">jmeno</span> <span class="o">=</span> <span class="s2">&quot;Soňa&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">jmeno</span>
+<span class="go">&#39;Soňa&#39;</span>
+</pre></div><p>Můžeš ji také předat funkci nebo použít ve výrazu.
+Python za jméno proměnné dosadí aktuální hodnotu:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">jmeno</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">jmeno</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="go">&#39;SoňaSoňaSoňaSoňa&#39;</span>
+</pre></div><p>Super, ne?</p>
+<p>Proměnná může obsahovat cokoliv, například i čísla.
+Zkus tohle:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sirka</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">delka</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sirka</span> <span class="o">*</span> <span class="n">delka</span>
+<span class="go">24</span>
+</pre></div><p>Ale co když použiješ nesprávné jméno? Dokážeš odhadnout, co se stane?</p>
+<div class="solution" id="solution-0">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=0"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesto</span> <span class="o">=</span> <span class="s2">&quot;Tokyo&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mmesto</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">NameError</span>: <span class="n">name &#39;mmesto&#39; is not defined</span>
+</pre></div>
+    </div>
+</div><p>Chyba!</p>
+<p>Python má různé typy chyb. Tato se nazývá <code>NameError</code>.
+Python ti vrátí tuto chybu, pokud se pokusíš použít proměnnou,
+která dosud nebyla nastavena.
+Často jde o překlep.
+Když tedy uvidíš <code>NameError</code> zkontroluj jestli jsi neudělala překlep,
+když jsi proměnnou nastavovala nebo použila.</p>
+<h2 id="jmena_promennych">Jména proměnných
+<a href="#jmena_promennych" class="header-link">#</a>
+</h2>
+<p>Profesionální programátoři pojmenovávají proměnné anglicky,
+aby jim rozumělo co nejvíc kolegů po celém světě.
+Začátečníkům ale doporučujeme češtinu – je tak jasnější, která jména
+si můžeš zvolit sama (např. <code>barva</code>) a která jsou
+z Pythonu (např. <code>upper</code>).
+Nevýhoda je, že si časem budeš muset odvyknout.</p>
+<p>Každopádně je dobré nepoužívat diakritiku a vyhnout se velkým pímenům:
+místo <code><strong>J</strong>m<strong>é</strong>no</code> použij jen <code>jmeno</code>.</p>
+<p>Vyzkoušej si:
+Která z těchto jmen ti Python dovolí použít jako proměnnou?</p>
+<ul>
+<li><code>tlacitko5</code></li>
+<li><code>5tlacitko</code></li>
+<li><code>tlačítko</code></li>
+<li><code>oblibena barva</code></li>
+<li><code>oblibena-barva</code></li>
+<li><code>oblibenaBarva</code></li>
+</ul>
+<div class="solution" id="solution-1">
+    <h3>Řešení</h3>
+    <div class="solution-cover">
+        <a href="naucse:solution?solution=1"><span class="link-text">Ukázat řešení</span></a>
+    </div>
+    <div class="solution-body" aria-hidden="true">
+        <ul>
+<li><code>tlacitko5</code> ano.</li>
+<li><code>5tlacitko</code> ne: jména musí začínat písmenkem.</li>
+<li><code>tlačítko</code> ano, ale diakritice (<code>č</code>, <code>í</code>) je lepší se vyhnout.</li>
+<li><code>oblibena barva</code> ne: to není jedno jméno, ale dvě!</li>
+<li><code>oblibena-barva</code> taky ne: to Python bere jako odečtení dvou proměnných
+(<code>oblibena</code> mínus <code>barva</code>).</li>
+<li><code>oblibenaBarva</code> ano, ale velkým písmenům je lepší se vyhnout.</li>
+</ul>
+    </div>
+</div><p>Ve složitějších jménech proměnných se používá podtržítko.
+Např. <code>oblibena_barva</code> bude Python považovat za jedno slovo, název jedné
+proměnné, ale člověk vidí slova dvě.</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">oblibena_barva</span> <span class="o">=</span> <span class="s1">&#39;žlutá&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">oblibena_barva</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="go">&#39;ŽLUTÁ&#39;</span>
+</pre></div><h2 id="shrnuti">Shrnutí
+<a href="#shrnuti" class="header-link">#</a>
+</h2>
+<ul>
+<li><strong>Proměnné</strong> jsou jména pro hodnoty.</li>
+<li>Přiřazením (<code>=</code>) můžeš proměnnou nastavit na jakoukoli hodnotu.</li>
+<li>Proměnné pojmenováváme <strong>malými písmenky</strong> bez diakritiky.</li>
+<li>Na oddělení slov v rámci jména můžeme použít <strong>podtržítko</strong>.</li>
+</ul>

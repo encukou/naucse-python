@@ -1,0 +1,138 @@
+<h1 id="uloz_to">Ulož to!
+<a href="#uloz_to" class="header-link">#</a>
+</h1>
+<p>Zatím jsi psala všechny programy v konzoli v interaktivním režimu Pythonu,
+ve kterém Python vždy po napsání příkazu odpověděl výsledkem.
+Když Python opustíš (nebo vypneš počítač),
+všechno co jsi zatím naprogramovala se ztratí.</p>
+<p>Větší programy jsou trvanlivější: ukládají se do souborů a dají se kdykoli
+spustit znovu.</p>
+<p>Je čas si to vyzkoušet. Budeš potřebovat:</p>
+<ol>
+<li>Ukončit interaktivní režim Pythonu</li>
+<li>Otevřít editor kódu</li>
+<li>Uložit kód do nového souboru</li>
+<li>Spustit kód ze souboru!</li>
+</ol>
+<p>Jako první krok vypni Python. Existuje na to funkce <code>exit()</code>:</p>
+<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exit</span><span class="p">()</span>
+</pre></div><p>Tak se dostaneš zpět do příkazové řádky. Pamatuješ na ni?
+Už neuvidíš <code>&gt;&gt;&gt;</code>, ale řádek končící <code>$</code> nebo <code>&gt;</code>.
+Budou tu fungovat příkazy jako <code>cd</code> a <code>mkdir</code>,
+ale ne příkazy Pythonu, jako <code>1 + 1</code>.</p>
+<p>Doufám, že máš nainstalovaný <a href="naucse:page?lesson=beginners/install-editor">textový editor</a>.
+Ten teď otevři, udělej si nový soubor a do něj napiš tento příkaz:</p>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, PyLadies!&#39;</span><span class="p">)</span>
+</pre></div><p>Nový soubor ulož pod nějakým popisným názvem: <code>python_intro.py</code>.
+Ulož si jej do adresáře, kam si budeš dávat soubory k tomuto workshopu.
+Jméno musí končit na <code>.py</code>: tahle přípona říká editoru nebo i
+operačnímu systému, že jde o program v Pythonu a Python ho může spustit.</p>
+<div class="admonition note"><p class="admonition-title">Obarvování</p>
+<p>Po uložení by se text měl obarvit.
+V interaktivním režimu Pythonu mělo vše stejnou barvu,
+ale nyní bys měla vidět, že jméno funkce <code>print</code> je vysázeno jinou barvou než
+řetězec v závorkách.
+Barvy nevolíš sama, vybírá je editor na základě toho,
+jak potom Python kódu porozumí.</p>
+<p>Nazývá se to "zvýrazňování syntaxe" a je to užitečná funkce.
+Chce to trochu praxe, ale barvy můžou napovědět
+že ti chybí uvozovka za řetězcem
+nebo máš překlep v klíčovém slově jako <code>del</code>.
+To je jeden z důvodů, proč používáme programátorské editory :)</p>
+</div><p>Pokud máš soubor uložen, je čas jej spustit!
+Pomocí dovedností, které jsi se naučila v sekci
+o příkazové řádce, <em>změň adresář</em> na ten, kam jsi soubor uložila.
+(Pokud nevíš jak dál, požádej o pomoc kouče.)</p>
+<p>Nyní pomocí Pythonu spusť kód v souboru: zadej příkaz <code>python</code>, mezeru
+a jméno souboru ke spuštění.
+(Je to podobné jako příkaz <code>cd</code> pro konkrétní adresář –
+<code>cd <var>jmeno_adresare</var></code>.)</p>
+<div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>python<span class="w"> </span>python_intro.py
+<span class="go">Hello, PyLadies!</span>
+</pre></div><p>Funguje? Vidíš text?
+Jesli ano, právě jsi spustila svůj první opravdový program v Pythonu!
+Cítíš se úžasně?</p>
+<h2 id="vystup">Výstup
+<a href="#vystup" class="header-link">#</a>
+</h2>
+<p>Funkce <code>print()</code>, kterou jsi použila, umí něco <em>vypsat</em> na obrazovku.
+V konzoli se hodnoty výrazů vypisovaly automaticky, abys je mohla
+průběžně kontrolovat, ale programy v souborech bývají složitější a výpisy
+z každého kroku by byly nepřehledné.
+Proto na vypsání potřebuješ <code>print()</code>.
+Zkus si s následujícím programem:</p>
+<div class="highlight"><pre><span></span><span class="n">jmeno</span> <span class="o">=</span> <span class="s1">&#39;Ola&#39;</span>
+
+<span class="s1">&#39;Já jsem &#39;</span> <span class="o">+</span> <span class="n">jmeno</span>  <span class="c1"># Tohle Python nevypíše</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">jmeno</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>    <span class="c1"># Tohle jo!</span>
+</pre></div><p>Pak program spusť:</p>
+<div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>python<span class="w"> </span>python_intro.py
+<span class="go">OlaOlaOlaOlaOlaOlaOlaOla</span>
+</pre></div><p>Co se stalo?
+Když spustíš soubor s programem, Python jej prochází odshora dolů a postupně,
+řádek po řádku, plní jednotlivé příkazy:</p>
+<ul>
+<li>proměnnou <code>jmeno</code> nastaví na řetězec <code>'Ola'</code>,</li>
+<li>spojí řetězce <code>'Já jsem '</code> a <code>'Ola'</code>, ale výsledek zahodí,</li>
+<li>zopakuje řetězec <code>'Ola'</code> osmkrát a výsledek vypíše pomocí <code>print()</code>.</li>
+</ul>
+<p>Do závorek funkce <code>print()</code> můžeš dát i víc hodnot oddělených čárkami.
+Zkus obsah souboru změnit na následující program a znovu ho spustit:</p>
+<div class="highlight"><pre><span></span><span class="n">jmeno</span> <span class="o">=</span> <span class="s1">&#39;Amálka&#39;</span>
+<span class="n">vek</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Já jsem&#39;</span><span class="p">,</span> <span class="n">jmeno</span><span class="p">,</span> <span class="s1">&#39;a je mi&#39;</span><span class="p">,</span> <span class="n">vek</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Za rok mi bude&#39;</span><span class="p">,</span> <span class="n">vek</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div><h2 id="vstup">Vstup
+<a href="#vstup" class="header-link">#</a>
+</h2>
+<p>Další užitečná funkce je <code>input()</code>, která se umí zeptat na otázku.
+Odpověď pak vrátí jako řetězec, který si můžeš uložit do proměnné:</p>
+<div class="highlight"><pre><span></span><span class="n">jmeno</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Jak se jmenuješ? &#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">jmeno</span><span class="p">,</span> <span class="s1">&#39;umí programovat!&#39;</span><span class="p">)</span>
+</pre></div><p>Když program spustíš, zeptá se na otázku.
+Tu zadej na klávesnici <em>přímo do příkazové řádky</em>.
+Python ji načte a použije jako výsledek funkce <code>input</code>,
+který uloží do proměnné <code>jmeno</code>.
+A v rámci dalšího řádku programu ho vytiskne.</p>
+<div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>python<span class="w"> </span>python_intro.py
+<span class="go">Jak se jmenuješ? Ola</span>
+<span class="go">Ola umí programovat!</span>
+<span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>python<span class="w"> </span>python_intro.py
+<span class="go">Jak se jmenuješ? Princezna</span>
+<span class="go">Princezna umí programovat!</span>
+</pre></div><p>Funkce <code>input()</code> z klávesnice vždycky načítá text: když uživatel zadá <code>1234</code>,
+Python to bere jako řetězec číslic 1, 2, 3, 4.</p>
+<p>Když budeš chtít z klávesnice načíst spíš číslo než text, musíš použít funkci,
+která umí převést řetězec na číslo:</p>
+<div class="highlight"><pre><span></span><span class="n">letopocet</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Jaký je letos rok? &#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loni byl rok&#39;</span><span class="p">,</span> <span class="n">letopocet</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div><h2 id="komentare">Komentáře
+<a href="#komentare" class="header-link">#</a>
+</h2>
+<p>Všimla sis u jednoho z předchozích programu poznámek za „mřížkou“ (<code>#</code>)?</p>
+<div class="highlight"><pre><span></span><span class="n">jmeno</span> <span class="o">=</span> <span class="s1">&#39;Ola&#39;</span>
+
+<span class="s1">&#39;Já jsem &#39;</span> <span class="o">+</span> <span class="n">jmeno</span>  <span class="c1"># Tohle Python nevypíše</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">jmeno</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>    <span class="c1"># Tohle jo!</span>
+</pre></div><p>To jsou takzvané <em>komentáře</em>.
+Jsou určené jen pro lidi: Python je úplně ignoruje.</p>
+<p>Teď, když své programy ukládáš na disk a můžeš se k nim vracet,
+je důležité aby byly <em>čitelné</em>: aby z nich nejen počítače, ale i lidi
+poznali, co mají ty instrukce dělat.
+Vždycky když napíšeš nějaký složitější kus kódu k němu zkus přidat komentář
+s vysvětlivkou.
+Až se k programu za pár dní nebo měsíců vrátíš, poděkuješ si!</p>
+<h2 id="shrnuti">Shrnutí
+<a href="#shrnuti" class="header-link">#</a>
+</h2>
+<ul>
+<li>Příkaz <strong>python</strong> pustí uložený soubor jako program v Pythonu.</li>
+<li>Funkce <strong>print</strong> vypisuje hodnoty.</li>
+<li>Funkce <strong>input</strong> načítá řetězce, které uživatel zadá na klávesnici.</li>
+<li><strong>Komentáře</strong> můžou zpřehlednit složitější kód. Python je ignoruje.</li>
+</ul>

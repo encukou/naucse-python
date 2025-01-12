@@ -1,0 +1,76 @@
+<h1 id="vylepseni_ovladani_hada">Vylepšení ovládání Hada
+<a href="#vylepseni_ovladani_hada" class="header-link">#</a>
+</h1>
+<p>Možná si všimneš, zvlášť jestli jsi už nějakou verzi hada hrála,
+že ovládání tvé nové hry je trošku frustrující.
+A možná není úplně jednoduché přijít na to, proč.</p>
+<p>Můžou za to (hlavně) dva důvody:</p>
+<ol>
+<li>Když zmáčkneš dvě šipky rychle za sebou, v dalším „tahu“
+hada se projeví jen ta druhá.</li>
+<li>Když se had plazí doleva a hráč zmáčkne šipku doprava,
+had se otočí a hlavou si narazí do krku.</li>
+</ol>
+<p>Pojďme je vyřešit.</p>
+<h2 id="fronta_pokynu">Fronta pokynů
+<a href="#fronta_pokynu" class="header-link">#</a>
+</h2>
+<p>Když zmáčkneš dvě šipky rychle za sebou, v dalším „tahu“ hada se projeví jen
+ta druhá.</p>
+<p>Z pohledu programu to chování dává smysl – po stisknutí šipky se uloží
+její směr, a při „tahu“ hada se použije poslední uložený směr.
+S tímhle chováním je ale složité hada rychle otáčet: hráč si musí pohlídat,
+aby pro každý „tah“ hada nezmáčkl víc než jednu šipku.
+Lepší by bylo, kdyby se ukládaly <em>všechny</em> stisknuté klávesy, a had by
+v každém tahu reagoval maximálně jednu.
+Další by si „schoval“ na další tahy.</p>
+<p>Takovou „frontu“ stisků kláves lze uchovávat v seznamu.
+Přidej si na to do stavu hry seznam (v metodě <code>__init__</code>):</p>
+<div class="highlight"><pre><span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">queued_directions</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div><p>Tuhle frontu plň po každém stisku klávesy, metodou <code>append</code>.
+Je potřeba změnit většinu funkce <code>on_key_press</code> – místo změny
+atributu se nový směr přidá do seznamu.
+Abys nemusela psát čtyřikrát <code>append</code>,
+můžeš uložit nový směr do pomocné proměnné:</p>
+<div class="highlight"><pre><span></span><span class="nd">@window</span><span class="o">.</span><span class="n">event</span>
+<span class="k">def</span> <span class="nf">on_key_press</span><span class="p">(</span><span class="n">key_code</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">key_code</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">LEFT</span><span class="p">:</span>
+        <span class="n">new_direction</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">key_code</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">RIGHT</span><span class="p">:</span>
+        <span class="n">new_direction</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">key_code</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">DOWN</span><span class="p">:</span>
+        <span class="n">new_direction</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">key_code</span> <span class="o">==</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">UP</span><span class="p">:</span>
+        <span class="n">new_direction</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="n">state</span><span class="o">.</span><span class="n">queued_directions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_direction</span><span class="p">)</span>
+</pre></div><p>A zpátky k logice. V metodě <code>move</code> místo
+<code>dir_x, dir_y = self.snake_direction</code> z fronty vyber první nepoužitý prvek.
+Nezapomeň ho pak z fronty smazat, ať se dostane i na další:</p>
+<div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">queued_directions</span><span class="p">:</span>
+            <span class="n">new_direction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">queued_directions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">queued_directions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">snake_direction</span> <span class="o">=</span> <span class="n">new_direction</span>
+</pre></div><p>Zkontroluj, že to funguje.</p>
+<h3 id="zpatky_ni_krok">Zpátky ni krok
+<a href="#zpatky_ni_krok" class="header-link">#</a>
+</h3>
+<p>Když hráč zmáčkne šipku opačného směru, než se had právě plazí, had se otočí a 
+hlavou si narazí do krku.</p>
+<p>Z pohledu programu to opět dává smysl: plazí-li se had doleva,
+políčko napravo od hlavy je plné.
+Když tedy had začne plazit doprava, narazí na políčko s hadem a hráč prohrává.
+Z pohledu hry (a biologie!) ale narážení do krku moc smyslu nedává.
+Lepší by bylo obrácení směru úplně ignorovat.</p>
+<p>A jak poznat opačný směr?
+Když se had plazí doprava, <code>(1, 0)</code>, tak je opačný směr doleva, <code>(-1, 0)</code>.
+Když se plazí dolů, <code>(0, -1)</code>, tak naopak je nahoru, <code>(0, 1)</code>.
+Obecně, k (<var>x</var>, <var>y</var>) je opačný směr
+(-<var>x</var>, -<var>y</var>).</p>
+<p>Zatím ale pracujeme s celými <var>n</var>-ticemi, takže je potřeba obě
+na <var>x</var> a <var>y</var> „rozbalit“.
+Kód tedy bude vypadat takto:</p>
+<div class="highlight"><pre><span></span>            <span class="n">old_x</span><span class="p">,</span> <span class="n">old_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">snake_direction</span>
+            <span class="n">new_x</span><span class="p">,</span> <span class="n">new_y</span> <span class="o">=</span> <span class="n">new_direction</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">old_x</span><span class="p">,</span> <span class="n">old_y</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span><span class="o">-</span><span class="n">new_x</span><span class="p">,</span> <span class="o">-</span><span class="n">new_y</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">snake_direction</span> <span class="o">=</span> <span class="n">new_direction</span>
+</pre></div><p>Dej ho místo puvodního <code>self.snake_direction = new_direction</code>.</p>
