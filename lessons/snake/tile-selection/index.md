@@ -33,7 +33,7 @@ tedy směr k *předchozí* a *následující* souřadnici:
         <th>Směr k následující</th>
         <th></th>
     </tr>
-    {% set data = [
+    {%- set data = [
         (1, 2, 'end', 'right'),
         (2, 2, 'left', 'right'),
         (3, 2, 'left', 'top'),
@@ -41,8 +41,8 @@ tedy směr k *předchozí* a *následující* souřadnici:
         (3, 4, 'bottom', 'top'),
         (3, 5, 'bottom', 'right'),
         (4, 5, 'left', 'end'),
-    ] %}
-    {% for x, y, bef, aft in data %}
+    ] -%}
+    {%- for x, y, bef, aft in data -%}
         <tr>
             <td>({{ x }}, {{ y }})</td>
             <td>{% if loop.first %}<em>není</em>{% else %}
@@ -61,7 +61,7 @@ tedy směr k *předchozí* a *následující* souřadnici:
                 >
             </td>
         </tr>
-    {% endfor %}
+    {%- endfor -%}
 </table>
 
 Toto je **těžký úkol**.
@@ -214,33 +214,33 @@ Takového hada nakreslím následovně:
 * Nakreslím políčko C (k čemuž potřebuju vědět, že před ním je B a po něm D)
 * … a tak dál:
 
+{% set alphabet = 'ABCDEFGH' %}
 <table class="table">
-    {% set alphabet = 'ABCDEFGH' %}
     <tr>
         <th>K vykreslení</th>
-        {% for x, y, bef, aft in data %}
-            <td>{{ alphabet[loop.index0] }}</td>
-        {% endfor %}
+        {%- for x, y, bef, aft in data -%}
+            <td>{{- alphabet[loop.index0] -}}</td>
+        {%- endfor -%}
     </tr>
     <tr>
         <th>Předchozí</th>
-        {% for x, y, bef, aft in data %}
+        {%- for x, y, bef, aft in data -%}
             <td>
-            {% if loop.first %}×{% else %}
-                {{ alphabet[loop.index0-1] }}
-            {% endif %}
+            {%- if loop.first %}×{% else -%}
+                {{- alphabet[loop.index0-1] -}}
+            {%- endif -%}
             </td>
-        {% endfor %}
+        {%- endfor -%}
     </tr>
     <tr>
         <th>Následující</th>
-        {% for x, y, bef, aft in data %}
+        {%- for x, y, bef, aft in data -%}
             <td>
-            {% if loop.last %}×{% else %}
-                {{ alphabet[loop.index0+1] }}
-            {% endif %}
+            {%- if loop.last %}×{% else -%}
+                {{- alphabet[loop.index0+1] -}}
+            {%- endif -%}
             </td>
-        {% endfor %}
+        {%- endfor -%}
     </tr>
 </table>
 
