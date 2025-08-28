@@ -11,14 +11,14 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.9
+        python-version: 3.13
     - name: Poetry cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pypoetry
         key: poetry-cache-${{ runner.os }}-${{ hashFiles('poetry.lock') }}-${{ hashFiles('.github/workflows/*.yml') }}
     - name: Pip cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pip
         key: pip-cache-${{ runner.os }}-${{ hashFiles('.github/workflows/*.yml') }}
