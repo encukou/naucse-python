@@ -30,8 +30,8 @@ do vývoje, je potřeba ho nejdřív nainstalovat:
 
 * Vytvoř si prostředí a nainstaluj závislosti:
 
-    ```doscon
-    $ poetry install
+    ```console
+    $ poetry install --no-root
     ```
 
 Nainstalovanou aplikaci spustíš následovně:
