@@ -1,0 +1,123 @@
+{
+    "api_version": [
+        0,
+        4
+    ],
+    "course": {
+        "default_time": {
+            "end": "20:30",
+            "start": "18:00"
+        },
+        "description": "Pokračovací kurz knihovny a data",
+        "edit_info": {
+            "branch": "pyladiescz-brno",
+            "url": "https://github.com/encukou/naucse-python"
+        },
+        "lessons": {},
+        "long_description": "<p>Další oblasti Pythonu, které se do začátačnického nevešly. Kapitoly pro práci s daty.</p>",
+        "place": "Fakulta Informatiky MUNI, Botanická 554/68a, místnost S505",
+        "sessions": [
+            {
+                "date": "2025-02-17",
+                "serial": "1",
+                "slug": "cykly",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "Opakování cyklů, comprehensions"
+            },
+            {
+                "date": "2025-02-24",
+                "serial": "2",
+                "slug": "parametry",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "Parametry příkazové řádky"
+            },
+            {
+                "date": "2025-03-03",
+                "serial": "3",
+                "slug": "data",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "Úvod do datové analýzy"
+            },
+            {
+                "date": "2025-03-10",
+                "serial": "4",
+                "slug": "pandas",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "Pandas"
+            },
+            {
+                "date": "2025-03-17",
+                "serial": "5",
+                "slug": "sql",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "SQL"
+            },
+            {
+                "date": "2025-03-24",
+                "serial": "6",
+                "slug": "github",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "Github a pull requesty"
+            },
+            {
+                "date": "2025-03-31",
+                "serial": "7",
+                "slug": "github-pokracovani",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "Github a pull requesty pokračování"
+            },
+            {
+                "date": "2025-04-07",
+                "serial": "8",
+                "slug": "sql-pokracovani",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "SQL pokračování"
+            },
+            {
+                "date": "2025-04-14",
+                "serial": "9",
+                "slug": "regexp",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "Regulární výrazy"
+            },
+            {
+                "date": "2025-04-28",
+                "serial": "10",
+                "slug": "api",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "API"
+            },
+            {
+                "date": "2025-05-05",
+                "serial": "11",
+                "slug": "webscraping",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "Webscraping (Selenium)"
+            },
+            {
+                "date": "2025-05-12",
+                "serial": "12",
+                "slug": "tba",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "Téma ještě nebylo zvoleno"
+            },
+            {
+                "date": "2025-05-19",
+                "serial": "13",
+                "slug": "vizualizace",
+                "source_file": "courses/2025-brno-jaro-pondeli.yml",
+                "title": "Vizualizace"
+            }
+        ],
+        "source_file": "courses/2025-brno-jaro-pondeli.yml",
+        "subtitle": "Brno - jaro 2025 - pondělí",
+        "time_description": "18:00–20:30",
+        "timezone": "Europe/Prague",
+        "title": "Python a jeho knihovny",
+        "vars": {
+            "coach-present": true,
+            "pyladies": true,
+            "user-gender": "f"
+        }
+    }
+}
